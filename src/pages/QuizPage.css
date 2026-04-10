@@ -1,0 +1,136 @@
+.quiz-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #050b2c 0%, #020720 100%);
+  color: white;
+}
+
+.quiz-card {
+  background-color: #2e3b67 !important;
+  border-radius: 24px !important;
+  color: white !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.result-card {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quiz-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #dbe4ff;
+}
+
+.quiz-set-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.quiz-counter {
+  font-size: 1rem;
+  color: #aab6da;
+  font-weight: 600;
+}
+
+.quiz-progress {
+  height: 10px;
+  background-color: #43517d !important;
+  border-radius: 999px !important;
+  overflow: hidden;
+}
+
+.quiz-progress .progress-bar {
+  background-color: #60a5fa !important;
+}
+
+.quiz-prompt {
+  font-size: 2rem;
+  line-height: 1.4;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.quiz-subheading {
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.answer-btn {
+  width: 100%;
+  min-height: 76px;
+  text-align: left !important;
+  border-radius: 14px !important;
+  background-color: transparent !important;
+  border: 2px solid #66759f !important;
+  color: white !important;
+  font-size: 1.1rem !important;
+  padding: 1rem 1.25rem !important;
+  transition: 0.2s ease;
+  box-shadow: none !important;
+}
+
+.answer-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: #90a4d4 !important;
+}
+
+.answer-correct {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+  color: white !important;
+}
+
+.answer-wrong {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: white !important;
+}
+
+.feedback-alert {
+  border-radius: 14px !important;
+  font-size: 1rem;
+}
+
+.score-display {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #e5e7eb;
+}
+
+.quiz-next-btn {
+  border: none !important;
+  background-color: #3b82f6 !important;
+  color: white !important;
+  border-radius: 12px !important;
+  padding: 0.85rem 1.25rem !important;
+  font-weight: 700 !important;
+}
+
+.quiz-next-btn:disabled {
+  opacity: 0.55 !important;
+}
+
+.result-score {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.result-percent {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #60a5fa;
+}
+
+@media (max-width: 768px) {
+  .quiz-prompt {
+    font-size: 1.4rem;
+    min-height: auto;
+  }
+
+  .answer-btn {
+    min-height: 64px;
+    font-size: 1rem !important;
+  }
+}

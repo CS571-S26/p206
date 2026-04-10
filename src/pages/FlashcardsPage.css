@@ -1,0 +1,137 @@
+.flashcards-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #060b2d 0%, #040824 100%);
+  color: white;
+}
+
+.flashcards-breadcrumb {
+  color: #9fb3ff;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.flashcards-title {
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+.flashcards-subtitle {
+  color: #c7d2fe;
+}
+
+.mode-btn {
+  background-color: #2f3c69 !important;
+  border: none !important;
+  border-radius: 16px !important;
+  padding: 1rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+  box-shadow: none !important;
+}
+
+.mode-btn:hover {
+  background-color: #3a4a7d !important;
+}
+
+.mode-btn-active {
+  background-color: #3757ff !important;
+  box-shadow: 0 0 0 2px #58a6ff inset, 0 0 16px rgba(88, 166, 255, 0.25) !important;
+}
+
+.flashcard-shell {
+  background-color: #25345f !important;
+  border-radius: 24px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.flashcard-shell-top {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.flashcard-main {
+  background-color: #334472 !important;
+  border-radius: 24px !important;
+  min-height: 430px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flashcard-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.flashcard-badge {
+  font-size: 0.9rem !important;
+  padding: 0.55rem 0.8rem !important;
+}
+
+.flashcard-text {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.35;
+  max-width: 700px;
+}
+
+.flashcard-controls {
+  margin-bottom: 1rem;
+}
+
+.control-btn {
+  width: 56px;
+  height: 56px;
+  border: none !important;
+  background-color: #2f3c69 !important;
+  color: white !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:hover {
+  background-color: #405184 !important;
+}
+
+.flashcard-counter {
+  min-width: 90px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e5e7eb;
+}
+
+.sidebar-card {
+  background-color: #25345f !important;
+  border-radius: 20px !important;
+  color: white !important;
+}
+
+.sidebar-list-btn {
+  background-color: #334472 !important;
+  border: none !important;
+  border-radius: 12px !important;
+  color: white !important;
+}
+
+.sidebar-list-btn:hover {
+  background-color: #405184 !important;
+}
+
+.sidebar-list-btn-active {
+  background-color: #3757ff !important;
+}
+
+@media (max-width: 768px) {
+  .flashcards-title {
+    font-size: 2rem;
+  }
+
+  .flashcard-main {
+    min-height: 320px;
+  }
+
+  .flashcard-text {
+    font-size: 1.5rem;
+  }
+}

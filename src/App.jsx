@@ -1,20 +1,20 @@
-import './App.css'
-import { Routes, Route } from 'react-router-dom'
-import HomePage from './pages/HomePage.jsx'
-import AboutPage from './pages/AboutPage.jsx'
-import NotFoundPage from './pages/NotFoundPage.jsx'
-import Layout from './components/Layout.jsx'
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import FlashcardsPage from "./pages/FlashcardsPage";
+import StudySetsPage from "./pages/StudySetsPage";
+import QuizPage from "./pages/QuizPage";
 
-function App() {
+export default function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="about" element={<AboutPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Route>
-    </Routes>
-  )
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/flashcards" element={<StudySetsPage />} />
+        <Route path="/flashcards/:setId" element={<FlashcardsPage />} />
+        <Route path="/quiz/:setId" element={<QuizPage />} />
+      </Routes>
+    </>
+  );
 }
-
-export default App
