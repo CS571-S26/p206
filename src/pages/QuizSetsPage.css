@@ -1,0 +1,59 @@
+.quizsets-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #060b2d 0%, #040824 100%);
+  color: white;
+}
+
+.quizsets-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.quizsets-subtitle {
+  color: #c7d2fe;
+  font-size: 1.1rem;
+}
+
+.quizset-card {
+  cursor: pointer;
+  border-radius: 22px !important;
+  min-height: 150px;
+  background: #2c3b69 !important;
+  color: white !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.quizset-card:hover {
+  transform: translateY(-4px);
+  background: #3a4c84 !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}
+
+.quizset-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: white;
+}
+
+.quizset-category {
+  font-size: 0.95rem;
+  color: #b9c7ff;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .quizsets-title {
+    font-size: 2.2rem;
+  }
+
+  .quizset-card {
+    min-height: 120px;
+  }
+
+  .quizset-card-title {
+    font-size: 1rem;
+  }
+}

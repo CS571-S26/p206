@@ -1,10 +1,7 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { Container, Row, Col, Card, Button, ButtonGroup, Badge } from "react-bootstrap";
+import { useMemo, useState, useEffect } from "react";
+import { Container, Row, Col, Card, Button, Badge } from "react-bootstrap";
+import { useNavigate, useParams } from "react-router-dom";
 import {
-  ChevronLeft,
-  ChevronRight,
-  Shuffle,
   Grid,
   Book,
   PencilSquare,
@@ -12,52 +9,49 @@ import {
   Lightbulb,
   VolumeUp,
   Gear,
+  ChevronLeft,
+  ChevronRight,
+  Shuffle,
   ArrowsFullscreen
 } from "react-bootstrap-icons";
-
+import { studySets } from "../data/studySets";
+import { setContent } from "../data/SetContent";
 import "./FlashcardsPage.css";
 
-
-
-
-
-
-
-const flashcards = [
-  {
-    term: "CIA Triad",
-    definition: "Confidentiality, Integrity, and Availability."
-  },
-  {
-    term: "Phishing",
-    definition: "A social engineering attack that tricks users into revealing sensitive information."
-  },
-  {
-    term: "MFA",
-    definition: "Multi-factor authentication requires two or more verification factors."
-  },
-  {
-    term: "Firewall",
-    definition: "A security system that monitors and filters incoming and outgoing network traffic."
-  },
-  {
-    term: "Least Privilege",
-    definition: "Giving users only the minimum access needed to perform their role."
-  }
-];
-
 export default function FlashcardsPage() {
+  const navigate = useNavigate();
+  const { setId } = useParams();
+
+  const activeSet = useMemo(() => {
+    return studySets.find((set) => set.id === setId) || studySets[0];
+  }, [setId]);
+
+  const flashcards = useMemo(() => {
+    return setContent[activeSet?.id] || [];
+  }, [activeSet]);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
-  const { setId } = useParams();
+
+  useEffect(() => {
+    setCurrentIndex(0);
+    setFlipped(false);
+  }, [activeSet?.id]);
+
+  if (!activeSet) {
+    return null;
+  }
+
   const currentCard = flashcards[currentIndex];
 
   const handleNext = () => {
+    if (!flashcards.length) return;
     setFlipped(false);
     setCurrentIndex((prev) => (prev + 1) % flashcards.length);
   };
 
   const handlePrev = () => {
+    if (!flashcards.length) return;
     setFlipped(false);
     setCurrentIndex((prev) =>
       prev === 0 ? flashcards.length - 1 : prev - 1
@@ -65,8 +59,9 @@ export default function FlashcardsPage() {
   };
 
   const handleShuffle = () => {
-    const randomIndex = Math.floor(Math.random() * flashcards.length);
+    if (!flashcards.length) return;
     setFlipped(false);
+    const randomIndex = Math.floor(Math.random() * flashcards.length);
     setCurrentIndex(randomIndex);
   };
 
@@ -77,7 +72,7 @@ export default function FlashcardsPage() {
           <Col lg={9}>
             <div className="mb-3">
               <div className="flashcards-breadcrumb mb-2">
-                Security+ / Flashcards / Domain 1
+                Security+ / Flashcards / {activeSet.title}
               </div>
               <h1 className="flashcards-title mb-2">CySecPrep Flashcards</h1>
               <p className="flashcards-subtitle mb-0">
@@ -94,14 +89,20 @@ export default function FlashcardsPage() {
               </Col>
 
               <Col md={6} xl={3}>
-                <Button className="mode-btn w-100">
+                <Button
+                  className="mode-btn w-100"
+                  onClick={() => navigate(`/quiz/${activeSet.id}`)}
+                >
                   <Grid className="me-2" />
                   Learn
                 </Button>
               </Col>
 
               <Col md={6} xl={3}>
-                <Button className="mode-btn w-100">
+                <Button
+                  className="mode-btn w-100"
+                  onClick={() => navigate(`/quiz/${activeSet.id}`)}
+                >
                   <PencilSquare className="me-2" />
                   Test
                 </Button>
@@ -134,14 +135,20 @@ export default function FlashcardsPage() {
                   onClick={() => setFlipped(!flipped)}
                 >
                   <Card.Body className="d-flex justify-content-center align-items-center text-center">
-                    <div>
-                      <Badge bg="info" className="mb-3 flashcard-badge">
-                        {flipped ? "Definition" : "Term"}
-                      </Badge>
-                      <h2 className="flashcard-text mb-0">
-                        {flipped ? currentCard.definition : currentCard.term}
-                      </h2>
-                    </div>
+                    {flashcards.length > 0 ? (
+                      <div>
+                        <Badge bg="info" className="mb-3 flashcard-badge">
+                          {flipped ? "Definition" : "Term"}
+                        </Badge>
+                        <h2 className="flashcard-text mb-0">
+                          {flipped ? currentCard.definition : currentCard.term}
+                        </h2>
+                      </div>
+                    ) : (
+                      <div>
+                        <h2 className="flashcard-text mb-0">No cards yet</h2>
+                      </div>
+                    )}
                   </Card.Body>
                 </Card>
               </Card.Body>
@@ -153,7 +160,7 @@ export default function FlashcardsPage() {
               </Button>
 
               <div className="flashcard-counter">
-                {currentIndex + 1} / {flashcards.length}
+                {flashcards.length ? `${currentIndex + 1} / ${flashcards.length}` : "0 / 0"}
               </div>
 
               <Button className="control-btn rounded-circle" onClick={handleNext}>
@@ -175,14 +182,35 @@ export default function FlashcardsPage() {
               <Card.Body>
                 <h5 className="mb-3">Study Set Info</h5>
                 <p className="mb-2">
-                  <strong>Category:</strong> Security+ Basics
+                  <strong>Category:</strong> {activeSet.category}
                 </p>
                 <p className="mb-2">
                   <strong>Total Cards:</strong> {flashcards.length}
                 </p>
                 <p className="mb-0">
-                  <strong>Focus:</strong> Terms, acronyms, and security concepts
+                  <strong>Focus:</strong> {activeSet.title}
                 </p>
+              </Card.Body>
+            </Card>
+
+            <Card className="sidebar-card border-0 mt-3">
+              <Card.Body>
+                <h5 className="mb-3">All Study Sets</h5>
+                <div className="scrollable-sets-box">
+                  <div className="d-grid gap-2">
+                    {studySets.map((set) => (
+                      <Button
+                        key={set.id}
+                        className={`sidebar-list-btn text-start ${
+                          activeSet.id === set.id ? "sidebar-list-btn-active" : ""
+                        }`}
+                        onClick={() => navigate(`/flashcards/${set.id}`)}
+                      >
+                        {set.title}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
               </Card.Body>
             </Card>
 
