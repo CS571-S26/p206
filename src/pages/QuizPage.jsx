@@ -1,21 +1,61 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Card, Button, Row, Col, Alert, ProgressBar } from "react-bootstrap";
 import { studySets } from "../data/studySets";
-import { setContent } from "../data/setContent";
+import { SetContent } from "../data/SetContent";
 import "./QuizPage.css";
 
 export default function QuizPage() {
   const { setId } = useParams();
 
-  const selectedSet = studySets.find((set) => set.id === setId);
-  const questions = useMemo(() => setContent[setId] || [], [setId]);
+  const selectedSet = useMemo(() => {
+    return studySets.find((set) => set.id === setId);
+  }, [setId]);
+
+  const questions = useMemo(() => {
+    const specialSetMap = {
+      "threat-vectors": "attack-surfaces-1",
+      "malware-attacks": "malware-1",
+      "vulnerability-management": "vuln-management-1",
+      "secure-protocols": "secure-protocols-1",
+      "application-security": "application-security-1",
+      "network-attacks": "network-attacks-1",
+      "application-attacks": "application-attacks-1",
+      "security-vulnerabilities": "security-vulnerabilities-1",
+      "data-protection": "data-protection-1",
+      "resilience-recovery": "resilience-recovery-1",
+      "wireless-security": "wireless-security-1",
+      "indicators-malicious": "indicators-malicious-1",
+      "access-controls": "access-controls-1",
+      "password-concepts": "password-concepts-1",
+      "incident-response": "incident-response-1",
+      "risk-management": "risk-management-1",
+      "agreement-types": "agreement-types-1",
+      "penetration-testing": "penetration-testing-1"
+    };
+
+    const possibleIds = [
+      setId,
+      `${setId}-1`,
+      specialSetMap[setId]
+    ].filter(Boolean);
+
+    return SetContent.filter((question) => possibleIds.includes(question.setId));
+  }, [setId]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedChoice, setSelectedChoice] = useState("");
+  const [selectedChoices, setSelectedChoices] = useState([]);
   const [answered, setAnswered] = useState(false);
   const [isCorrect, setIsCorrect] = useState(null);
   const [score, setScore] = useState(0);
+
+  useEffect(() => {
+    setCurrentIndex(0);
+    setSelectedChoices([]);
+    setAnswered(false);
+    setIsCorrect(null);
+    setScore(0);
+  }, [setId]);
 
   if (!selectedSet) {
     return (
@@ -35,12 +75,57 @@ export default function QuizPage() {
 
   const currentQuestion = questions[currentIndex];
   const quizFinished = currentIndex >= questions.length;
+  const correctAnswers = (currentQuestion?.correctAnswers || []).map(String);
+  const requiredSelections = currentQuestion?.select || 1;
+  const isMultiSelect = requiredSelections > 1;
+
+  const resetQuestionState = () => {
+    setSelectedChoices([]);
+    setAnswered(false);
+    setIsCorrect(null);
+  };
 
   const handleChoiceClick = (choice) => {
     if (answered) return;
 
-    setSelectedChoice(choice);
-    const correct = choice === currentQuestion.correctAnswer;
+    const choiceStr = String(choice);
+
+    if (!isMultiSelect) {
+      const correct = correctAnswers.includes(choiceStr);
+      setSelectedChoices([choiceStr]);
+      setIsCorrect(correct);
+      setAnswered(true);
+
+      if (correct) {
+        setScore((prev) => prev + 1);
+      }
+      return;
+    }
+
+    setSelectedChoices((prev) => {
+      if (prev.includes(choiceStr)) {
+        return prev.filter((item) => item !== choiceStr);
+      }
+
+      if (prev.length < requiredSelections) {
+        return [...prev, choiceStr];
+      }
+
+      return prev;
+    });
+  };
+
+  const handleSubmitAnswer = () => {
+    if (answered || !isMultiSelect) return;
+    if (selectedChoices.length !== requiredSelections) return;
+
+    const selectedSorted = [...selectedChoices].sort();
+    const correctSorted = [...correctAnswers].sort();
+
+    const correct =
+      selectedSorted.length === correctSorted.length &&
+      selectedSorted.every((choice, index) => choice === correctSorted[index]);
+
     setIsCorrect(correct);
     setAnswered(true);
 
@@ -52,9 +137,7 @@ export default function QuizPage() {
   const handleNext = () => {
     if (currentIndex < questions.length - 1) {
       setCurrentIndex((prev) => prev + 1);
-      setSelectedChoice("");
-      setAnswered(false);
-      setIsCorrect(null);
+      resetQuestionState();
     } else {
       setCurrentIndex(questions.length);
     }
@@ -62,7 +145,7 @@ export default function QuizPage() {
 
   const handleRestart = () => {
     setCurrentIndex(0);
-    setSelectedChoice("");
+    setSelectedChoices([]);
     setAnswered(false);
     setIsCorrect(null);
     setScore(0);
@@ -104,9 +187,7 @@ export default function QuizPage() {
           <Card.Body className="p-4 p-md-5">
             <div className="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
               <div>
-                <div className="quiz-label mb-2">
-                  {currentQuestion.promptType === "definition" ? "Definition" : "Term"}
-                </div>
+                <div className="quiz-label mb-2">Question</div>
                 <h2 className="quiz-set-title mb-0">{selectedSet.title}</h2>
               </div>
 
@@ -117,36 +198,59 @@ export default function QuizPage() {
 
             <ProgressBar now={progressPercent} className="quiz-progress mb-4" />
 
-            <div className="quiz-prompt mb-5">
-              {currentQuestion.prompt}
-            </div>
+            <div className="quiz-prompt mb-3">{currentQuestion.prompt}</div>
 
-            <h5 className="quiz-subheading mb-4">Choose an answer</h5>
+            <h5 className="quiz-subheading mb-2">
+              {isMultiSelect
+                ? `Select ${requiredSelections} answers`
+                : "Choose an answer"}
+            </h5>
+
+            {isMultiSelect && !answered && (
+              <p className="mb-4 text-light">
+                Selected {selectedChoices.length} of {requiredSelections}
+              </p>
+            )}
 
             <Row className="g-3">
-              {currentQuestion.choices.map((choice) => {
+              {currentQuestion.choices.map((choice, index) => {
+                const choiceStr = String(choice);
                 let buttonClass = "answer-btn";
 
                 if (answered) {
-                  if (choice === currentQuestion.correctAnswer) {
+                  if (correctAnswers.includes(choiceStr)) {
                     buttonClass += " answer-correct";
-                  } else if (choice === selectedChoice) {
+                  } else if (selectedChoices.includes(choiceStr)) {
                     buttonClass += " answer-wrong";
                   }
+                } else if (selectedChoices.includes(choiceStr)) {
+                  buttonClass += " answer-selected";
                 }
 
                 return (
-                  <Col md={6} key={choice}>
+                  <Col md={6} key={`${choiceStr}-${index}`}>
                     <Button
                       className={buttonClass}
                       onClick={() => handleChoiceClick(choice)}
                     >
-                      {choice}
+                      {choiceStr}
                     </Button>
                   </Col>
                 );
               })}
             </Row>
+
+            {!answered && isMultiSelect && (
+              <div className="mt-4">
+                <Button
+                  className="quiz-next-btn"
+                  onClick={handleSubmitAnswer}
+                  disabled={selectedChoices.length !== requiredSelections}
+                >
+                  Submit Answer
+                </Button>
+              </div>
+            )}
 
             {answered && (
               <div className="mt-4">
@@ -156,7 +260,8 @@ export default function QuizPage() {
                   </Alert>
                 ) : (
                   <Alert variant="danger" className="feedback-alert mb-0">
-                    Incorrect. Correct answer: <strong>{currentQuestion.correctAnswer}</strong>
+                    Incorrect. Correct answer{correctAnswers.length > 1 ? "s" : ""}:{" "}
+                    <strong>{correctAnswers.join(", ")}</strong>
                   </Alert>
                 )}
               </div>

@@ -1,3 +1,140 @@
+/* Card list scrollable styling */
+.sidebar-card-list {
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.sidebar-card-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-card-list::-webkit-scrollbar-track {
+  background: #1f2b52;
+  border-radius: 999px;
+}
+
+.sidebar-card-list::-webkit-scrollbar-thumb {
+  background: #4b5f9e;
+  border-radius: 999px;
+}
+
+.sidebar-card-list::-webkit-scrollbar-thumb:hover {
+  background: #5c74bd;
+}
+/* Flashcard shell and main card styling for dark/gradient background */
+.flashcard-shell {
+  border-radius: 18px !important;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb) !important;
+  color: white !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.flashcard-main {
+  border-radius: 16px !important;
+  background: #22305a !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 340px;
+  min-width: 340px;
+  max-width: 100%;
+  width: 480px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .flashcard-main {
+    min-width: 0;
+    width: 100%;
+    padding: 1.2rem 0.5rem !important;
+    min-height: 180px;
+  }
+}
+
+.flashcard-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+}
+
+.sidebar-card {
+  border-radius: 16px !important;
+  background: #22305a !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+.flashcards-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #03132b 0%, #041a38 100%);
+  color: white;
+}
+
+.flashcards-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.flashcards-subtitle {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+}
+
+.flashcard-card {
+  border-radius: 18px !important;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb) !important;
+  color: white !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flashcard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.flashcard-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.flashcards-btn {
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 0.9rem 1.5rem !important;
+  font-weight: 600 !important;
+  background-color: #2563eb !important;
+  color: white !important;
+}
+
+.flashcards-btn-green {
+  background-color: #22c55e !important;
+}
+
+.flashcards-btn-orange {
+  background-color: #f97316 !important;
+}
+
+@media (max-width: 768px) {
+  .flashcards-title {
+    font-size: 2.2rem;
+  }
+
+  .flashcards-subtitle {
+    font-size: 1rem;
+  }
+
+  .flashcard-card-title {
+    font-size: 1rem;
+  }
+}
 .scrollable-sets-box {
   max-height: 260px;
   overflow-y: auto;

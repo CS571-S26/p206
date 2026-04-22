@@ -1,81 +1,164 @@
 .homepage {
   min-height: 100vh;
-  background: linear-gradient(180deg, #03132b 0%, #041a38 100%);
+  background: radial-gradient(circle at top, #0b2b5a 0%, #03132b 45%, #020617 100%);
   color: white;
 }
 
 .hero-section {
-  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto 4rem auto;
+  padding: 3.5rem 1.5rem 2rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #7dd3fc;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .homepage-title {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .homepage-subtitle {
-  font-size: 1.2rem;
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.7;
   color: #cbd5e1;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .hero-btn {
   border: none !important;
-  border-radius: 12px !important;
-  padding: 0.9rem 1.5rem !important;
-  font-weight: 600 !important;
+  border-radius: 14px !important;
+  padding: 0.9rem 1.4rem !important;
+  font-weight: 700 !important;
+  min-width: 180px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
 }
 
 .hero-btn-green {
-  background-color: #22c55e !important;
+  background: linear-gradient(135deg, #16a34a, #22c55e) !important;
 }
 
 .hero-btn-blue {
-  background-color: #2563eb !important;
+  background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
 }
 
 .hero-btn-orange {
-  background-color: #f97316 !important;
+  background: linear-gradient(135deg, #ea580c, #f97316) !important;
 }
 
 .categories-section {
-  padding: 1rem;
+  margin-top: 1rem;
 }
 
-.category-card {
-  cursor: pointer;
-  border-radius: 18px !important;
-  min-height: 140px;
-  background: linear-gradient(135deg, #1d4ed8, #2563eb) !important;
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 750;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+.app-card {
+  width: 100%;
+  min-height: 220px;
+  border: none !important;
+  border-radius: 22px !important;
+  padding: 1.5rem !important;
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.92), rgba(29, 78, 216, 0.92)) !important;
   color: white !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  text-align: left !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.2s ease;
+  display: flex !important;
+  align-items: stretch;
+  justify-content: flex-start;
+  white-space: normal !important;
 }
 
-.category-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+.app-card:hover:not(:disabled) {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.34);
 }
 
-.category-card-title {
-  font-size: 1.15rem;
+.home-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.home-card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.home-card-title {
+  font-size: 1.2rem;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+}
+
+.home-card-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #dbeafe;
+  opacity: 0.95;
+}
+
+.browse-btn {
+  border: none !important;
+  border-radius: 14px !important;
+  padding: 0.85rem 1.3rem !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #1e293b, #334155) !important;
+  color: white !important;
 }
 
 @media (max-width: 768px) {
   .homepage-title {
-    font-size: 2.2rem;
+    font-size: 2.25rem;
   }
 
   .homepage-subtitle {
     font-size: 1rem;
   }
 
-  .category-card {
-    min-height: 110px;
+  .app-card {
+    min-height: 180px;
+    padding: 1.2rem !important;
   }
 
-  .category-card-title {
-    font-size: 1rem;
+  .home-card-title {
+    font-size: 1.05rem;
   }
 }

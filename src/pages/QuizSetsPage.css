@@ -1,6 +1,7 @@
+
 .quizsets-page {
   min-height: 100vh;
-  background: linear-gradient(180deg, #060b2d 0%, #040824 100%);
+  background: linear-gradient(180deg, #03132b 0%, #041a38 100%);
   color: white;
 }
 
@@ -11,31 +12,29 @@
 }
 
 .quizsets-subtitle {
-  color: #c7d2fe;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: #cbd5e1;
 }
 
 .quizset-card {
   cursor: pointer;
-  border-radius: 22px !important;
-  min-height: 150px;
-  background: #2c3b69 !important;
+  border-radius: 18px !important;
+  min-height: 140px;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb) !important;
   color: white !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
 }
 
 .quizset-card:hover {
   transform: translateY(-4px);
-  background: #3a4c84 !important;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
 }
 
 .quizset-card-title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.4;
-  color: white;
 }
 
 .quizset-category {
@@ -44,13 +43,34 @@
   margin-top: 0.5rem;
 }
 
+.quizsets-btn {
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 0.9rem 1.5rem !important;
+  font-weight: 600 !important;
+  background-color: #2563eb !important;
+  color: white !important;
+}
+
+.quizsets-btn-green {
+  background-color: #22c55e !important;
+}
+
+.quizsets-btn-orange {
+  background-color: #f97316 !important;
+}
+
 @media (max-width: 768px) {
   .quizsets-title {
     font-size: 2.2rem;
   }
 
+  .quizsets-subtitle {
+    font-size: 1rem;
+  }
+
   .quizset-card {
-    min-height: 120px;
+    min-height: 110px;
   }
 
   .quizset-card-title {

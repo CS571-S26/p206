@@ -15,7 +15,7 @@ import {
   ArrowsFullscreen
 } from "react-bootstrap-icons";
 import { studySets } from "../data/studySets";
-import { setContent } from "../data/SetContent";
+import { SetContent } from "../data/SetContent";
 import "./FlashcardsPage.css";
 
 export default function FlashcardsPage() {
@@ -27,8 +27,35 @@ export default function FlashcardsPage() {
   }, [setId]);
 
   const flashcards = useMemo(() => {
-    return setContent[activeSet?.id] || [];
-  }, [activeSet]);
+  const specialSetMap = {
+    "threat-vectors": "attack-surfaces-1",
+    "malware-attacks": "malware-1",
+    "vulnerability-management": "vuln-management-1",
+    "secure-protocols": "secure-protocols-1",
+    "application-security": "application-security-1",
+    "network-attacks": "network-attacks-1",
+    "application-attacks": "application-attacks-1",
+    "security-vulnerabilities": "security-vulnerabilities-1",
+    "data-protection": "data-protection-1",
+    "resilience-recovery": "resilience-recovery-1",
+    "wireless-security": "wireless-security-1",
+    "indicators-malicious": "indicators-malicious-1",
+    "access-controls": "access-controls-1",
+    "password-concepts": "password-concepts-1",
+    "incident-response": "incident-response-1",
+    "risk-management": "risk-management-1",
+    "agreement-types": "agreement-types-1",
+    "penetration-testing": "penetration-testing-1"
+  };
+
+  const possibleIds = [
+    activeSet?.id,
+    `${activeSet?.id}-1`,
+    specialSetMap[activeSet?.id]
+  ].filter(Boolean);
+
+  return SetContent.filter((card) => possibleIds.includes(card.setId));
+}, [activeSet]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -141,8 +168,10 @@ export default function FlashcardsPage() {
                           {flipped ? "Definition" : "Term"}
                         </Badge>
                         <h2 className="flashcard-text mb-0">
-                          {flipped ? currentCard.definition : currentCard.term}
-                        </h2>
+                        {flipped
+                          ? (currentCard.correctAnswers?.join(", ") || "No answer available")
+                          : (currentCard.prompt || "No question available")}
+                      </h2>
                       </div>
                     ) : (
                       <div>
@@ -217,7 +246,7 @@ export default function FlashcardsPage() {
             <Card className="sidebar-card border-0 mt-3">
               <Card.Body>
                 <h5 className="mb-3">Card List</h5>
-                <div className="d-grid gap-2">
+                <div className="sidebar-card-list d-grid gap-2">
                   {flashcards.map((card, index) => (
                     <Button
                       key={index}
@@ -229,7 +258,7 @@ export default function FlashcardsPage() {
                         setFlipped(false);
                       }}
                     >
-                      {index + 1}. {card.term}
+                      {index + 1}. {card.prompt}
                     </Button>
                   ))}
                 </div>
