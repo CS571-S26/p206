@@ -1,0 +1,148 @@
+.about-page {
+  min-height: calc(100vh - 88px);
+  background: linear-gradient(180deg, #0b1220 0%, #070b16 100%);
+  color: #f8f9fa;
+}
+
+.about-card {
+  background-color: rgba(10, 16, 32, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+  color: #f8fafc;
+}
+
+.about-page a {
+  text-decoration: underline;
+  color: #7dd3fc;
+}
+
+.about-page a:hover,
+.about-page a:focus {
+  color: #7dd3fc;
+}
+
+.about-badge {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-title {
+  font-size: clamp(2.25rem, 3vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-intro {
+  max-width: 760px;
+  line-height: 1.8;
+  color: #f8fafc;
+}
+
+.about-action-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.about-cta .btn {
+  min-width: 150px;
+}
+
+.feature-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.feature-card-actions .btn {
+  min-width: 150px;
+}
+
+@media (min-width: 768px) {
+  .feature-card-actions {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.about-section {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-section:last-child {
+  border-bottom: none;
+}
+
+.section-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.feature-card,
+.resource-card {
+  background-color: rgba(10, 16, 32, 0.98);
+  border: 4px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-card .card-body,
+.resource-card .card-body {
+  padding: 1.25rem;
+}
+
+.feature-card .card-title,
+.feature-card h2,
+.resource-card .card-title,
+.resource-card h2 {
+  color: #16cdff;
+}
+
+.resource-description {
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.feature-list .list-group-item,
+.resource-list .list-group-item {
+  background: transparent;
+  color: #f8fafc;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.feature-list .list-group-item + .list-group-item,
+.resource-list .list-group-item + .list-group-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 767px) {
+  .about-card {
+    padding: 1.5rem;
+  }
+
+  .about-cta {
+    text-align: left;
+    width: 100%;
+  }
+
+  .about-action-group {
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .about-action-group .btn {
+    width: 100%;
+    min-width: unset;
+    box-sizing: border-box;
+  }
+}

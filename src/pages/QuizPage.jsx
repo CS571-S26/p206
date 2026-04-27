@@ -21,17 +21,17 @@ export default function QuizPage() {
       "application-security": "application-security-1",
       "network-attacks": "network-attacks-1",
       "application-attacks": "application-attacks-1",
-      "security-vulnerabilities": "security-vulnerabilities-1",
+      "security-vulnerabilities": "vulnerabilities-1",
       "data-protection": "data-protection-1",
       "resilience-recovery": "resilience-recovery-1",
       "wireless-security": "wireless-security-1",
-      "indicators-malicious": "indicators-malicious-1",
+      "indicators-malicious": "ioc-1",
       "access-controls": "access-controls-1",
-      "password-concepts": "password-concepts-1",
+      "password-concepts": "passwords-1",
       "incident-response": "incident-response-1",
       "risk-management": "risk-management-1",
-      "agreement-types": "agreement-types-1",
-      "penetration-testing": "penetration-testing-1"
+      "agreement-types": "agreements-1",
+      "penetration-testing": "pentesting-1"
     };
 
     const possibleIds = [

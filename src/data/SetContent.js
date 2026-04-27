@@ -14918,11 +14918,12 @@ export  const SetContent = [
     ],
     "select": 1
   },
+  
   {
-    "setId": "security-controls-1",
-    "id": 1,
-    "prompt": "Which of the following answers can be used to describe technical security controls? (Select 3 answers)",
-    "choices": [
+    setId: "security-controls-1",
+    id: 1,
+    prompt: "Which of the following answers can be used to describe technical security controls? (Select 3 answers)",
+    choices: [
       "Focused on protecting material assets",
       "Sometimes called logical security controls",
       "Executed by computer systems (instead of people)",
@@ -14930,18 +14931,18 @@ export  const SetContent = [
       "Implemented with technology",
       "Primarily implemented and executed by people (as opposed to computer systems)"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Sometimes called logical security controls",
       "Executed by computer systems (instead of people)",
       "Implemented with technology"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "security-controls-1",
-    "id": 2,
-    "prompt": "Which of the answers listed below refer to examples of technical security controls? (Select 3 answers)",
-    "choices": [
+    setId: "security-controls-1",
+    id: 2,
+    prompt: "Which of the answers listed below refer to examples of technical security controls? (Select 3 answers)",
+    choices: [
       "Security audits",
       "Encryption",
       "Organizational security policy",
@@ -14949,18 +14950,18 @@ export  const SetContent = [
       "Configuration management",
       "Firewalls"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Encryption",
       "IDSs",
       "Firewalls"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "security-controls-1",
-    "id": 3,
-    "prompt": "Which of the following answers refer to the characteristic features of managerial security controls? (Select 3 answers)",
-    "choices": [
+    setId: "security-controls-1",
+    id: 3,
+    prompt: "Which of the following answers refer to the characteristic features of managerial security controls? (Select 3 answers)",
+    choices: [
       "Also known as administrative controls",
       "Sometimes referred to as logical security controls",
       "Focused on reducing the risk of security incidents",
@@ -14968,36 +14969,36 @@ export  const SetContent = [
       "Documented in written policies",
       "Focused on protecting material assets"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Also known as administrative controls",
       "Focused on reducing the risk of security incidents",
       "Documented in written policies"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "security-controls-1",
-    "id": 4,
-    "prompt": "Examples of managerial security controls include: (Select 3 answers)",
-    "choices": [
+    setId: "security-controls-1",
+    id: 4,
+    prompt: "Examples of managerial security controls include: (Select 3 answers)",
+    choices: [
       "Configuration management",
       "Data backups",
       "Organizational security policy",
       "Risk assessments",
       "Security awareness training"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Organizational security policy",
       "Risk assessments",
       "Security awareness training"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "security-controls-1",
-    "id": 5,
-    "prompt": "Which of the answers listed below can be used to describe operational security controls (Select 3 answers)",
-    "choices": [
+    setId: "security-controls-1",
+    id: 5,
+    prompt: "Which of the answers listed below can be used to describe operational security controls (Select 3 answers)",
+    choices: [
       "Also known as administrative controls",
       "Focused on the day-to-day procedures of an organization",
       "Executed by computer systems (instead of people)",
@@ -15005,70 +15006,71 @@ export  const SetContent = [
       "Focused on managing risk",
       "Primarily implemented and executed by people (as opposed to computer systems)"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Focused on the day-to-day procedures of an organization",
       "Used to ensure that the equipment continues to work as specified",
       "Primarily implemented and executed by people (as opposed to computer systems)"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "security-controls-1",
-    "id": 6,
-    "prompt": "Which of the following examples fall into the category of operational security controls? (Select 3 answers)",
-    "choices": [
+    setId: "security-controls-1",
+    id: 6,
+    prompt: "Which of the following examples fall into the category of operational security controls? (Select 3 answers)",
+    choices: [
       "Risk assessments",
       "Configuration management",
       "System backups",
       "Authentication protocols",
       "Patch management"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Configuration management",
       "System backups",
       "Patch management"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "security-controls-1",
-    "id": 7,
-    "prompt": "Which of the answers listed below refers to security controls designed to deter",
-    "choices": [
-      "detect",
-      "and prevent unauthorized access",
-      "theft",
-      "damage",
-      "or destruction of material assets?",
-      "Managerial security controls"
+    setId: "security-controls-1",
+    id: 7,
+    prompt: "Which of the answers listed below refers to security controls designed to deter, detect, and prevent unauthorized access, theft, damage, or destruction of material assets?",
+    choices: [
+      "Managerial security controls",
+      "Physical security controls",
+      "Technical security controls",
+      "Operational security controls"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Physical security controls"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "security-controls-1",
-    "id": 8,
-    "prompt": "Which of the following examples do not fall into the category of physical security controls? (Select 3 answers)",
-    "choices": [
+    setId: "security-controls-1",
+    id: 8,
+    prompt: "Which of the following examples do not fall into the category of physical security controls? (Select 3 answers)",
+    choices: [
       "Lighting",
       "Access control vestibules",
       "Data backups",
       "Fencing/Bollards/Barricades",
       "Firewalls",
-      "Security guards"
-    ],
-    "correctAnswers": [
+      "Security guards",
       "Asset management"
     ],
-    "select": null
+    correctAnswers: [
+      "Data backups",
+      "Firewalls",
+      "Asset management"
+    ],
+    select: 3
   },
   {
-    "setId": "security-controls-1",
-    "id": 9,
-    "prompt": "What are the examples of preventive security controls? (Select 3 answers)",
-    "choices": [
+    setId: "security-controls-1",
+    id: 9,
+    prompt: "What are the examples of preventive security controls? (Select 3 answers)",
+    choices: [
       "Encryption",
       "IDS",
       "Sensors",
@@ -15076,18 +15078,18 @@ export  const SetContent = [
       "Warning signs",
       "AV software"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Encryption",
       "Firewalls",
       "AV software"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "security-controls-1",
-    "id": 10,
-    "prompt": "Examples of deterrent security controls include: (Select 3 answers)",
-    "choices": [
+    setId: "security-controls-1",
+    id: 10,
+    prompt: "Examples of deterrent security controls include: (Select 3 answers)",
+    choices: [
       "Warning signs",
       "Sensors",
       "Lighting",
@@ -15095,1154 +15097,813 @@ export  const SetContent = [
       "Security audits",
       "Fencing/Bollards"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Warning signs",
       "Lighting",
       "Fencing/Bollards"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "security-controls-1",
-    "id": 11,
-    "prompt": "Which of the answers listed below refer(s) to detective security control(s)? (Select all that apply)",
-    "choices": [
+    setId: "security-controls-1",
+    id: 11,
+    prompt: "Which of the answers listed below refer(s) to detective security control(s)? (Select all that apply)",
+    choices: [
       "Lighting",
       "Log monitoring",
       "Sandboxing",
       "Security audits",
       "CCTV",
-      "IDS"
-    ],
-    "correctAnswers": [
+      "IDS",
       "Vulnerability scanning"
     ],
-    "select": null
+    correctAnswers: [
+      "Log monitoring",
+      "Security audits",
+      "CCTV",
+      "IDS",
+      "Vulnerability scanning"
+    ],
+    select: 5
   },
   {
-    "setId": "security-controls-1",
-    "id": 12,
-    "prompt": "Which of the following answers refer(s) to corrective security control(s)? (Select all that apply)",
-    "choices": [
+    setId: "security-controls-1",
+    id: 12,
+    prompt: "Which of the following answers refer(s) to corrective security control(s)? (Select all that apply)",
+    choices: [
       "Recovering data from backup copies",
       "Applying software updates and patches to fix vulnerabilities",
       "Developing and implementing IRPs to respond to and recover from security incidents",
       "Regularly reviewing logs for anomalies or patterns indicative of attacks",
       "Activating and executing DRPs to restore operations after a major incident"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Recovering data from backup copies",
       "Applying software updates and patches to fix vulnerabilities",
       "Developing and implementing IRPs to respond to and recover from security incidents",
       "Activating and executing DRPs to restore operations after a major incident"
     ],
-    "select": 4
+    select: 4
   },
   {
-    "setId": "security-controls-1",
-    "id": 13,
-    "prompt": "Which of the answers listed below refer(s) to compensating security control(s)? (Select all that apply)",
-    "choices": [
+    setId: "security-controls-1",
+    id: 13,
+    prompt: "Which of the answers listed below refer(s) to compensating security control(s)? (Select all that apply)",
+    choices: [
       "Backup power systems",
       "Video surveillance",
       "MFA",
       "Application sandboxing",
       "Network segmentation"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Backup power systems",
       "MFA",
-      "Application sandboxing"
+      "Application sandboxing",
+      "Network segmentation"
     ],
-    "select": 3
+    select: 4
   },
   {
-    "setId": "security-controls-1",
-    "id": 14,
-    "prompt": "The term \"Directive security controls\" refers to the category of security controls that are implemented through policies and procedures.",
-    "choices": [
-      true,
-      false
-    ],
-    "correctAnswers": [
-      "true"
-    ],
-    "select": 1
+    setId: "security-controls-1",
+    id: 14,
+    prompt: "The term \"Directive security controls\" refers to the category of security controls that are implemented through policies and procedures.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "security-controls-1",
-    "id": 15,
-    "prompt": "Which of the following terms fall into the category of directive security controls? (Select 2 answers)",
-    "choices": [
-      "IRP",
-      "AUP",
-      "IDS",
-      "MFA",
-      "IPS"
-    ],
-    "correctAnswers": [
-      "IRP",
-      "AUP"
-    ],
-    "select": 2
+    setId: "security-controls-1",
+    id: 15,
+    prompt: "Which of the following terms fall into the category of directive security controls? (Select 2 answers)",
+    choices: ["IRP", "AUP", "IDS", "MFA", "IPS"],
+    correctAnswers: ["IRP", "AUP"],
+    select: 2
+  },
+   {
+    setId: "encryption-1",
+    id: 1,
+    prompt: "Which of the following answers refers to a data storage device equipped with hardware-level encryption functionality?",
+    choices: ["HSM", "TPM", "EFS", "SED"],
+    correctAnswers: ["SED"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 1,
-    "prompt": "Which of the following answers refers to a data storage device equipped with hardware-level encryption functionality?",
-    "choices": [
-      "HSM",
-      "TPM",
-      "EFS",
-      "SED"
-    ],
-    "correctAnswers": [
-      "SED"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 2,
+    prompt: "Which of the answers listed below refers to software technology designed to provide confidentiality for an entire data storage device?",
+    choices: ["TPM", "FDE", "EFS", "HSM"],
+    correctAnswers: ["FDE"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 2,
-    "prompt": "Which of the answers listed below refers to software technology designed to provide confidentiality for an entire data storage device?",
-    "choices": [
-      "TPM",
-      "FDE",
-      "EFS",
-      "HSM"
-    ],
-    "correctAnswers": [
-      "FDE"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 3,
+    prompt: "An MS Windows component that enables encryption of individual files is called:",
+    choices: ["SED", "EFS", "BitLocker", "FDE"],
+    correctAnswers: ["EFS"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 3,
-    "prompt": "An MS Windows component that enables encryption of individual files is called:",
-    "choices": [
-      "SED",
-      "EFS",
-      "BitLocker",
-      "FDE"
-    ],
-    "correctAnswers": [
-      "EFS"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 4,
+    prompt: "Which of the following software application tools are specifically designed for implementing encryption algorithms to secure data communication and storage? (Select 2 answers)",
+    choices: ["VPN", "GPG", "SSH", "IPsec", "PGP"],
+    correctAnswers: ["GPG", "PGP"],
+    select: 2
   },
   {
-    "setId": "encryption-1",
-    "id": 4,
-    "prompt": "Which of the following software application tools are specifically designed for implementing encryption algorithms to secure data communication and storage? (Select 2 answers)",
-    "choices": [
-      "VPN",
-      "GPG",
-      "SSH",
-      "IPsec",
-      "PGP"
-    ],
-    "correctAnswers": [
-      "GPG",
-      "PGP"
-    ],
-    "select": 2
+    setId: "encryption-1",
+    id: 5,
+    prompt: "What is the name of a network protocol that secures web traffic via SSL/TLS encryption?",
+    choices: ["SFTP", "HTTPS", "FTPS", "SHTTP"],
+    correctAnswers: ["HTTPS"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 5,
-    "prompt": "What is the name of a network protocol that secures web traffic via SSL/TLS encryption?",
-    "choices": [
-      "SFTP",
-      "HTTPS",
-      "FTPS",
-      "SHTTP"
-    ],
-    "correctAnswers": [
-      "HTTPS"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 6,
+    prompt: "A network protocol that enables secure file transfer over SSH is known as:",
+    choices: ["TFTP", "SFTP", "Telnet", "FTPS"],
+    correctAnswers: ["SFTP"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 6,
-    "prompt": "A network protocol that enables secure file transfer over SSH is known as:",
-    "choices": [
-      "TFTP",
-      "SFTP",
-      "Telnet",
-      "FTPS"
-    ],
-    "correctAnswers": [
-      "SFTP"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 7,
+    prompt: "SFTP is an extension of the FTP protocol that adds support for SSL/TLS encryption.",
+    choices: ["True", "False"],
+    correctAnswers: ["False"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 7,
-    "prompt": "SFTP is an extension of the FTP protocol that adds support for SSL/TLS encryption.",
-    "choices": [
-      true,
-      false
-    ],
-    "correctAnswers": [
-      "false"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 8,
+    prompt: "A type of cryptographic network protocol for secure data communication, remote command-line login, remote command execution, and other secure network services between two networked computers is called:",
+    choices: ["RDP", "SSH", "Telnet", "SCP"],
+    correctAnswers: ["SSH"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 8,
-    "prompt": "A type of cryptographic network protocol for secure data communication",
-    "choices": [
-      "remote command-line login",
-      "remote command execution",
-      "and other secure network services between two networked computers is called:",
-      "RDP",
-      "SSH",
-      "Telnet"
-    ],
-    "correctAnswers": [
-      "SCP"
-    ],
-    "select": 0
+    setId: "encryption-1",
+    id: 9,
+    prompt: "Which part of IPsec provides authentication, integrity, and confidentiality?",
+    choices: ["SPD", "PFS", "AH", "ESP"],
+    correctAnswers: ["ESP"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 9,
-    "prompt": "Which part of IPsec provides authentication",
-    "choices": [
-      "integrity",
-      "and confidentiality?",
-      "SPD",
-      "PFS",
-      "AH",
-      "ESP"
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
+    setId: "encryption-1",
+    id: 10,
+    prompt: "A system that uses public network (such as the Internet) as a means for creating private encrypted connections between remote locations is referred to as:",
+    choices: ["WWAN", "VPN", "PAN", "VLAN"],
+    correctAnswers: ["VPN"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 10,
-    "prompt": "A system that uses public network (such as the Internet) as a means for creating private encrypted connections between remote locations is referred to as:",
-    "choices": [
-      "WWAN",
-      "VPN",
-      "PAN",
-      "VLAN"
-    ],
-    "correctAnswers": [
-      "VPN"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 11,
+    prompt: "Which protocol enables secure, real-time delivery of audio and video over an IP network?",
+    choices: ["S/MIME", "RTP", "SIP", "SRTP"],
+    correctAnswers: ["SRTP"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 11,
-    "prompt": "Which protocol enables secure",
-    "choices": [
-      "real-time delivery of audio and video over an IP network?",
-      "S/MIME",
-      "RTP",
-      "SIP",
-      "SRTP"
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": null
+    setId: "encryption-1",
+    id: 12,
+    prompt: "An encryption protocol primarily used in Wi-Fi networks implementing the WPA2 security standard is known as:",
+    choices: ["TKIP", "CCMP", "SSL", "IPsec"],
+    correctAnswers: ["CCMP"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 12,
-    "prompt": "An encryption protocol primarily used in Wi-Fi networks implementing the WPA2 security standard is known as:",
-    "choices": [
-      "TKIP",
-      "CCMP",
-      "SSL",
-      "IPsec"
-    ],
-    "correctAnswers": [
-      "CCMP"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 13,
+    prompt: "Which cryptographic protocol is designed to provide secure communications over a computer network and is the successor to SSL?",
+    choices: ["IPsec", "TLS", "AES", "CCMP"],
+    correctAnswers: ["TLS"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 13,
-    "prompt": "Which cryptographic protocol is designed to provide secure communications over a computer network and is the successor to SSL?",
-    "choices": [
-      "IPsec",
-      "TLS",
-      "AES",
-      "CCMP"
-    ],
-    "correctAnswers": [
-      "TLS"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 14,
+    prompt: "Examples of techniques used for encrypting information include symmetric encryption (also called public-key encryption) and asymmetric encryption (also called secret-key encryption, or session-key encryption).",
+    choices: ["True", "False"],
+    correctAnswers: ["False"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 14,
-    "prompt": "Examples of techniques used for encrypting information include symmetric encryption (also called public-key encryption) and asymmetric encryption (also called secret-key encryption",
-    "choices": [
-      "or session-key encryption).",
-      true,
-      false
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
+    setId: "encryption-1",
+    id: 15,
+    prompt: "In asymmetric encryption, any message encrypted with the use of a public key can only be decrypted by applying the same algorithm and a matching private key (and vice versa).",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 15,
-    "prompt": "In asymmetric encryption",
-    "choices": [
-      "any message encrypted with the use of a public key can only be decrypted by applying the same algorithm and a matching private key (and vice versa).",
-      true,
-      false
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 16,
+    prompt: "Which of the algorithms listed below are not symmetric ciphers? (Select 3 answers)",
+    choices: ["AES", "DES", "DHE", "ECC", "IDEA", "RC4", "RSA"],
+    correctAnswers: ["DHE", "ECC", "RSA"],
+    select: 3
   },
   {
-    "setId": "encryption-1",
-    "id": 16,
-    "prompt": "Which of the algorithms listed below are not symmetric ciphers? (Select 3 answers)",
-    "choices": [
-      "AES",
-      "DES",
-      "DHE",
-      "ECC",
-      "IDEA",
-      "RC4"
-    ],
-    "correctAnswers": [
-      "RSA"
-    ],
-    "select": null
+    setId: "encryption-1",
+    id: 17,
+    prompt: "Which of the following algorithms do(es) not fall into the category of asymmetric encryption? (Select all that apply)",
+    choices: ["AES", "DES", "DHE", "ECC", "IDEA", "RC4", "RSA"],
+    correctAnswers: ["AES", "DES", "IDEA", "RC4"],
+    select: 4
   },
   {
-    "setId": "encryption-1",
-    "id": 17,
-    "prompt": "Which of the following algorithms do(es) not fall into the category of asymmetric encryption? (Select all that apply)",
-    "choices": [
-      "AES",
-      "DES",
-      "DHE",
-      "ECC",
-      "IDEA",
-      "RC4"
-    ],
-    "correctAnswers": [
-      "RSA"
-    ],
-    "select": null
+    setId: "encryption-1",
+    id: 18,
+    prompt: "The term \"KEK\" refers to a type of cryptographic key often used in key management systems to add an additional layer of security when encrypting and decrypting other cryptographic keys.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 18,
-    "prompt": "The term \"KEK\" refers to a type of cryptographic key often used in key management systems to add an additional layer of security when encrypting and decrypting other cryptographic keys.",
-    "choices": [
-      true,
-      false
-    ],
-    "correctAnswers": [
-      "true"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 19,
+    prompt: "Which of the answers listed below refers to a protocol used to set up secure connections and exchange of cryptographic keys in IPsec VPNs?",
+    choices: ["SSL", "IKE", "ESP", "DHE"],
+    correctAnswers: ["IKE"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 19,
-    "prompt": "Which of the answers listed below refers to a protocol used to set up secure connections and exchange of cryptographic keys in IPsec VPNs?",
-    "choices": [
-      "SSL",
-      "IKE",
-      "ESP",
-      "DHE"
-    ],
-    "correctAnswers": [
-      "IKE"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 20,
+    prompt: "Which of the following answers refers to a key exchange protocol that generates temporary keys for each session, providing forward secrecy to protect past and future communications?",
+    choices: ["PFS", "SHA", "PGP", "DHE"],
+    correctAnswers: ["DHE"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 20,
-    "prompt": "Which of the following answers refers to a key exchange protocol that generates temporary keys for each session",
-    "choices": [
-      "providing forward secrecy to protect past and future communications?",
-      "PFS",
-      "SHA",
-      "PGP",
-      "DHE"
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": null
+    setId: "encryption-1",
+    id: 21,
+    prompt: "Which of the answers listed below refers to a solution designed to strengthen the security of session keys?",
+    choices: ["ECB", "PFS", "EFS", "PFX"],
+    correctAnswers: ["PFS"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 21,
-    "prompt": "Which of the answers listed below refers to a solution designed to strengthen the security of session keys?",
-    "choices": [
-      "ECB",
-      "PFS",
-      "EFS",
-      "PFX"
-    ],
-    "correctAnswers": [
-      "PFS"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 22,
+    prompt: "Which of the following answers refers to a cryptographic key exchange protocol that leverages ECC for enhanced security and efficiency?",
+    choices: ["S/MIME", "ECDHE", "DHE", "ECDSA"],
+    correctAnswers: ["ECDHE"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 22,
-    "prompt": "Which of the following answers refers to a cryptographic key exchange protocol that leverages ECC for enhanced security and efficiency?",
-    "choices": [
-      "S/MIME",
-      "ECDHE",
-      "DHE",
-      "ECDSA"
-    ],
-    "correctAnswers": [
-      "ECDHE"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 23,
+    prompt: "What is the name of a public-key cryptosystem that leverages the mathematical properties of large prime numbers to facilitate secure key exchange, create digital signatures, and encrypt data?",
+    choices: ["ECC", "RSA", "PKI", "DSA"],
+    correctAnswers: ["RSA"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 23,
-    "prompt": "What is the name of a public-key cryptosystem that leverages the mathematical properties of large prime numbers to facilitate secure key exchange",
-    "choices": [
-      "create digital signatures",
-      "and encrypt data?",
-      "ECC",
-      "RSA",
-      "PKI",
-      "DSA"
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
+    setId: "encryption-1",
+    id: 24,
+    prompt: "Which cryptographic solution would be best suited for low-power devices, such as IoT devices, embedded systems, and mobile devices?",
+    choices: ["ECC", "DES", "RSA", "AES"],
+    correctAnswers: ["ECC"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 24,
-    "prompt": "Which cryptographic solution would be best suited for low-power devices",
-    "choices": [
-      "such as IoT devices",
-      "embedded systems",
-      "and mobile devices?",
-      "ECC",
-      "DES",
-      "RSA"
-    ],
-    "correctAnswers": [
-      "AES"
-    ],
-    "select": 0
+    setId: "encryption-1",
+    id: 25,
+    prompt: "Which of the cryptographic algorithms listed below is the least vulnerable to attacks?",
+    choices: ["AES", "DES", "RC4", "3DES"],
+    correctAnswers: ["AES"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 25,
-    "prompt": "Which of the cryptographic algorithms listed below is the least vulnerable to attacks?",
-    "choices": [
-      "AES",
-      "DES",
-      "RC4",
-      "3DES"
-    ],
-    "correctAnswers": [
-      "AES"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 26,
+    prompt: "Which of the following answers refers to a deprecated (largely replaced by AES) symmetric-key block cipher encryption algorithm?",
+    choices: ["ECDSA", "RSA", "IDEA", "DSA"],
+    correctAnswers: ["IDEA"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 26,
-    "prompt": "Which of the following answers refers to a deprecated (largely replaced by AES) symmetric-key block cipher encryption algorithm?",
-    "choices": [
-      "ECDSA",
-      "RSA",
-      "IDEA",
-      "DSA"
-    ],
-    "correctAnswers": [
-      "IDEA"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 27,
+    prompt: "What is the recommended replacement for DES?",
+    choices: ["DSA", "RSA", "RC4", "AES"],
+    correctAnswers: ["AES"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 27,
-    "prompt": "What is the recommended replacement for DES?",
-    "choices": [
-      "DSA",
-      "RSA",
-      "RC4",
-      "AES"
-    ],
-    "correctAnswers": [
-      "AES"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 28,
+    prompt: "An IV is a random or pseudorandom value used in cryptography to ensure that the same plaintext input does not produce the same ciphertext output, even when the same encryption key is used. The IV is typically used with encryption algorithms in block cipher modes to enhance security by introducing randomness to the encryption process.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 28,
-    "prompt": "An IV is a random or pseudorandom value used in cryptography to ensure that the same plaintext input does not produce the same ciphertext output",
-    "choices": [
-      "even when the same encryption key is used. The IV is typically used with encryption algorithms in block cipher modes to enhance security by introducing randomness to the encryption process.",
-      true,
-      false
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 29,
+    prompt: "Which of the answers listed below refers to a logical operation commonly used in the context of cybersecurity, particularly in encryption and obfuscation techniques?",
+    choices: ["AND", "OR", "NOT", "XOR"],
+    correctAnswers: ["XOR"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 29,
-    "prompt": "Which of the answers listed below refers to a logical operation commonly used in the context of cybersecurity",
-    "choices": [
-      "particularly in encryption and obfuscation techniques?",
-      "AND",
-      "OR",
-      "NOT",
-      "XOR"
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": null
+    setId: "encryption-1",
+    id: 30,
+    prompt: "Which of the following answers refers to a block cipher mode that works by chaining the ciphertext blocks together, such that each ciphertext block depends on the previous block?",
+    choices: ["CBC", "GCM", "ECB", "CFB"],
+    correctAnswers: ["CBC"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 30,
-    "prompt": "Which of the following answers refers to a block cipher mode that works by chaining the ciphertext blocks together",
-    "choices": [
-      "such that each ciphertext block depends on the previous block?",
-      "CBC",
-      "GCM",
-      "ECB",
-      "CFB"
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": null
+    setId: "encryption-1",
+    id: 31,
+    prompt: "Which cipher mode transforms a block cipher into a stream cipher enabling the encryption of individual bits or bytes of data?",
+    choices: ["CFB", "CBC", "GCM", "ECB"],
+    correctAnswers: ["CFB"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 31,
-    "prompt": "Which cipher mode transforms a block cipher into a stream cipher enabling the encryption of individual bits or bytes of data?",
-    "choices": [
-      "CFB",
-      "CBC",
-      "GCM",
-      "ECB"
-    ],
-    "correctAnswers": [
-      "CFB"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 32,
+    prompt: "A block cipher mode that combines a unique counter with encryption key to generate a stream of pseudorandom data blocks which are then used for encrypting data is called:",
+    choices: ["CBC", "GCM", "CFB", "CTM"],
+    correctAnswers: ["CTM"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 32,
-    "prompt": "A block cipher mode that combines a unique counter with encryption key to generate a stream of pseudorandom data blocks which are then used for encrypting data is called:",
-    "choices": [
-      "CBC",
-      "GCM",
-      "CFB",
-      "CTM"
-    ],
-    "correctAnswers": [
-      "GCM"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 33,
+    prompt: "Which of the block cipher modes listed below is the simplest/weakest and therefore not recommended for use?",
+    choices: ["CBC", "GCM", "ECB", "CTM"],
+    correctAnswers: ["ECB"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 33,
-    "prompt": "Which of the block cipher modes listed below is the simplest/weakest and therefore not recommended for use?",
-    "choices": [
-      "CBC",
-      "GCM",
-      "ECB",
-      "CTM"
-    ],
-    "correctAnswers": [
-      "ECB"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 34,
+    prompt: "Which block cipher mode combines CTM for encryption with an authentication mechanism to ensure both data confidentiality and integrity?",
+    choices: ["CBC", "GCM", "ECB", "CFB"],
+    correctAnswers: ["GCM"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 34,
-    "prompt": "Which block cipher mode combines CTM for encryption with an authentication mechanism to ensure both data confidentiality and integrity?",
-    "choices": [
-      "CBC",
-      "GCM",
-      "ECB",
-      "CFB"
-    ],
-    "correctAnswers": [
-      "GCM"
-    ],
-    "select": 1
+    setId: "encryption-1",
+    id: 35,
+    prompt: "In cryptography, the number of bits in a key used by a cryptographic algorithm is referred to as key size or key length. The key length determines the maximum number of combinations required to break the encryption algorithm, therefore typically a longer key means stronger cryptographic security.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 35,
-    "prompt": "In cryptography",
-    "choices": [
-      "the number of bits in a key used by a cryptographic algorithm is referred to as key size or key length. The key length determines the maximum number of combinations required to break the encryption algorithm",
-      "therefore typically a longer key means stronger cryptographic security.",
-      true,
-      false
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
+    setId: "encryption-1",
+    id: 36,
+    prompt: "Which AES key length provides the highest level of security?",
+    choices: ["128-bit key", "192-bit key", "256-bit key", "320-bit key"],
+    correctAnswers: ["256-bit key"],
+    select: 1
   },
   {
-    "setId": "encryption-1",
-    "id": 36,
-    "prompt": "Which AES key length provides the highest level of security?",
-    "choices": [
-      "128-bit key",
-      "192-bit key",
-      "256-bit key",
-      "320-bit key"
-    ],
-    "correctAnswers": [
-      "256-bit key"
-    ],
-    "select": 1
+    setId: "hashing-1",
+    id: 1,
+    prompt: "A hash function is a mathematical algorithm that maps data of arbitrary size to a fixed-size hash value, typically represented as a short string of characters. The hash function result, also known as a digest or checksum, provides a unique representation of the original data input. The functionality of hash functions relies on the fact that if there is any change to the data after the original hash was generated, the new hash value calculated after content modification will be different from the original result because hash functions are designed to be sensitive to changes in the input data.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "hashing-1",
-    "id": 1,
-    "prompt": "A hash function is a mathematical algorithm that maps data of arbitrary size to a fixed-size hash value",
-    "choices": [
-      "typically represented as a short string of characters. The hash function result",
-      "also known as a digest or checksum",
-      "provides a unique representation of the original data input. The functionality of hash functions relies on the fact that if there is any change to the data after the original hash was generated",
-      "the new hash value calculated after content modification will be different from the original result because hash functions are designed to be sensitive to changes in the input data.",
-      true,
-      false
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
-  },
-  {
-    "setId": "hashing-1",
-    "id": 2,
-    "prompt": "Hash functions find use in a variety of applications",
-    "choices": [
-      "including:",
+    setId: "hashing-1",
+    id: 2,
+    prompt: "Hash functions find use in a variety of applications, including:",
+    choices: [
       "Cryptography",
       "Data integrity verification",
       "Password verification and storage",
       "Digital signatures",
-      "Blockchain technology"
-    ],
-    "correctAnswers": [
+      "Blockchain technology",
       "All of the above"
     ],
-    "select": null
+    correctAnswers: ["All of the above"],
+    select: 1
   },
   {
-    "setId": "hashing-1",
-    "id": 3,
-    "prompt": "Which of the answers listed below refers to a cryptographic hash function that has been widely used in the past but is now considered deprecated for security-sensitive applications due to known vulnerabilities?",
-    "choices": [
-      "MD5",
-      "SHA",
-      "CRC",
-      "HMAC"
-    ],
-    "correctAnswers": [
-      "MD5"
-    ],
-    "select": 1
+    setId: "hashing-1",
+    id: 3,
+    prompt: "Which of the answers listed below refers to a cryptographic hash function that has been widely used in the past but is now considered deprecated for security-sensitive applications due to known vulnerabilities?",
+    choices: ["MD5", "SHA", "CRC", "HMAC"],
+    correctAnswers: ["MD5"],
+    select: 1
   },
   {
-    "setId": "hashing-1",
-    "id": 4,
-    "prompt": "Which of the following answers refers to a family of cryptographic hash functions designed for various security-related applications",
-    "choices": [
-      "including digital signatures",
-      "password storage",
-      "secure communications",
-      "and data integrity verification?",
-      "RSA",
-      "AES"
-    ],
-    "correctAnswers": [
-      "PKCS"
-    ],
-    "select": null
+    setId: "hashing-1",
+    id: 4,
+    prompt: "Which of the following answers refers to a family of cryptographic hash functions designed for various security-related applications, including digital signatures, password storage, secure communications, and data integrity verification?",
+    choices: ["RSA", "AES", "PKCS", "SHA"],
+    correctAnswers: ["SHA"],
+    select: 1
   },
   {
-    "setId": "hashing-1",
-    "id": 5,
-    "prompt": "Which of the hash functions listed below offers the highest level of security?",
-    "choices": [
-      "MD5",
-      "SHA-3",
-      "RIPEMD-160",
-      "HMAC"
-    ],
-    "correctAnswers": [
-      "SHA-3"
-    ],
-    "select": 1
+    setId: "hashing-1",
+    id: 5,
+    prompt: "Which of the hash functions listed below offers the highest level of security?",
+    choices: ["MD5", "SHA-3", "RIPEMD-160", "HMAC"],
+    correctAnswers: ["SHA-3"],
+    select: 1
   },
   {
-    "setId": "hashing-1",
-    "id": 6,
-    "prompt": "Which of the following combines a cryptographic hash function with a secret key to provide a means of verifying both the authenticity and integrity of a message or data?",
-    "choices": [
-      "MD5",
-      "DSA",
-      "HMAC",
-      "DES"
-    ],
-    "correctAnswers": [
-      "HMAC"
-    ],
-    "select": 1
+    setId: "hashing-1",
+    id: 6,
+    prompt: "Which of the following combines a cryptographic hash function with a secret key to provide a means of verifying both the authenticity and integrity of a message or data?",
+    choices: ["MD5", "DSA", "HMAC", "DES"],
+    correctAnswers: ["HMAC"],
+    select: 1
   },
   {
-    "setId": "hashing-1",
-    "id": 7,
-    "prompt": "Which of the answers listed below refers to a non-cryptographic hash function often used for error-checking purposes?",
-    "choices": [
-      "MD5",
-      "CRC",
-      "SHA",
-      "RIPEMD"
-    ],
-    "correctAnswers": [
-      "CRC"
-    ],
-    "select": 1
+    setId: "hashing-1",
+    id: 7,
+    prompt: "Which of the answers listed below refers to a non-cryptographic hash function often used for error-checking purposes?",
+    choices: ["MD5", "CRC", "SHA", "RIPEMD"],
+    correctAnswers: ["CRC"],
+    select: 1
   },
-  {
-    "setId": "digital-signatures-1",
-    "id": 1,
-    "prompt": "Which of the answers listed below refers to a cryptographic technique that verifies the authenticity and integrity of digital documents or messages by using a unique encrypted identifier from the sender?",
-    "choices": [
+   {
+    setId: "digital-signatures-1",
+    id: 1,
+    prompt: "Which of the answers listed below refers to a cryptographic technique that verifies the authenticity and integrity of digital documents or messages by using a unique encrypted identifier from the sender?",
+    choices: [
       "Digital signature",
       "Cryptographic hash function",
       "Digital certificate",
       "Asymmetric encryption"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Digital signature"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "digital-signatures-1",
-    "id": 2,
-    "prompt": "Which of the following answers refer to algorithms used for generating and verifying digital signatures? (Select 3 answers)",
-    "choices": [
+    setId: "digital-signatures-1",
+    id: 2,
+    prompt: "Which of the following answers refer to algorithms used for generating and verifying digital signatures? (Select 3 answers)",
+    choices: [
       "ECDSA",
       "RSA",
       "ECDHE",
       "DSA",
       "GPG/PGP"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "ECDSA",
       "RSA",
       "DSA"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "digital-signatures-1",
-    "id": 3,
-    "prompt": "Which of the answers listed below refer to DSA? (Select 2 answers)",
-    "choices": [
+    setId: "digital-signatures-1",
+    id: 3,
+    prompt: "Which of the answers listed below refer to DSA? (Select 2 answers)",
+    choices: [
       "Specifically designed for creating and verifying digital signatures",
       "Primarily used for secure communication and digital signatures",
       "Not well suited for data encryption (DSA is not an encryption algorithm)",
       "Used for both encryption and digital signatures in various applications",
       "Based on the mathematical properties of large prime numbers"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Specifically designed for creating and verifying digital signatures",
       "Not well suited for data encryption (DSA is not an encryption algorithm)"
     ],
-    "select": 2
+    select: 2
   },
   {
-    "setId": "digital-signatures-1",
-    "id": 4,
-    "prompt": "Which of the following answers refer to the characteristic features of RSA? (Select 2 answers)",
-    "choices": [
+    setId: "digital-signatures-1",
+    id: 4,
+    prompt: "Which of the following answers refer to the characteristic features of RSA? (Select 2 answers)",
+    choices: [
       "Based on the discrete logarithm problem",
       "Primarily used for secure communication and digital signatures",
       "Used for data encryption",
       "Specifically designed for creating and verifying digital signatures",
       "Not well suited for data encryption"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Primarily used for secure communication and digital signatures",
       "Used for data encryption"
     ],
-    "select": 2
+    select: 2
   },
   {
-    "setId": "digital-signatures-1",
-    "id": 5,
-    "prompt": "Which of the answers listed below best describe the characteristics of ECDSA? (Select 2 answers)",
-    "choices": [
+    setId: "digital-signatures-1",
+    id: 5,
+    prompt: "Which of the answers listed below best describe the characteristics of ECDSA? (Select 2 answers)",
+    choices: [
       "Used for digital signatures",
       "Can be used for both encryption and digital signatures",
       "Does not include a native encryption function",
       "Enables the encryption of data",
       "Based on the mathematical properties of large prime numbers"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Used for digital signatures",
       "Does not include a native encryption function"
     ],
-    "select": 2
+    select: 2
   },
   {
-    "setId": "digital-signatures-1",
-    "id": 6,
-    "prompt": "Given the computational limitations of IoT devices",
-    "choices": [
-      "smartcards",
-      "and mobile devices",
-      "which of the following digital signature algorithms would be the most efficient choice due to its smaller key size and lower processing requirements?",
+    setId: "digital-signatures-1",
+    id: 6,
+    prompt: "Given the computational limitations of IoT devices, smartcards, and mobile devices, which of the following digital signature algorithms would be the most efficient choice due to its smaller key size and lower processing requirements?",
+    choices: [
       "RSA",
       "ECDHE",
-      "DSA"
+      "DSA",
+      "ECDSA",
+      "ECC"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "ECDSA"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 1,
-    "prompt": "A type of digital document that verifies the identity of an individual",
-    "choices": [
-      "device",
-      "service",
-      "or organization in online communications is known as:",
+    setId: "digital-certificates-1",
+    id: 1,
+    prompt: "A type of digital document that verifies the identity of an individual, device, service, or organization in online communications is known as:",
+    choices: [
       "Encryption key",
       "Digital certificate",
-      "Identity token"
-    ],
-    "correctAnswers": [
+      "Identity token",
       "Digital signature"
     ],
-    "select": 0
+    correctAnswers: [
+      "Digital certificate"
+    ],
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 2,
-    "prompt": "What is the role of RA in PKI? (Select 2 answers)",
-    "choices": [
+    setId: "digital-certificates-1",
+    id: 2,
+    prompt: "What is the role of RA in PKI? (Select 2 answers)",
+    choices: [
       "Accepting requests for digital certificates",
       "Validating digital certificates",
       "Authenticating the entity making the request",
       "Providing backup source for cryptographic keys",
       "Issuing digital certificates"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Accepting requests for digital certificates",
       "Authenticating the entity making the request"
     ],
-    "select": 2
+    select: 2
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 3,
-    "prompt": "Which of the answers listed below refers to a trusted third party responsible for issuing",
-    "choices": [
-      "revoking",
-      "and managing digital certificates?",
+    setId: "digital-certificates-1",
+    id: 3,
+    prompt: "Which of the answers listed below refers to a trusted third party responsible for issuing, revoking, and managing digital certificates?",
+    choices: [
       "RA",
       "DN",
       "CA",
       "CSP"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "CA"
     ],
-    "select": 0
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 4,
-    "prompt": "Which of the following answers refers to a means for periodic publication of all digital certificates that have been revoked?",
-    "choices": [
+    setId: "digital-certificates-1",
+    id: 4,
+    prompt: "Which of the following answers refers to a means for periodic publication of all digital certificates that have been revoked?",
+    choices: [
       "CRL",
       "OSPF",
       "RA",
       "CSR"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "CRL"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 5,
-    "prompt": "Which of the answers listed below refers to a protocol that enables on-demand querying of the revocation status of a digital certificate?",
-    "choices": [
+    setId: "digital-certificates-1",
+    id: 5,
+    prompt: "Which of the answers listed below refers to a protocol that enables on-demand querying of the revocation status of a digital certificate?",
+    choices: [
       "CSP",
       "OCSP",
       "DN",
       "CRL"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "OCSP"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 6,
-    "prompt": "What is the fastest way to check the validity of a single digital certificate?",
-    "choices": [
+    setId: "digital-certificates-1",
+    id: 6,
+    prompt: "What is the fastest way to check the validity of a single digital certificate?",
+    choices: [
       "CSR",
       "DN",
       "CRL",
       "OCSP"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "OCSP"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 7,
-    "prompt": "Which of the following answers can be used to describe self-signed digital certificates? (Select 3 answers)",
-    "choices": [
+    setId: "digital-certificates-1",
+    id: 7,
+    prompt: "Which of the following answers can be used to describe self-signed digital certificates? (Select 3 answers)",
+    choices: [
       "Backed by a well-known and trusted third party",
       "Not trusted by default by web browsers and other applications",
-      "Used in trusted environments",
-      "such as internal networks and development environments",
+      "Used in trusted environments, such as internal networks and development environments",
       "Suitable for websites and other applications that are accessible to the public",
-      "Trusted by default by web browsers and other applications"
-    ],
-    "correctAnswers": [
+      "Trusted by default by web browsers and other applications",
       "Not backed by a well-known and trusted third party"
     ],
-    "select": 0
+    correctAnswers: [
+      "Not trusted by default by web browsers and other applications",
+      "Used in trusted environments, such as internal networks and development environments",
+      "Not backed by a well-known and trusted third party"
+    ],
+    select: 3
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 8,
-    "prompt": "A self-signed digital certificate is also referred to as:",
-    "choices": [
+    setId: "digital-certificates-1",
+    id: 8,
+    prompt: "A self-signed digital certificate is also referred to as:",
+    choices: [
       "Client certificate",
       "EV certificate",
       "Server certificate",
       "Wildcard certificate",
       "None of the above"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "None of the above"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 9,
-    "prompt": "Third-party digital certificates",
-    "choices": [
-      "issued by trusted CAs",
-      "are automatically trusted by most browsers and operating systems",
-      "involve a cost",
-      "and require validation of the applicant's identity. In contrast",
-      "self-signed certificates",
-      "issued by the entity to itself"
+    setId: "digital-certificates-1",
+    id: 9,
+    prompt: "Third-party digital certificates, issued by trusted CAs, are automatically trusted by most browsers and operating systems, involve a cost, and require validation of the applicant's identity. In contrast, self-signed certificates, issued by the entity to itself, are not automatically trusted, are free to create and use, and do not require validation by a CA.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      "are not automatically trusted"
+    correctAnswers: [
+      "True"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 10,
-    "prompt": "In the context of digital certificates",
-    "choices": [
-      "the term \"Root of trust\" refers to the highest level of trust within a PKI system. It is typically represented by a root CA",
-      "which is a trusted third party that serves as the foundation for the entire PKI. All other entities in the PKI hierarchy",
-      "including intermediate CAs and end-entities (such as web servers",
-      "email servers",
-      "user devices",
-      "IoT devices"
+    setId: "digital-certificates-1",
+    id: 10,
+    prompt: "In the context of digital certificates, the term \"Root of trust\" refers to the highest level of trust within a PKI system. It is typically represented by a root CA, which is a trusted third party that serves as the foundation for the entire PKI. All other entities in the PKI hierarchy, including intermediate CAs and end-entities (such as web servers, email servers, user devices, IoT devices, and individual users), derive their trust from this root. When a certificate is issued and signed by an intermediate CA, it gains trust through a chain of trust back to the root CA. This hierarchical trust model allows users and systems to trust certificates presented by websites, services, or individuals because they can trace the trust back to the well-established root of trust.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      "and individual users)"
+    correctAnswers: [
+      "True"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 11,
-    "prompt": "Which of the answers listed below refers to a PKI trust model?",
-    "choices": [
+    setId: "digital-certificates-1",
+    id: 11,
+    prompt: "Which of the answers listed below refers to a PKI trust model?",
+    choices: [
       "Single CA model",
       "Hierarchical model (root CA + intermediate CAs)",
       "Mesh model (cross-certifying CAs)",
       "Web of trust model (all CAs function as root CAs)",
       "Chain of trust model (multiple CAs in a sequential chain)",
-      "Bridge model (cross-certifying between separate PKIs)"
+      "Bridge model (cross-certifying between separate PKIs)",
+      "Hybrid model (combining aspects of different models)",
+      "All of the above"
     ],
-    "correctAnswers": [
-      "Hybrid model (combining aspects of different models)"
+    correctAnswers: [
+      "All of the above"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 12,
-    "prompt": "Which of the following answers refers to a cryptographic file generated by an entity requesting a digital certificate from a CA?",
-    "choices": [
+    setId: "digital-certificates-1",
+    id: 12,
+    prompt: "Which of the following answers refers to a cryptographic file generated by an entity requesting a digital certificate from a CA?",
+    choices: [
       "OID",
       "CSR",
       "DN",
       "CRL"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "CSR"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 13,
-    "prompt": "A type of digital certificate that can be used to secure multiple subdomains within a primary domain is called:",
-    "choices": [
+    setId: "digital-certificates-1",
+    id: 13,
+    prompt: "A type of digital certificate that can be used to secure multiple subdomains within a primary domain is called:",
+    choices: [
       "Root signing certificate",
       "Subject Alternative Name (SAN) certificate",
       "Extended Validation (EV) certificate",
       "Wildcard certificate"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Wildcard certificate"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 14,
-    "prompt": "Which digital certificate type allows to secure multiple domain names or subdomains with a single certificate?",
-    "choices": [
+    setId: "digital-certificates-1",
+    id: 14,
+    prompt: "Which digital certificate type allows to secure multiple domain names or subdomains with a single certificate?",
+    choices: [
       "Extended Validation (EV) certificate",
       "Wildcard certificate",
       "Subject Alternative Name (SAN) certificate",
       "Root signing certificate"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Subject Alternative Name (SAN) certificate"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "digital-certificates-1",
-    "id": 15,
-    "prompt": "Which of the answers listed below refers to an identifier used for PKI objects?",
-    "choices": [
+    setId: "digital-certificates-1",
+    id: 15,
+    prompt: "Which of the answers listed below refers to an identifier used for PKI objects?",
+    choices: [
       "OID",
       "DN",
       "SAN",
       "GUID"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "OID"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "threat-actors-1",
-    "id": 1,
-    "prompt": "Which of the following terms is used to describe sophisticated and prolonged cyberattacks often carried out by well-funded and organized groups",
-    "choices": [
-      "such as nation-states?",
+    setId: "threat-actors-1",
+    id: 1,
+    prompt: "Which of the following terms is used to describe sophisticated and prolonged cyberattacks often carried out by well-funded and organized groups, such as nation-states?",
+    choices: [
       "MitM",
       "APT",
       "XSRF",
       "DDoS"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "APT"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "threat-actors-1",
-    "id": 2,
-    "prompt": "In IT security",
-    "choices": [
-      "the term \"Shadow IT\" is used to describe the practice of using IT systems",
-      "software",
-      "or services within an organization without the explicit approval or oversight of the organization's IT department.",
-      true,
-      false
+    setId: "threat-actors-1",
+    id: 2,
+    prompt: "In IT security, the term \"Shadow IT\" is used to describe the practice of using IT systems, software, or services within an organization without the explicit approval or oversight of the organization's IT department.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "True"
     ],
-    "select": 0
+    select: 1
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 1,
-    "prompt": "An attack surface is the sum of all the potential points (vulnerabilities) through which an attacker can interact with or compromise a system or network",
-    "choices": [
-      "indicating the overall exposure to potential threats. Examples of attack surfaces can be all software",
-      "hardware",
-      "and network interfaces with known security flaws. A threat vector represents the method or means through which a cyber threat is introduced or delivered to a target system. It outlines the pathway or avenue used by attackers to exploit vulnerabilities. Common threat vector types include phishing emails",
-      "malware",
-      "drive-by downloads",
-      "and social engineering techniques."
-    ],
-    "correctAnswers": [
-      "true"
-    ],
-    "select": 0
+    setId: "attack-surfaces-1",
+    id: 1,
+    prompt: "An attack surface is the sum of all the potential points (vulnerabilities) through which an attacker can interact with or compromise a system or network, indicating the overall exposure to potential threats. Examples of attack surfaces can be all software, hardware, and network interfaces with known security flaws. A threat vector represents the method or means through which a cyber threat is introduced or delivered to a target system. It outlines the pathway or avenue used by attackers to exploit vulnerabilities. Common threat vector types include phishing emails, malware, drive-by downloads, and social engineering techniques.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 2,
-    "prompt": "Which of the answers listed below refers to an email-based threat vector?",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 2,
+    prompt: "Which of the answers listed below refers to an email-based threat vector?",
+    choices: [
       "Spoofing",
       "Phishing",
       "BEC attacks",
@@ -16250,115 +15911,107 @@ export  const SetContent = [
       "Malware attachments",
       "All of the above"
     ],
-    "correctAnswers": [
-      "All of the above"
-    ],
-    "select": 1
+    correctAnswers: ["All of the above"],
+    select: 1
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 3,
-    "prompt": "Which of the following terms refers to a threat vector commonly associated with SMS-based communication?",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 3,
+    prompt: "Which of the following terms refers to a threat vector commonly associated with SMS-based communication?",
+    choices: [
       "Phishing",
       "Vishing",
       "Smishing",
       "Pharming"
     ],
-    "correctAnswers": [
-      "Smishing"
-    ],
-    "select": 1
+    correctAnswers: ["Smishing"],
+    select: 1
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 4,
-    "prompt": "Which of the answers listed below refers to an example of a potential threat vector in IM-based communication?",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 4,
+    prompt: "Which of the answers listed below refers to an example of a potential threat vector in IM-based communication?",
+    choices: [
       "Phishing attack",
       "Malware distribution",
       "Spoofing attack",
       "Eavesdropping",
       "Account hijacking",
-      "Malicious link/attachment"
-    ],
-    "correctAnswers": [
+      "Malicious link/attachment",
       "All of the above"
     ],
-    "select": null
+    correctAnswers: ["All of the above"],
+    select: 1
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 5,
-    "prompt": "Which of the following answers refer to examples of image-based threat vectors? (Select 3 answers)",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 5,
+    prompt: "Which of the following answers refer to examples of image-based threat vectors? (Select 3 answers)",
+    choices: [
       "Steganography",
       "BEC attacks",
       "Image spoofing (deepfakes)",
       "Brand impersonation",
       "Malware-embedded images"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Steganography",
       "Image spoofing (deepfakes)",
       "Malware-embedded images"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 6,
-    "prompt": "Which of the answers listed below refers to a file-based threat vector?",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 6,
+    prompt: "Which of the answers listed below refers to a file-based threat vector?",
+    choices: [
       "PDF exploits",
       "Malicious macros in documents",
-      "Compressed files (ZIP",
-      "RAR)",
+      "Compressed files (ZIP, RAR)",
       "Malicious scripts in web pages",
-      "Infected images"
+      "Infected images",
+      "Malicious executables",
+      "All of the above"
     ],
-    "correctAnswers": [
-      "Malicious executables"
-    ],
-    "select": null
+    correctAnswers: ["All of the above"],
+    select: 1
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 7,
-    "prompt": "Which of the following answer choices is an example of a threat vector type that is typical for voice communication?",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 7,
+    prompt: "Which of the following answer choices is an example of a threat vector type that is typical for voice communication?",
+    choices: [
       "Smishing",
       "Pharming",
       "Vishing",
       "Phishing"
     ],
-    "correctAnswers": [
-      "Vishing"
-    ],
-    "select": 1
+    correctAnswers: ["Vishing"],
+    select: 1
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 8,
-    "prompt": "Examples of threat vectors directly related to the use of removable devices include: (Select 2 answers)",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 8,
+    prompt: "Examples of threat vectors directly related to the use of removable devices include: (Select 2 answers)",
+    choices: [
       "Pretexting",
       "Malware delivery",
       "Watering hole attacks",
       "Data exfiltration",
       "Social engineering attacks"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Malware delivery",
       "Data exfiltration"
     ],
-    "select": 2
+    select: 2
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 9,
-    "prompt": "Which of the answers listed below refer(s) to client-based software threat vector(s)? (Select all that apply)",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 9,
+    prompt: "Which of the answers listed below refer(s) to client-based software threat vector(s)? (Select all that apply)",
+    choices: [
       "Drive-by download via web browser",
       "Malicious macro",
       "Vulnerability in a network protocol or device",
@@ -16366,48 +16019,52 @@ export  const SetContent = [
       "Infected executable file",
       "Malicious attachment in email application"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "Drive-by download via web browser",
+      "Malicious macro",
+      "USB-based attack",
+      "Infected executable file",
+      "Malicious attachment in email application"
     ],
-    "select": null
+    select: 5
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 10,
-    "prompt": "Which of the following answers refer to agentless software threat vectors? (Select 2 answers)",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 10,
+    prompt: "Which of the following answers refer to agentless software threat vectors? (Select 2 answers)",
+    choices: [
       "Phishing email",
       "Malicious USB drive",
       "Network protocol vulnerability",
       "Infected macro",
       "Packet sniffing"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Network protocol vulnerability",
       "Packet sniffing"
     ],
-    "select": 2
+    select: 2
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 11,
-    "prompt": "Exploiting known vulnerability is a common threat vector for:",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 11,
+    prompt: "Exploiting known vulnerability is a common threat vector for:",
+    choices: [
       "Legacy systems/apps",
       "Unsupported systems/apps",
       "Newly released systems/apps",
       "Systems/apps with zero-day vulnerability"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Unsupported systems/apps"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 12,
-    "prompt": "Which of the wireless technologies listed below are considered potential threat vectors and should be avoided due to their known vulnerabilities? (Select all that apply)",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 12,
+    prompt: "Which of the wireless technologies listed below are considered potential threat vectors and should be avoided due to their known vulnerabilities? (Select all that apply)",
+    choices: [
       "WPS",
       "WAP",
       "WPA",
@@ -16415,469 +16072,444 @@ export  const SetContent = [
       "WPA2",
       "WEP"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "WPS",
+      "WPA",
+      "WPA2",
+      "WEP"
     ],
-    "select": null
+    select: 4
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 13,
-    "prompt": "Which of the following answers refers to a threat vector characteristic only to wired networks?",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 13,
+    prompt: "Which of the following answers refers to a threat vector characteristic only to wired networks?",
+    choices: [
       "ARP Spoofing",
       "VLAN hopping",
       "Cable tapping",
       "Port sniffing",
       "All of the above"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Cable tapping"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 14,
-    "prompt": "Examples of threat vectors related to Bluetooth communication include: bluesmacking (a type of DoS attack that targets Bluetooth devices by overwhelming them with excessive traffic)",
-    "choices": [
-      "bluejacking (the practice of sending unsolicited messages or data to a Bluetooth-enabled device)",
-      "bluesnarfing (gaining unauthorized access to a Bluetooth device and data theft)",
-      "and bluebugging (gaining remote control over a Bluetooth device).",
-      true,
-      false
+    setId: "attack-surfaces-1",
+    id: 14,
+    prompt: "Examples of threat vectors related to Bluetooth communication include: bluesmacking (a type of DoS attack that targets Bluetooth devices by overwhelming them with excessive traffic), bluejacking (the practice of sending unsolicited messages or data to a Bluetooth-enabled device), bluesnarfing (gaining unauthorized access to a Bluetooth device and data theft), and bluebugging (gaining remote control over a Bluetooth device).",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "True"
     ],
-    "select": 0
+    select: 1
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 15,
-    "prompt": "Which of the answers listed below refers to the most probable cause of an unauthorized access caused by the exploitation of a specific network entry point?",
-    "choices": [
+    setId: "attack-surfaces-1",
+    id: 15,
+    prompt: "Which of the answers listed below refers to the most probable cause of an unauthorized access caused by the exploitation of a specific network entry point?",
+    choices: [
       "Outdated AV software",
       "Browser cookies",
       "Open service ports",
       "Insufficient logging and monitoring"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Open service ports"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 16,
-    "prompt": "The importance of changing default usernames and passwords can be illustrated by the example of certain network devices (such as routers)",
-    "choices": [
-      "which are often shipped with default and well-known admin credentials that can be looked up on the web. Leaving the default credentials unchanged expands the attack surface by providing an easy entry point for unauthorized access.",
-      true,
-      false
+    setId: "attack-surfaces-1",
+    id: 16,
+    prompt: "The importance of changing default usernames and passwords can be illustrated by the example of certain network devices (such as routers), which are often shipped with default and well-known admin credentials that can be looked up on the web. Leaving the default credentials unchanged expands the attack surface by providing an easy entry point for unauthorized access.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "True"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "attack-surfaces-1",
-    "id": 17,
-    "prompt": "Which of the following answers refer to common threat vectors that apply to MSPs",
-    "choices": [
-      "vendors",
-      "and suppliers in the supply chain? (Select 2 answers)",
+    setId: "attack-surfaces-1",
+    id: 17,
+    prompt: "Which of the following answers refer to common threat vectors that apply to MSPs, vendors, and suppliers in the supply chain? (Select 2 answers)",
+    choices: [
       "Compliance violations",
       "Brand reputation damage",
       "Propagation of malware",
-      "Operational disruptions"
-    ],
-    "correctAnswers": [
+      "Operational disruptions",
       "Social engineering techniques"
     ],
-    "select": 0
+    correctAnswers: [
+      "Propagation of malware",
+      "Social engineering techniques"
+    ],
+    select: 2
   },
-  {
-    "setId": "social-engineering-1",
-    "id": 1,
-    "prompt": "A social engineering technique whereby attackers under disguise of a legitimate request attempt to gain access to confidential information is commonly referred to as:",
-    "choices": [
+   {
+    setId: "social-engineering-1",
+    id: 1,
+    prompt: "A social engineering technique whereby attackers under disguise of a legitimate request attempt to gain access to confidential information is commonly referred to as:",
+    choices: [
       "Phishing",
       "Smishing",
       "Pharming",
       "Spoofing"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Phishing"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "social-engineering-1",
-    "id": 2,
-    "prompt": "The practice of using a telephone system to manipulate user into disclosing confidential information is known as:",
-    "choices": [
+    setId: "social-engineering-1",
+    id: 2,
+    prompt: "The practice of using a telephone system to manipulate user into disclosing confidential information is known as:",
+    choices: [
       "Whaling",
       "Spear phishing",
       "Vishing",
       "Pharming"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Vishing"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "social-engineering-1",
-    "id": 3,
-    "prompt": "Which of the following answers refers to a social engineering attack that exploits SMS or text messages to deceive recipients into taking harmful actions",
-    "choices": [
-      "such as revealing sensitive information or clicking malicious links?",
+    setId: "social-engineering-1",
+    id: 3,
+    prompt: "Which of the following answers refers to a social engineering attack that exploits SMS or text messages to deceive recipients into taking harmful actions, such as revealing sensitive information or clicking malicious links?",
+    choices: [
       "Pharming",
       "Spoofing",
       "Quishing",
       "Smishing"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "Smishing"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "social-engineering-1",
-    "id": 4,
-    "prompt": "Which of the terms listed below refers to false or misleading information that is spread unintentionally?",
-    "choices": [
+    setId: "social-engineering-1",
+    id: 4,
+    prompt: "Which of the terms listed below refers to false or misleading information that is spread unintentionally?",
+    choices: [
       "Astroturfing",
       "Disinformation",
       "Gaslighting",
       "Misinformation"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Misinformation"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "social-engineering-1",
-    "id": 5,
-    "prompt": "Which of the following terms best describes deliberately false or misleading information spread with the intent to deceive or manipulate?",
-    "choices": [
+    setId: "social-engineering-1",
+    id: 5,
+    prompt: "Which of the following terms best describes deliberately false or misleading information spread with the intent to deceive or manipulate?",
+    choices: [
       "Disinformation",
       "Deception",
       "Gaslighting",
       "Manipulation"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Disinformation"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "social-engineering-1",
-    "id": 6,
-    "prompt": "Which type of social engineering attack relies on identity fraud?",
-    "choices": [
+    setId: "social-engineering-1",
+    id: 6,
+    prompt: "Which type of social engineering attack relies on identity fraud?",
+    choices: [
       "Pretexting",
       "Spear phishing",
       "Tailgating",
       "Impersonation"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Impersonation"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "social-engineering-1",
-    "id": 7,
-    "prompt": "A BEC attack is an example of:",
-    "choices": [
+    setId: "social-engineering-1",
+    id: 7,
+    prompt: "A BEC attack is an example of:",
+    choices: [
       "Smishing",
       "Phishing",
       "Vishing",
       "Pharming"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Phishing"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "social-engineering-1",
-    "id": 8,
-    "prompt": "Which of the answers listed below refers to a social engineering technique where an attacker creates a fabricated scenario or situation to deceive the victim into revealing sensitive information?",
-    "choices": [
+    setId: "social-engineering-1",
+    id: 8,
+    prompt: "Which of the answers listed below refers to a social engineering technique where an attacker creates a fabricated scenario or situation to deceive the victim into revealing sensitive information?",
+    choices: [
       "Impersonation",
       "Credential harvesting",
       "Pretexting",
       "Watering hole attack"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Pretexting"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "social-engineering-1",
-    "id": 9,
-    "prompt": "Which of the following terms refers to a common platform for watering hole attacks?",
-    "choices": [
+    setId: "social-engineering-1",
+    id: 9,
+    prompt: "Which of the following terms refers to a common platform for watering hole attacks?",
+    choices: [
       "Mail gateways",
       "Websites",
       "PBX systems",
       "Web browsers"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Websites"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "social-engineering-1",
-    "id": 10,
-    "prompt": "A fake website mimicking a legitimate online retailer",
-    "choices": [
-      "designed to steal user login credentials is an example of:",
+    setId: "social-engineering-1",
+    id: 10,
+    prompt: "A fake website mimicking a legitimate online retailer, designed to steal user login credentials is an example of:",
+    choices: [
       "Malicious software",
       "Brand impersonation",
       "Identity fraud",
       "Watering hole attack"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "Brand impersonation"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "social-engineering-1",
-    "id": 11,
-    "prompt": "The term \"Typosquatting\" refers to a deceptive practice involving the deliberate registration of domain names with misspellings or slight variations that closely resemble well-established and popular domain names. The primary goal of this strategy is to exploit the common typographical errors made by users while entering URLs into their web browser's address bar. Beyond capturing inadvertent traffic",
-    "choices": [
-      "typosquatting may also be used for hosting phishing sites to trick users into divulging sensitive information",
-      "distributing malware through deceptive websites",
-      "generating ad revenue by redirecting mistyped traffic",
-      "or engaging in brand impersonation to harm the reputation of authentic brands or deceive users.",
-      true,
-      false
+    setId: "social-engineering-1",
+    id: 11,
+    prompt: "The term \"Typosquatting\" refers to a deceptive practice involving the deliberate registration of domain names with misspellings or slight variations that closely resemble well-established and popular domain names. The primary goal of this strategy is to exploit the common typographical errors made by users while entering URLs into their web browser's address bar. Beyond capturing inadvertent traffic, typosquatting may also be used for hosting phishing sites to trick users into divulging sensitive information, distributing malware through deceptive websites, generating ad revenue by redirecting mistyped traffic, or engaging in brand impersonation to harm the reputation of authentic brands or deceive users.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "True"
     ],
-    "select": 0
+    select: 1
   },
   {
-    "setId": "social-engineering-1",
-    "id": 12,
-    "prompt": "In email communication",
-    "choices": [
-      "what signs can be of help in recognizing a phishing attempt?",
+    setId: "social-engineering-1",
+    id: 12,
+    prompt: "In email communication, what signs can be of help in recognizing a phishing attempt?",
+    choices: [
       "The message contains poor spelling and grammar",
       "The message asks for personal information",
       "The message includes a call to action with a sense of urgency",
       "The message includes suspicious links or attachments",
       "Any of the above"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "Any of the above"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "social-engineering-1",
-    "id": 13,
-    "prompt": "What would be an appropriate user response to an email phishing attempt? (Select all that apply)",
-    "choices": [
+    setId: "social-engineering-1",
+    id: 13,
+    prompt: "What would be an appropriate user response to an email phishing attempt? (Select all that apply)",
+    choices: [
       "Not replying to the message or providing any personal information",
-      "Reporting the message to the IT or security department",
-      "if applicable",
+      "Reporting the message to the IT or security department, if applicable",
       "Deleting the message from the inbox",
       "Not clicking on any links or downloading any attachments in the message",
-      "Forwarding the message to the sender to verify its legitimacy"
-    ],
-    "correctAnswers": [
+      "Forwarding the message to the sender to verify its legitimacy",
       "Opening the attachment in a sandbox environment to check its safety"
     ],
-    "select": null
+    correctAnswers: [
+      "Not replying to the message or providing any personal information",
+      "Reporting the message to the IT or security department, if applicable",
+      "Deleting the message from the inbox",
+      "Not clicking on any links or downloading any attachments in the message"
+    ],
+    select: 4
   },
   {
-    "setId": "social-engineering-1",
-    "id": 14,
-    "prompt": "What is the best countermeasure against social engineering attacks?",
-    "choices": [
+    setId: "social-engineering-1",
+    id: 14,
+    prompt: "What is the best countermeasure against social engineering attacks?",
+    choices: [
       "Situational awareness",
       "Implicit deny policy",
       "User education",
       "Strong security controls"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "User education"
     ],
-    "select": 1
+    select: 1
   },
-  {
-    "setId": "vulnerabilities-1",
-    "id": 1,
-    "prompt": "Which type of application attack relies on introducing external code into the address space of a running program?",
-    "choices": [
+   {
+    setId: "vulnerabilities-1",
+    id: 1,
+    prompt: "Which type of application attack relies on introducing external code into the address space of a running program?",
+    choices: [
       "Buffer overflow",
       "Memory injection",
       "Replay attack",
       "Pointer dereference"
     ],
-    "correctAnswers": [
-      "Memory injection"
-    ],
-    "select": 1
+    correctAnswers: ["Memory injection"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 2,
-    "prompt": "A collection of precompiled functions designed to be used by more than one Microsoft Windows application simultaneously to save system resources is known as:",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 2,
+    prompt: "A collection of precompiled functions designed to be used by more than one Microsoft Windows application simultaneously to save system resources is known as:",
+    choices: [
       "DLL",
       "API",
       "EXE",
       "INI"
     ],
-    "correctAnswers": [
-      "DLL"
-    ],
-    "select": 1
+    correctAnswers: ["DLL"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 3,
-    "prompt": "Which of the answers listed below refers to an application attack that relies on executing a library of code?",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 3,
+    prompt: "Which of the answers listed below refers to an application attack that relies on executing a library of code?",
+    choices: [
       "Memory leak",
       "DLL injection",
       "Pointer dereference",
       "Buffer overflow"
     ],
-    "correctAnswers": [
-      "DLL injection"
-    ],
-    "select": 1
+    correctAnswers: ["DLL injection"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 4,
-    "prompt": "A type of exploit in which an application overwrites the contents of a memory area it should not have access to is called:",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 4,
+    prompt: "A type of exploit in which an application overwrites the contents of a memory area it should not have access to is called:",
+    choices: [
       "DLL injection",
       "Buffer overflow",
       "Memory leak",
       "Privilege escalation"
     ],
-    "correctAnswers": [
-      "Buffer overflow"
-    ],
-    "select": 1
+    correctAnswers: ["Buffer overflow"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 5,
-    "prompt": "A malfunction in a preprogrammed sequential access to a shared resource is described as:",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 5,
+    prompt: "A malfunction in a preprogrammed sequential access to a shared resource is described as:",
+    choices: [
       "Race condition",
       "Concurrency error",
       "Multithreading",
       "Synchronization error"
     ],
-    "correctAnswers": [
-      "Race condition"
-    ],
-    "select": 1
+    correctAnswers: ["Race condition"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 6,
-    "prompt": "A type of vulnerability where the state of a resource is verified at one point in time but may change before the resource is actually used is referred to as:",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 6,
+    prompt: "A type of vulnerability where the state of a resource is verified at one point in time but may change before the resource is actually used is referred to as:",
+    choices: [
       "TOC",
       "TOC/TOU",
       "TOU",
       "TSIG"
     ],
-    "correctAnswers": [
-      "TOC/TOU"
-    ],
-    "select": 1
+    correctAnswers: ["TOC/TOU"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 7,
-    "prompt": "A malicious application update is a type of malware that can be installed through a seemingly legitimate software update. The introduction of a malicious update into the application code can be enabled through various means",
-    "choices": [
-      "including:",
+    setId: "vulnerabilities-1",
+    id: 7,
+    prompt: "A malicious application update is a type of malware that can be installed through a seemingly legitimate software update. The introduction of a malicious update into the application code can be enabled through various means, including:",
+    choices: [
       "Unsigned application code",
       "Unencrypted update channel (HTTP vs HTTPS)",
       "Fake update website",
       "Unauthorized access to update server",
-      "Compromised software development process"
-    ],
-    "correctAnswers": [
+      "Compromised software development process",
       "All of the above"
     ],
-    "select": null
+    correctAnswers: ["All of the above"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 8,
-    "prompt": "Which of the following answers does not refer to a common type of OS-based vulnerability?",
-    "choices": [
-      "Access control and permissions vulnerabilities (weak passwords",
-      "privilege escalation)",
-      "Vulnerabilities in installed applications",
-      "system utilities",
-      "and device drivers",
-      "Memory-related vulnerabilities (memory leaks"
+    setId: "vulnerabilities-1",
+    id: 8,
+    prompt: "Which of the following answers does not refer to a common type of OS-based vulnerability?",
+    choices: [
+      "Access control and permissions vulnerabilities (weak passwords, privilege escalation)",
+      "Vulnerabilities in installed applications, system utilities, and device drivers",
+      "Memory-related vulnerabilities (memory leaks, buffer overflows, race conditions)",
+      "Patch and update management vulnerabilities (security patch and update delays, malicious updates)",
+      "Vulnerabilities related to system/security misconfigurations",
+      "Network-related vulnerabilities (DoS attacks, remote code execution attacks)",
+      "All of the above answer choices are examples of OS-based vulnerabilities"
     ],
-    "correctAnswers": [
-      "buffer overflows"
-    ],
-    "select": null
+    correctAnswers: ["All of the above answer choices are examples of OS-based vulnerabilities"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 9,
-    "prompt": "Which of the answers listed below refers to a security vulnerability that enables inserting malicious code into input fields",
-    "choices": [
-      "such search bars or login forms",
-      "to execute unauthorized commands on a database?",
+    setId: "vulnerabilities-1",
+    id: 9,
+    prompt: "Which of the answers listed below refers to a security vulnerability that enables inserting malicious code into input fields, such search bars or login forms, to execute unauthorized commands on a database?",
+    choices: [
       "RCE",
       "SQLi",
       "XSS",
       "CSRF"
     ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
+    correctAnswers: ["SQLi"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 10,
-    "prompt": "Which of the following indicates an SQL injection attack attempt?",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 10,
+    prompt: "Which of the following indicates an SQL injection attack attempt?",
+    choices: [
       "DELETE FROM itemDB WHERE itemID = '1';",
       "SELECT * FROM users WHERE userName = 'Alice' AND password = '' OR '1' = '1';",
       "DROP TABLE itemDB;",
-      "SELECT * FROM users WHERE email = 'example@example.com' AND password = '' ;"
+      "SELECT * FROM users WHERE email = 'example@example.com' AND password = '';"
     ],
-    "correctAnswers": [
-      "SELECT * FROM users WHERE userName = 'Alice' AND password = '' OR '1' = '1'",
-      ""
+    correctAnswers: [
+      "SELECT * FROM users WHERE userName = 'Alice' AND password = '' OR '1' = '1';"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 11,
-    "prompt": "Which of the answers listed below describe the characteristics of a cross-site scripting attack? (Select 3 answers)",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 11,
+    prompt: "Which of the answers listed below describe the characteristics of a cross-site scripting attack? (Select 3 answers)",
+    choices: [
       "Exploits the trust a user's web browser has in a website",
       "A malicious script is injected into a trusted website",
       "User's browser executes attacker's script",
@@ -16885,75 +16517,70 @@ export  const SetContent = [
       "A user is tricked by an attacker into submitting unauthorized web requests",
       "Website executes attacker's requests"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "Exploits the trust a user's web browser has in a website",
+      "A malicious script is injected into a trusted website",
+      "User's browser executes attacker's script"
     ],
-    "select": null
+    select: 3
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 12,
-    "prompt": "Which of the terms listed below refers to a situation in which a product or service may no longer receive security patches or other updates",
-    "choices": [
-      "making it more vulnerable to attack?",
+    setId: "vulnerabilities-1",
+    id: 12,
+    prompt: "Which of the terms listed below refers to a situation in which a product or service may no longer receive security patches or other updates, making it more vulnerable to attack?",
+    choices: [
       "EOL",
       "ALM",
       "EOS",
       "SDLC"
     ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": null
+    correctAnswers: ["EOL"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 13,
-    "prompt": "What is the main vulnerability related to legacy hardware?",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 13,
+    prompt: "What is the main vulnerability related to legacy hardware?",
+    choices: [
       "Compatibility issues",
       "Lack of security updates and patches",
       "Worn-out physical components",
       "Lack of skilled personnel to run it and maintain it"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Lack of security updates and patches"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 14,
-    "prompt": "The term \"VM escape\" refers to the process of breaking out of the boundaries of a guest operating system installation to access the primary hypervisor controlling all the virtual machines on the host machine.",
-    "choices": [
-      true,
-      false
+    setId: "vulnerabilities-1",
+    id: 14,
+    prompt: "The term \"VM escape\" refers to the process of breaking out of the boundaries of a guest operating system installation to access the primary hypervisor controlling all the virtual machines on the host machine.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      "true"
-    ],
-    "select": 1
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 15,
-    "prompt": "Which of the following answers refers to a virtualization-related vulnerability where virtualized assets allocated to one VM are improperly isolated and can be accessed or compromised by another VM?",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 15,
+    prompt: "Which of the following answers refers to a virtualization-related vulnerability where virtualized assets allocated to one VM are improperly isolated and can be accessed or compromised by another VM?",
+    choices: [
       "Resource reuse",
       "Privilege escalation",
       "Resource exhaustion",
       "Concurrent session usage"
     ],
-    "correctAnswers": [
-      "Resource reuse"
-    ],
-    "select": 1
+    correctAnswers: ["Resource reuse"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 16,
-    "prompt": "Which of the answers listed below refers to a cloud-related vulnerability type?",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 16,
+    prompt: "Which of the answers listed below refers to a cloud-related vulnerability type?",
+    choices: [
       "Insecure APIs",
       "Poor access controls",
       "Lack of security updates",
@@ -16961,184 +16588,175 @@ export  const SetContent = [
       "Shadow IT / Malicious insiders",
       "All of the above"
     ],
-    "correctAnswers": [
-      "All of the above"
-    ],
-    "select": 1
+    correctAnswers: ["All of the above"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 17,
-    "prompt": "The practice of installing mobile apps from websites and app stores other than the official marketplaces is referred to as:",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 17,
+    prompt: "The practice of installing mobile apps from websites and app stores other than the official marketplaces is referred to as:",
+    choices: [
       "Jailbreaking",
       "Rooting",
       "Sideloading",
       "Carrier unlocking"
     ],
-    "correctAnswers": [
-      "Sideloading"
-    ],
-    "select": 1
+    correctAnswers: ["Sideloading"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 18,
-    "prompt": "Which of the following terms is used to describe the process of removing software restrictions imposed by Apple on its iOS operating system?",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 18,
+    prompt: "Which of the following terms is used to describe the process of removing software restrictions imposed by Apple on its iOS operating system?",
+    choices: [
       "Sideloading",
       "Carrier unlocking",
       "Rooting",
       "Jailbreaking"
     ],
-    "correctAnswers": [
-      "Jailbreaking"
-    ],
-    "select": 1
+    correctAnswers: ["Jailbreaking"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 19,
-    "prompt": "The term \"Rooting\" refers to the capability of gaining administrative access to the operating system and system applications on:",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 19,
+    prompt: "The term \"Rooting\" refers to the capability of gaining administrative access to the operating system and system applications on:",
+    choices: [
       "Android devices",
       "iOS devices",
       "Microsoft devices",
       "All types of mobile devices"
     ],
-    "correctAnswers": [
-      "Android devices"
-    ],
-    "select": 1
+    correctAnswers: ["Android devices"],
+    select: 1
   },
   {
-    "setId": "vulnerabilities-1",
-    "id": 20,
-    "prompt": "A type of attack aimed at exploiting vulnerability that is present in already released software but unknown to the software developer is known as:",
-    "choices": [
+    setId: "vulnerabilities-1",
+    id: 20,
+    prompt: "A type of attack aimed at exploiting vulnerability that is present in already released software but unknown to the software developer is known as:",
+    choices: [
       "On-path attack",
       "IV attack",
       "Zero-day attack",
       "Replay attack"
     ],
-    "correctAnswers": [
-      "Zero-day attack"
-    ],
-    "select": 1
+    correctAnswers: ["Zero-day attack"],
+    select: 1
   },
   {
-    "setId": "malware-1",
-    "id": 1,
-    "prompt": "Malware that restricts access to a computer system by encrypting files or locking the entire system down until the user performs requested action is called:",
-    "choices": [
+    setId: "malware-1",
+    id: 1,
+    prompt: "Malware that restricts access to a computer system by encrypting files or locking the entire system down until the user performs requested action is called:",
+    choices: [
       "Grayware",
       "Adware",
       "Ransomware",
       "Spyware"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Ransomware"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "malware-1",
-    "id": 2,
-    "prompt": "A Trojan horse is a type of software that performs harmful actions under the guise of a legitimate and useful program. The most characteristic feature of Trojan horse is that while it may function as a legitimate program and possess all the expected functionalities",
-    "choices": [
-      "it also contains a concealed portion of malicious code that the user is unaware of.",
-      true,
-      false
+    setId: "malware-1",
+    id: 2,
+    prompt: "A Trojan horse is a type of software that performs harmful actions under the guise of a legitimate and useful program. The most characteristic feature of Trojan horse is that while it may function as a legitimate program and possess all the expected functionalities, it also contains a concealed portion of malicious code that the user is unaware of.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "True"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "malware-1",
-    "id": 3,
-    "prompt": "Which type of Trojan enables unauthorized remote access to a compromised system?",
-    "choices": [
+    setId: "malware-1",
+    id: 3,
+    prompt: "Which type of Trojan enables unauthorized remote access to a compromised system?",
+    choices: [
       "APT",
       "RAT",
       "MaaS",
       "PUP"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "RAT"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "malware-1",
-    "id": 4,
-    "prompt": "A standalone malicious computer program that typically propagates itself over a computer network to adversely affect system resources and network bandwidth is referred to as:",
-    "choices": [
+    setId: "malware-1",
+    id: 4,
+    prompt: "A standalone malicious computer program that typically propagates itself over a computer network to adversely affect system resources and network bandwidth is referred to as:",
+    choices: [
       "Worm",
       "Fileless virus",
       "Bot",
       "Logic bomb"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Worm"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "malware-1",
-    "id": 5,
-    "prompt": "Malicious software collecting information about users without their knowledge/consent is known as:",
-    "choices": [
+    setId: "malware-1",
+    id: 5,
+    prompt: "Malicious software collecting information about users without their knowledge/consent is known as:",
+    choices: [
       "Cryptomalware",
       "Adware",
       "Ransomware",
       "Spyware"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Spyware"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "malware-1",
-    "id": 6,
-    "prompt": "Which of the answers listed below refer to the characteristic features of bloatware? (Select 3 answers)",
-    "choices": [
+    setId: "malware-1",
+    id: 6,
+    prompt: "Which of the answers listed below refer to the characteristic features of bloatware? (Select 3 answers)",
+    choices: [
       "Pre-installed on a device by the device manufacturer or retailer",
       "Generally considered undesirable due to negative impact on system performance",
       "Installed without user consent",
-      "Can be pre-installed",
-      "downloaded",
-      "or bundled with other software"
+      "Can be pre-installed, downloaded, or bundled with other software",
+      "Generally considered undesirable due to negative impact on system performance, privacy, and security"
     ],
-    "correctAnswers": [
+    correctAnswers: [
+      "Pre-installed on a device by the device manufacturer or retailer",
+      "Generally considered undesirable due to negative impact on system performance",
+      "Installed without user consent"
+    ],
+    select: 3
+  },
+  {
+    setId: "malware-1",
+    id: 7,
+    prompt: "Which of the following answers refer to the characteristics of a PUP? (Select 3 answers)",
+    choices: [
+      "Often installed without clear user consent",
+      "Can be pre-installed, downloaded, or bundled with other software",
+      "Generally considered undesirable due to negative impact on system performance, privacy, and security",
+      "Pre-installed on a device by the device manufacturer or retailer",
       "Generally considered undesirable due to negative impact on system performance"
     ],
-    "select": null
-  },
-  {
-    "setId": "malware-1",
-    "id": 7,
-    "prompt": "Which of the following answers refer to the characteristics of a PUP? (Select 3 answers)",
-    "choices": [
+    correctAnswers: [
       "Often installed without clear user consent",
-      "Can be pre-installed",
-      "downloaded",
-      "or bundled with other software",
-      "Generally considered undesirable due to negative impact on system performance",
-      "privacy"
+      "Can be pre-installed, downloaded, or bundled with other software",
+      "Generally considered undesirable due to negative impact on system performance, privacy, and security"
     ],
-    "correctAnswers": [
-      "and security"
-    ],
-    "select": null
+    select: 3
   },
   {
-    "setId": "malware-1",
-    "id": 8,
-    "prompt": "Which of the statements listed below apply to the definition of a computer virus? (Select 3 answers)",
-    "choices": [
+    setId: "malware-1",
+    id: 8,
+    prompt: "Which of the statements listed below apply to the definition of a computer virus? (Select 3 answers)",
+    choices: [
       "A self-replicating computer program containing malicious segment",
       "Malware that typically requires its host application to be run to make the virus active",
       "A standalone malicious computer program that replicates itself over a computer network",
@@ -17146,400 +16764,360 @@ export  const SetContent = [
       "Malicious code that typically attaches itself to an application program or other executable component",
       "A self-contained malicious program or code that does need a host to propagate itself"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "A self-replicating computer program containing malicious segment",
+      "Malware that typically requires its host application to be run to make the virus active",
+      "Malicious code that typically attaches itself to an application program or other executable component"
     ],
-    "select": null
+    select: 3
   },
   {
-    "setId": "malware-1",
-    "id": 9,
-    "prompt": "Which of the following is an example of spyware?",
-    "choices": [
+    setId: "malware-1",
+    id: 9,
+    prompt: "Which of the following is an example of spyware?",
+    choices: [
       "Keylogger",
       "Vulnerability scanner",
       "Computer worm",
       "Packet sniffer"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Keylogger"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "malware-1",
-    "id": 10,
-    "prompt": "Malicious code activated by a specific event is called:",
-    "choices": [
+    setId: "malware-1",
+    id: 10,
+    prompt: "Malicious code activated by a specific event is called:",
+    choices: [
       "Cryptomalware",
       "Backdoor",
       "Rootkit",
       "Logic bomb"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Logic bomb"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "malware-1",
-    "id": 11,
-    "prompt": "Which of the following answers refers to a collection of software tools used by a hacker to mask intrusion and obtain administrator-level access to a computer or computer network?",
-    "choices": [
+    setId: "malware-1",
+    id: 11,
+    prompt: "Which of the following answers refers to a collection of software tools used by a hacker to mask intrusion and obtain administrator-level access to a computer or computer network?",
+    choices: [
       "Rootkit",
       "Spyware",
       "Backdoor",
       "Trojan"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Rootkit"
     ],
-    "select": 1
+    select: 1
+  },
+    {
+    setId: "network-attacks-1",
+    id: 1,
+    prompt: "As opposed to simple DoS attacks that usually are performed from a single system, a DDoS attack uses multiple compromised computer systems to perform the attack against its target. The intermediary systems that are used as a platform for the attack (often referred to as zombies, and collectively as a botnet) are the secondary victims of the DDoS attack.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "network-attacks-1",
-    "id": 1,
-    "prompt": "As opposed to simple DoS attacks that usually are performed from a single system",
-    "choices": [
-      "a DDoS attack uses multiple compromised computer systems to perform the attack against its target. The intermediary systems that are used as a platform for the attack (often referred to as zombies",
-      "and collectively as a botnet) are the secondary victims of the DDoS attack.",
-      true,
-      false
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
-  },
-  {
-    "setId": "network-attacks-1",
-    "id": 2,
-    "prompt": "A type of DDoS attack where an attacker exploits vulnerabilities in certain services or protocols to generate responses that are much larger than the original request is referred to as:",
-    "choices": [
+    setId: "network-attacks-1",
+    id: 2,
+    prompt: "A type of DDoS attack where an attacker exploits vulnerabilities in certain services or protocols to generate responses that are much larger than the original request is referred to as:",
+    choices: [
       "Amplified DDoS attack",
       "Volumetric DDoS attack",
       "Reflected DDoS attack",
       "Application DDoS attack"
     ],
-    "correctAnswers": [
-      "Amplified DDoS attack"
-    ],
-    "select": 1
+    correctAnswers: ["Amplified DDoS attack"],
+    select: 1
   },
   {
-    "setId": "network-attacks-1",
-    "id": 3,
-    "prompt": "What defines a reflected DDoS attack?",
-    "choices": [
+    setId: "network-attacks-1",
+    id: 3,
+    prompt: "What defines a reflected DDoS attack?",
+    choices: [
       "Overwhelming the target with a high volume of traffic to saturate its bandwidth",
       "Exploiting vulnerabilities in network protocols to consume resources and disrupt services",
       "Utilizing third-party servers to reflect and amplify attack traffic towards the target",
       "Targeting vulnerabilities in applications or web servers to exhaust resources"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Utilizing third-party servers to reflect and amplify attack traffic towards the target"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "network-attacks-1",
-    "id": 4,
-    "prompt": "A DNS amplification attack is a type of DDoS attack wherein an attacker sends a small",
-    "choices": [
-      "specially crafted DNS query containing a spoofed IP address (the victim’s IP) to a compromised DNS server. Upon receiving the query",
-      "the DNS server generates a much larger response packet",
-      "which is then sent to the victim's IP address",
-      "causing potential disruption due to overwhelming traffic.",
-      true,
-      false
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
+    setId: "network-attacks-1",
+    id: 4,
+    prompt: "A DNS amplification attack is a type of DDoS attack wherein an attacker sends a small, specially crafted DNS query containing a spoofed IP address (the victim’s IP) to a compromised DNS server. Upon receiving the query, the DNS server generates a much larger response packet, which is then sent to the victim's IP address, causing potential disruption due to overwhelming traffic.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "network-attacks-1",
-    "id": 5,
-    "prompt": "Which of the answers listed below refers to a cyberattack technique that relies on providing false DNS information to a DNS resolver for the purpose of redirecting or manipulating the resolution of domain names to malicious IP addresses?",
-    "choices": [
+    setId: "network-attacks-1",
+    id: 5,
+    prompt: "Which of the answers listed below refers to a cyberattack technique that relies on providing false DNS information to a DNS resolver for the purpose of redirecting or manipulating the resolution of domain names to malicious IP addresses?",
+    choices: [
       "DNS spoofing",
       "Credential stuffing",
       "URL hijacking",
       "Domain hijacking"
     ],
-    "correctAnswers": [
-      "DNS spoofing"
-    ],
-    "select": 1
+    correctAnswers: ["DNS spoofing"],
+    select: 1
   },
   {
-    "setId": "network-attacks-1",
-    "id": 6,
-    "prompt": "Remapping a domain name to a rogue IP address is an example of what kind of exploit?",
-    "choices": [
+    setId: "network-attacks-1",
+    id: 6,
+    prompt: "Remapping a domain name to a rogue IP address is an example of what kind of exploit?",
+    choices: [
       "URL hijacking",
       "DNS cache poisoning",
       "Domain hijacking",
       "ARP poisoning"
     ],
-    "correctAnswers": [
-      "DNS cache poisoning"
-    ],
-    "select": 1
+    correctAnswers: ["DNS cache poisoning"],
+    select: 1
   },
   {
-    "setId": "network-attacks-1",
-    "id": 7,
-    "prompt": "When domain registrants due to unlawful actions of third parties lose control over their domain names",
-    "choices": [
-      "they fall victim to:",
+    setId: "network-attacks-1",
+    id: 7,
+    prompt: "When domain registrants due to unlawful actions of third parties lose control over their domain names, they fall victim to:",
+    choices: [
       "Sybil attack",
       "Domain hijacking",
       "Typosquatting",
       "URL hijacking"
     ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": null
+    correctAnswers: ["Domain hijacking"],
+    select: 1
   },
   {
-    "setId": "network-attacks-1",
-    "id": 8,
-    "prompt": "The practice of gaining unauthorized access to a Bluetooth device is known as:",
-    "choices": [
+    setId: "network-attacks-1",
+    id: 8,
+    prompt: "The practice of gaining unauthorized access to a Bluetooth device is known as:",
+    choices: [
       "Phishing",
       "Bluejacking",
       "Smishing",
       "Bluesnarfing"
     ],
-    "correctAnswers": [
-      "Bluesnarfing"
-    ],
-    "select": 1
+    correctAnswers: ["Bluesnarfing"],
+    select: 1
   },
   {
-    "setId": "network-attacks-1",
-    "id": 9,
-    "prompt": "A wireless disassociation attack is a type of: (Select 2 answers)",
-    "choices": [
+    setId: "network-attacks-1",
+    id: 9,
+    prompt: "A wireless disassociation attack is a type of: (Select 2 answers)",
+    choices: [
       "Downgrade attack",
       "Deauthentication attack",
       "Brute-force attack",
       "DoS attack",
       "Cryptographic attack"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Deauthentication attack",
       "DoS attack"
     ],
-    "select": 2
+    select: 2
   },
   {
-    "setId": "network-attacks-1",
-    "id": 10,
-    "prompt": "A wireless jamming attack is a type of:",
-    "choices": [
+    setId: "network-attacks-1",
+    id: 10,
+    prompt: "A wireless jamming attack is a type of:",
+    choices: [
       "Cryptographic attack",
       "DoS attack",
       "Brute-force attack",
       "Downgrade attack"
     ],
-    "correctAnswers": [
-      "DoS attack"
-    ],
-    "select": 1
+    correctAnswers: ["DoS attack"],
+    select: 1
   },
   {
-    "setId": "network-attacks-1",
-    "id": 11,
-    "prompt": "Which wireless attack focuses on exploiting vulnerabilities found in WEP?",
-    "choices": [
+    setId: "network-attacks-1",
+    id: 11,
+    prompt: "Which wireless attack focuses on exploiting vulnerabilities found in WEP?",
+    choices: [
       "IV attack",
       "War driving",
       "SSID spoofing",
       "Bluejacking"
     ],
-    "correctAnswers": [
-      "IV attack"
-    ],
-    "select": 1
+    correctAnswers: ["IV attack"],
+    select: 1
   },
   {
-    "setId": "network-attacks-1",
-    "id": 12,
-    "prompt": "Which of the following statements can be used to describe the characteristics of an on-path attack? (Select all that apply)",
-    "choices": [
+    setId: "network-attacks-1",
+    id: 12,
+    prompt: "Which of the following statements can be used to describe the characteristics of an on-path attack? (Select all that apply)",
+    choices: [
       "An on-path attack is also known as MITM attack",
       "Attackers place themselves on the communication route between two devices",
       "Attackers intercept or modify packets sent between two communicating devices",
-      "Attackers do not have access to packets exchanged during the communication between two devices",
-      "An on-path attack is also known as MITM attack;Attackers place themselves on the communication route between two devices;Attackers intercept or modify packets sent between two communicating devices"
+      "Attackers do not have access to packets exchanged during the communication between two devices"
     ],
-    "correctAnswers": [
-      "3"
+    correctAnswers: [
+      "An on-path attack is also known as MITM attack",
+      "Attackers place themselves on the communication route between two devices",
+      "Attackers intercept or modify packets sent between two communicating devices"
     ],
-    "select": 0
+    select: 3
   },
   {
-    "setId": "network-attacks-1",
-    "id": 13,
-    "prompt": "A network replay attack occurs when an attacker captures sensitive user data and resends it to the receiver with the intent of gaining unauthorized access or tricking the receiver into unauthorized operations.",
-    "choices": [
-      true,
-      false
-    ],
-    "correctAnswers": [
-      "true"
-    ],
-    "select": 1
+    setId: "network-attacks-1",
+    id: 13,
+    prompt: "A network replay attack occurs when an attacker captures sensitive user data and resends it to the receiver with the intent of gaining unauthorized access or tricking the receiver into unauthorized operations.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "network-attacks-1",
-    "id": 14,
-    "prompt": "What are the characteristic features of a session ID? (Select 3 answers)",
-    "choices": [
+    setId: "network-attacks-1",
+    id: 14,
+    prompt: "What are the characteristic features of a session ID? (Select 3 answers)",
+    choices: [
       "Typically stored on the server side",
       "A unique identifier assigned by the website to a specific user",
-      "Contains user's authentication credentials",
-      "e.g.",
-      "username and password",
-      "A piece of data that can be stored in a cookie"
+      "Contains user's authentication credentials, e.g., username and password",
+      "A piece of data that can be stored in a cookie, or embedded as an URL parameter",
+      "Typically stored on the client side (in the user's browser) rather than on the server",
+      "A unique identifier assigned to a server"
     ],
-    "correctAnswers": [
-      "or embedded as an URL parameter"
+    correctAnswers: [
+      "A unique identifier assigned by the website to a specific user",
+      "A piece of data that can be stored in a cookie, or embedded as an URL parameter",
+      "Typically stored on the client side (in the user's browser) rather than on the server"
     ],
-    "select": null
+    select: 3
   },
   {
-    "setId": "network-attacks-1",
-    "id": 15,
-    "prompt": "In a session replay attack",
-    "choices": [
-      "an attacker intercepts and steals a valid session ID of a user and resends it to the server with the intent of gaining unauthorized access to the user's session or tricking the server into unauthorized operations on behalf of the legitimate user.",
-      true,
-      false
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 1
+    setId: "network-attacks-1",
+    id: 15,
+    prompt: "In a session replay attack, an attacker intercepts and steals a valid session ID of a user and resends it to the server with the intent of gaining unauthorized access to the user's session or tricking the server into unauthorized operations on behalf of the legitimate user.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "network-attacks-1",
-    "id": 16,
-    "prompt": "A technique that allows an attacker to authenticate to a remote server without extracting cleartext password from a digest is called:",
-    "choices": [
+    setId: "network-attacks-1",
+    id: 16,
+    prompt: "A technique that allows an attacker to authenticate to a remote server without extracting cleartext password from a digest is called:",
+    choices: [
       "Pass the hash",
       "Replay attack",
       "Brute-force attack",
       "Spraying attack"
     ],
-    "correctAnswers": [
-      "Pass the hash"
-    ],
-    "select": 1
+    correctAnswers: ["Pass the hash"],
+    select: 1
   },
   {
-    "setId": "application-attacks-1",
-    "id": 1,
-    "prompt": "What type of action allows an attacker to exploit the XSS vulnerability?",
-    "choices": [
+    setId: "application-attacks-1",
+    id: 1,
+    prompt: "What type of action allows an attacker to exploit the XSS vulnerability?",
+    choices: [
       "Code injection",
       "Privilege escalation",
       "Session hijacking",
       "Packet sniffing"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Code injection"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "application-attacks-1",
-    "id": 2,
-    "prompt": "Which of the following exploits targets a protocol used for managing and accessing networked resources?",
-    "choices": [
+    setId: "application-attacks-1",
+    id: 2,
+    prompt: "Which of the following exploits targets a protocol used for managing and accessing networked resources?",
+    choices: [
       "CSRF/XSRF attack",
       "XML injection attack",
       "LDAP injection attack",
       "SQL injection attack"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "LDAP injection attack"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "application-attacks-1",
-    "id": 3,
-    "prompt": "Which type of exploit targets web applications that generate content used to store and transport data?",
-    "choices": [
+    setId: "application-attacks-1",
+    id: 3,
+    prompt: "Which type of exploit targets web applications that generate content used to store and transport data?",
+    choices: [
       "SQL injection attack",
       "CSRF/XSRF attack",
       "XML injection attack",
       "LDAP injection attack"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "XML injection attack"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "application-attacks-1",
-    "id": 4,
-    "prompt": "A type of exploit that relies on overwriting contents of memory to cause unpredictable results in an application is referred to as:",
-    "choices": [
+    setId: "application-attacks-1",
+    id: 4,
+    prompt: "A type of exploit that relies on overwriting contents of memory to cause unpredictable results in an application is referred to as:",
+    choices: [
       "IV attack",
       "Privilege escalation",
       "Buffer overflow",
       "DLL injection"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Buffer overflow"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "application-attacks-1",
-    "id": 5,
-    "prompt": "A situation where an attacker intercepts and retransmits valid data exchange between an application and a server",
-    "choices": [
-      "or another application is known as:",
+    setId: "application-attacks-1",
+    id: 5,
+    prompt: "A situation where an attacker intercepts and retransmits valid data exchange between an application and a server, or another application is known as:",
+    choices: [
       "Sideloading",
       "Replay attack",
       "Phishing attack",
       "Race condition"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "Replay attack"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "application-attacks-1",
-    "id": 6,
-    "prompt": "Which of the following facilitate(s) privilege escalation attacks? (Select all that apply)",
-    "choices": [
+    setId: "application-attacks-1",
+    id: 6,
+    prompt: "Which of the following facilitate(s) privilege escalation attacks? (Select all that apply)",
+    choices: [
       "System/application vulnerabilities",
       "Password hashing",
       "System/application misconfigurations",
       "Network segmentation",
       "Social engineering techniques"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "System/application vulnerabilities",
       "System/application misconfigurations",
       "Social engineering techniques"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "application-attacks-1",
-    "id": 7,
-    "prompt": "Which of the statements listed below apply to the CSRF/XSRF attack? (Select 3 answers)",
-    "choices": [
+    setId: "application-attacks-1",
+    id: 7,
+    prompt: "Which of the statements listed below apply to the CSRF/XSRF attack? (Select 3 answers)",
+    choices: [
       "Exploits the trust a website has in the user's web browser",
       "A user is tricked by an attacker into submitting unauthorized web requests",
       "Website executes attacker's requests",
@@ -17547,744 +17125,1554 @@ export  const SetContent = [
       "A malicious script is injected into a trusted website",
       "User's browser executes attacker's script"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "Exploits the trust a website has in the user's web browser",
+      "A user is tricked by an attacker into submitting unauthorized web requests",
+      "Website executes attacker's requests"
     ],
-    "select": null
+    select: 3
   },
   {
-    "setId": "application-attacks-1",
-    "id": 8,
-    "prompt": "A dot-dot-slash attack is also referred to as:",
-    "choices": [
+    setId: "application-attacks-1",
+    id: 8,
+    prompt: "A dot-dot-slash attack is also referred to as:",
+    choices: [
       "Disassociation attack",
       "On-path attack",
       "Directory traversal attack",
       "Downgrade attack"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Directory traversal attack"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "application-attacks-1",
-    "id": 9,
-    "prompt": "Which of the following URLs is a potential indicator of a directory traversal attack?",
-    "choices": [
+    setId: "application-attacks-1",
+    id: 9,
+    prompt: "Which of the following URLs is a potential indicator of a directory traversal attack?",
+    choices: [
       "http://www.example.com/var/../etc/passwd",
       "http://www.example.com/var/www/../../etc/passwd",
       "http://www.example.com/var/www/files/../../../etc/passwd",
       "http://www.example.com/var/www/files/images/../../../../etc/passwd",
       "Any of the above"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Any of the above"
     ],
-    "select": 1
+    select: 1
+  },
+
+
+ {
+    setId: "ioc-1",
+    id: 1,
+    prompt: "A type of forensic evidence that can be used to detect unauthorized access attempts or other malicious activities is called:",
+    choices: [
+      "CVE",
+      "IoC",
+      "AIS",
+      "OSINT"
+    ],
+    correctAnswers: [
+      "IoC"
+    ],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 1,
-    "prompt": "Vulnerability scanning: (Select all that apply)",
-    "choices": [
+    setId: "ioc-1",
+    id: 2,
+    prompt: "An account lockout might indicate which type of malicious activity?",
+    choices: [
+      "Attempt to deliver malicious content",
+      "DoS attack",
+      "Account compromise",
+      "Password brute-forcing attempt"
+    ],
+    correctAnswers: [
+      "Password brute-forcing attempt"
+    ],
+    select: 1
+  },
+  {
+    setId: "ioc-1",
+    id: 3,
+    prompt: "Which of the terms listed below most accurately describes a situation wherein a single account is being used from multiple locations/devices at the same time?",
+    choices: [
+      "Spraying attack",
+      "Concurrent session usage",
+      "Single Sign-On (SSO)",
+      "Impossible travel"
+    ],
+    correctAnswers: [
+      "Concurrent session usage"
+    ],
+    select: 1
+  },
+  {
+    setId: "ioc-1",
+    id: 4,
+    prompt: "Which of the following terms refers to a malicious activity indicator in a situation where a firewall or other security measure prevents an attempt to deliver malicious payload or perform an unauthorized action?",
+    choices: [
+      "DoS attack",
+      "Resource inaccessibility",
+      "Blocked content",
+      "Excessive system resource consumption"
+    ],
+    correctAnswers: [
+      "Blocked content"
+    ],
+    select: 1
+  },
+  {
+    setId: "ioc-1",
+    id: 5,
+    prompt: "Which of the terms listed below most accurately describes a situation wherein an account is accessed from a location that is physically impossible for the user to be in?",
+    choices: [
+      "Login time restrictions",
+      "Impossible travel",
+      "Concurrent session usage",
+      "Out-of-cycle logging"
+    ],
+    correctAnswers: [
+      "Impossible travel"
+    ],
+    select: 1
+  },
+  {
+    setId: "ioc-1",
+    id: 6,
+    prompt: "The term \"Out-of-cycle logging\" refers to instances where systems or applications produce logs outside their regular intervals or in abnormal volumes, potentially signaling malicious activity.",
+    choices: [
+      "True",
+      "False"
+    ],
+    correctAnswers: [
+      "True"
+    ],
+    select: 1
+  },
+  {
+    setId: "ioc-1",
+    id: 7,
+    prompt: "Which of the following would indicate an attempt to hide evidence of malicious activity?",
+    choices: [
+      "Account lockout",
+      "Resource inaccessibility",
+      "Missing logs",
+      "Concurrent session usage"
+    ],
+    correctAnswers: [
+      "Missing logs"
+    ],
+    select: 1
+  },
+
+  {
+    setId: "data-protection-1",
+    id: 1,
+    prompt: "Which of the answers listed below refers to any type of information pertaining to an individual that can be used to uniquely identify that person?",
+    choices: ["PHI", "Biometrics", "ID", "PII"],
+    correctAnswers: ["PII"],
+    select: 1
+  },
+  {
+    setId: "data-protection-1",
+    id: 2,
+    prompt: "Which of the following regulates personal data privacy of the EU citizens?",
+    choices: ["PHI", "HIPAA", "PCI DSS", "GDPR"],
+    correctAnswers: ["GDPR"],
+    select: 1
+  },
+  {
+    setId: "data-protection-1",
+    id: 3,
+    prompt: "The US Health Insurance Portability and Accountability Act (HIPAA) provides privacy protection for:",
+    choices: ["PII", "PI", "PHI", "PIV"],
+    correctAnswers: ["PHI"],
+    select: 1
+  },
+  {
+    setId: "data-protection-1",
+    id: 4,
+    prompt: "The purpose of PCI DSS is to provide protection for:",
+    choices: ["Credit cardholder data", "Licensed software", "User passwords", "Personal health information"],
+    correctAnswers: ["Credit cardholder data"],
+    select: 1
+  },
+  {
+    setId: "data-protection-1",
+    id: 5,
+    prompt: "Which of the answers listed below refer(s) to encryption method(s) used to protect data at rest? (Select all that apply)",
+    choices: ["FDE", "SED", "IPsec", "TLS", "VPN", "EFS"],
+    correctAnswers: ["FDE", "SED", "EFS"],
+    select: 3
+  },
+  {
+    setId: "data-protection-1",
+    id: 6,
+    prompt: "Encryption methods used to protect data in transit include: (Select all that apply)",
+    choices: ["NFS", "VPN", "SED", "IPsec", "FDE", "TLS"],
+    correctAnswers: ["VPN", "IPsec", "TLS"],
+    select: 3
+  },
+  {
+    setId: "data-protection-1",
+    id: 7,
+    prompt: "Which of the following data states typically requires data to be processed in an unencrypted form?",
+    choices: ["Data in motion", "Data at rest", "Data in transit", "Data in use"],
+    correctAnswers: ["Data in use"],
+    select: 1
+  },
+  {
+    setId: "data-protection-1",
+    id: 8,
+    prompt: "Which of the answers listed below refer to examples of non-human readable data types? (Select 2 answers)",
+    choices: ["Binary code", "XML files", "Machine language", "HTML code", "SQL queries"],
+    correctAnswers: ["Binary code", "Machine language"],
+    select: 2
+  },
+  {
+    setId: "data-protection-1",
+    id: 9,
+    prompt: "Which of the following answers refers to an individual or role responsible for overseeing and ensuring compliance with data protection laws and policies within an organization?",
+    choices: ["CTO", "DPO", "CIO", "CSO"],
+    correctAnswers: ["DPO"],
+    select: 1
+  },
+  {
+    setId: "data-protection-1",
+    id: 10,
+    prompt: "A mobile device's built-in functionality enabling the usage of locator applications is known as:",
+    choices: ["WPS", "GSM", "SIM", "GPS"],
+    correctAnswers: ["GPS"],
+    select: 1
+  },
+  {
+    setId: "data-protection-1",
+    id: 11,
+    prompt: "Which of the answers listed below refers to a technology that provides control over the usage of a mobile device within a designated area?",
+    choices: ["Geofencing", "Captive portal", "Honeypot", "Geolocation"],
+    correctAnswers: ["Geofencing"],
+    select: 1
+  },
+  {
+    setId: "data-protection-1",
+    id: 12,
+    prompt: "Which of the following converts plaintext data into ciphertext using an algorithm and a key?",
+    choices: ["Encryption", "Masking", "Tokenization", "Obfuscation"],
+    correctAnswers: ["Encryption"],
+    select: 1
+  },
+  {
+    setId: "data-protection-1",
+    id: 13,
+    prompt: "Which of the answers listed below refers to a technique that enables converting input data into a fixed-size string, making it difficult to reverse or retrieve the original data?",
+    choices: ["Obfuscation", "Tokenization", "Hashing", "Encryption"],
+    correctAnswers: ["Hashing"],
+    select: 1
+  },
+  {
+    setId: "data-protection-1",
+    id: 14,
+    prompt: "Which of the following answers refer to data masking? (Select 2 answers)",
+    choices: [
+      "Replaces sensitive data with fictitious or modified data while retaining its original forma",
+      "Allows for data manipulation in environments where the actual values are not needed",
+      "Transforms data into an unreadable format using an algorithm and an encryption key",
+      "Creates a unique, fixed-length string from the original data",
+      "Replaces sensitive data with a non-sensitive identifier that has no meaning or value outside the specific system"
+    ],
+    correctAnswers: [
+      "Replaces sensitive data with fictitious or modified data while retaining its original forma",
+      "Allows for data manipulation in environments where the actual values are not needed"
+    ],
+    select: 2
+  },
+  {
+    setId: "data-protection-1",
+    id: 15,
+    prompt: "Which of the answers listed below refers to a situation where sensitive data is stored in a separate location and can be retrieved with a non-sensitive replacement that can also be processed just like the original data without the risk of revealing the contents of original data?",
+    choices: ["Masking", "Obfuscation", "Encryption", "Tokenization"],
+    correctAnswers: ["Tokenization"],
+    select: 1
+  },
+  {
+    setId: "data-protection-1",
+    id: 16,
+    prompt: "Which of the following modifies data or code to make it difficult to understand or reverse-engineer, but without necessarily encrypting or hiding the data?",
+    choices: ["Tokenization", "Encryption", "Obfuscation", "Hashing"],
+    correctAnswers: ["Obfuscation"],
+    select: 1
+  },
+  {
+    setId: "data-protection-1",
+    id: 17,
+    prompt: "Which of the answers listed below refer to the advantages of segmentation as a method for securing data? (Select 3 answers)",
+    choices: [
+      "Enhances security by limiting the spread of cyberattacks",
+      "Helps organizations comply with data regulatory requirements by isolating and protecting specific data types",
+      "Provides security for data in transit with the use of encryption",
+      "Guarantees data recovery in case of accidental deletion or system failures",
+      "Provides better control over user access to sensitive data"
+    ],
+    correctAnswers: [
+      "Enhances security by limiting the spread of cyberattacks",
+      "Helps organizations comply with data regulatory requirements by isolating and protecting specific data types",
+      "Provides better control over user access to sensitive data"
+    ],
+    select: 3
+  },
+  {
+    setId: "data-protection-1",
+    id: 18,
+    prompt: "ACL, FACL, DAC, MAC, and RBAC are all access control mechanisms that can be used to manage user permissions and protect the confidentiality, integrity, and availability of data.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
+  },
+
+  {
+    setId: "resilience-recovery-1",
+    id: 1,
+    prompt: "Hardware RAID Level 0: (Select all that apply)",
+    choices: [
+      "Requires a minimum of 2 drives to implement",
+      "Is also known as disk striping",
+      "Decreases reliability (failure of any disk in the array results in the loss of all data in the array)",
+      "Is also referred to as disk mirroring",
+      "Offers less volume capacity in comparison to RAID 1",
+      "Requires at least 3 drives to implement",
+      "Is suitable for systems where performance has higher priority than fault tolerance",
+      "Offers improved reliability by creating identical data sets on each drive (failure of one drive does not destroy the array as each drive contains identical copy of the data)"
+    ],
+    correctAnswers: [
+      "Requires a minimum of 2 drives to implement",
+      "Is also known as disk striping",
+      "Decreases reliability (failure of any disk in the array results in the loss of all data in the array)",
+      "Is suitable for systems where performance has higher priority than fault tolerance"
+    ],
+    select: 4
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 2,
+    prompt: "Hardware RAID Level 1: (Select 3 answers)",
+    choices: [
+      "Requires at least 2 drives to implement",
+      "Is also known as disk striping",
+      "Offers improved performance in comparison to RAID 0",
+      "Requires at least 3 drives to implement",
+      "Offers improved reliability by creating identical data sets on each drive (failure of one drive does not destroy the array as each drive contains identical copy of the data)",
+      "Is also referred to as disk mirroring"
+    ],
+    correctAnswers: [
+      "Requires at least 2 drives to implement",
+      "Offers improved reliability by creating identical data sets on each drive (failure of one drive does not destroy the array as each drive contains identical copy of the data)",
+      "Is also referred to as disk mirroring"
+    ],
+    select: 3
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 3,
+    prompt: "Hardware RAID Level 5: (Select 3 answers)",
+    choices: [
+      "Requires at least 2 drives to implement",
+      "Continues to operate in case of failure of more than 1 drive",
+      "Is also known as disk striping with double parity",
+      "Requires at least 3 drives to implement",
+      "Offers increased performance and fault tolerance (single drive failure does not destroy the array and lost data can be re-created by the remaining drives)",
+      "Requires at least 4 drives to implement",
+      "Is also known as disk striping with parity"
+    ],
+    correctAnswers: [
+      "Requires at least 3 drives to implement",
+      "Offers increased performance and fault tolerance (single drive failure does not destroy the array and lost data can be re-created by the remaining drives)",
+      "Is also known as disk striping with parity"
+    ],
+    select: 3
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 4,
+    prompt: "Hardware RAID Level 6: (Select 3 answers)",
+    choices: [
+      "Is also known as disk striping with parity",
+      "Requires at least 4 drives to implement",
+      "Offers increased performance and fault tolerance (failure of up to 2 drives does not destroy the array and lost data can be re-created by the remaining drives)",
+      "Requires at least 3 drives to implement",
+      "Is also known as disk striping with double parity",
+      "Continues to operate in case of failure of more than 2 drives",
+      "Requires at least 5 drives to implement"
+    ],
+    correctAnswers: [
+      "Requires at least 4 drives to implement",
+      "Offers increased performance and fault tolerance (failure of up to 2 drives does not destroy the array and lost data can be re-created by the remaining drives)",
+      "Is also known as disk striping with double parity"
+    ],
+    select: 3
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 5,
+    prompt: "Hardware RAID Level 10 (a.k.a. RAID 1+0): (Select 3 answers)",
+    choices: [
+      "Requires a minimum of 4 drives to implement",
+      "Is referred to as stripe of mirrors, i.e., a combination of RAID 1 (disk mirroring) and RAID 0 (disk striping)",
+      "Requires a minimum of 5 drives to implement",
+      "Offers increased performance and fault tolerance (failure of one drive in each mirrored pair of disk drives does not destroy the array)",
+      "Requires a minimum of 3 drives to implement",
+      "Continues to operate in case of failure of more than 2 drives",
+      "Is referred to as stripe of mirrors, i.e., a combination of RAID 1 (disk striping) and RAID 0 (disk mirroring)"
+    ],
+    correctAnswers: [
+      "Requires a minimum of 4 drives to implement",
+      "Is referred to as stripe of mirrors, i.e., a combination of RAID 1 (disk mirroring) and RAID 0 (disk striping)",
+      "Offers increased performance and fault tolerance (failure of one drive in each mirrored pair of disk drives does not destroy the array)"
+    ],
+    select: 3
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 6,
+    prompt: "Which of the following RAID levels does not offer fault tolerance?",
+    choices: ["RAID 6", "RAID 10", "RAID 5", "RAID 0", "RAID 1"],
+    correctAnswers: ["RAID 0"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 7,
+    prompt: "Which of the answers listed below refers to the primary function of load balancing?",
+    choices: [
+      "Maintains identical copies of data across multiple servers to enhance data availability and reliability",
+      "Distributes workload across multiple servers for improved performance",
+      "Groups servers together to provide high availability and fault tolerance",
+      "Distributes content geographically across multiple servers to improve performance, reduce latency, and handle high volumes of traffic"
+    ],
+    correctAnswers: ["Distributes workload across multiple servers for improved performance"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 8,
+    prompt: "Which of the following is the primary function of clustering?",
+    choices: [
+      "Distributes content geographically across multiple servers to improve performance, reduce latency, and handle high volumes of traffic",
+      "Groups servers together to provide high availability and fault tolerance",
+      "Maintains identical copies of data across multiple servers to enhance data availability and reliability",
+      "Distributes workload across multiple servers for improved performance"
+    ],
+    correctAnswers: ["Groups servers together to provide high availability and fault tolerance"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 9,
+    prompt: "Which of the terms listed below refers to a duplicate of the original site, with fully operational computer systems as well as near-complete backups of user data?",
+    choices: ["Hot site", "Warm site", "Cold site", "Mobile site"],
+    correctAnswers: ["Hot site"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 10,
+    prompt: "Which of the following terms refers to an alternate site that provides some pre-installed hardware and software and might have partial data backups, but it is not fully operational and requires additional configuration before use?",
+    choices: ["Cold site", "Hot site", "Mirror site", "Warm site"],
+    correctAnswers: ["Warm site"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 11,
+    prompt: "A disaster recovery facility that provides only the physical space for recovery operations is known as:",
+    choices: ["Hot site", "Warm site", "Cold site", "Mirror site"],
+    correctAnswers: ["Cold site"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 12,
+    prompt: "Which alternate site is the least expensive to implement?",
+    choices: ["Cold site", "Mirror site", "Warm site", "Hot site"],
+    correctAnswers: ["Cold site"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 13,
+    prompt: "Which alternate site allows for the fastest disaster recovery?",
+    choices: ["Cold site", "Hot site", "Mobile site", "Warm site"],
+    correctAnswers: ["Hot site"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 14,
+    prompt: "What is the name of a U.S. government initiative that provides a set of procedures and plans that an organization can implement to ensure continued performance of its essential functions during unexpected events?",
+    choices: ["SLA", "COOP", "RPO", "BIA"],
+    correctAnswers: ["COOP"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 15,
+    prompt: "Which of the answers listed below refers to a simulated scenario conducted in a controlled environment, typically involving discussions and planning around hypothetical security incidents?",
+    choices: ["Tabletop exercise", "Sandboxing", "Threat hunting", "Security awareness training"],
+    correctAnswers: ["Tabletop exercise"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 16,
+    prompt: "The process of switching to a redundant or standby system upon detecting a disruption in the primary system is called:",
+    choices: ["Fail over", "Multipath I/O", "Load balancing", "Parallel processing"],
+    correctAnswers: ["Fail over"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 17,
+    prompt: "Which of the following answers refers to a more realistic scenario that tests cybersecurity incident response by mimicking actual attacks?",
+    choices: ["Fingerprinting", "Simulation", "Threat hunting", "Tabletop exercise"],
+    correctAnswers: ["Simulation"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 18,
+    prompt: "Which of the solutions listed below provides redundancy and fault tolerance by dividing tasks into smaller subtasks and distributing them across multiple systems to be executed simultaneously?",
+    choices: ["Load balancing", "Multitasking", "Clustering", "Parallel processing"],
+    correctAnswers: ["Parallel processing"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 19,
+    prompt: "A file-based representation of the state of a virtual machine at a given point in time is referred to as:",
+    choices: ["Restore point", "Shadow copy", "Snapshot", "System image"],
+    correctAnswers: ["Snapshot"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 20,
+    prompt: "What type of backups are commonly used with virtual machines?",
+    choices: ["Incremental backups", "Snapshot backups", "Tape backups", "Differential backups"],
+    correctAnswers: ["Snapshot backups"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 21,
+    prompt: "Which of the following terms refers to a backup strategy that relies on creating and maintaining copies of data in real-time or near real-time on a separate system?",
+    choices: ["Mirroring", "Virtualization", "Journaling", "Replication"],
+    correctAnswers: ["Replication"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 22,
+    prompt: "A technique that allows to recover changes that occurred since the last backup in the event of a system crash is known as:",
+    choices: ["Replication", "Journaling", "Virtualization", "Mirroring"],
+    correctAnswers: ["Journaling"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 23,
+    prompt: "Which of the answers listed below refers to a device designed to supply (and monitor the quality of) electric power to multiple outlets?",
+    choices: ["PSU", "MDF", "PDU", "IDF"],
+    correctAnswers: ["PDU"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 24,
+    prompt: "What is the name of a device that can provide short-term emergency power during an unexpected main power source outage?",
+    choices: ["UPS", "PoE", "SVC", "PSU"],
+    correctAnswers: ["UPS"],
+    select: 1
+  },
+  {
+    setId: "resilience-recovery-1",
+    id: 25,
+    prompt: "Which of the following power redundancy solutions would be best suited for providing long-term emergency power during an unexpected main power source outage?",
+    choices: ["Dual-power supply", "Standby UPS", "Backup generator", "Managed PDU"],
+    correctAnswers: ["Backup generator"],
+    select: 1
+  },
+
+{
+    setId: "wireless-security-1",
+    id: 1,
+    prompt: "An SSID is a unique identifier (a.k.a. wireless network name) for a WLAN. Wireless networks advertise their presence by regularly broadcasting SSID in a special packet called beacon frame. In wireless networks with disabled security features, knowing the network SSID is enough to get access to the network. SSID also pinpoints the wireless router that acts as a WAP. Wireless routers from the same manufacturer are frequently configured with default (well-known) SSID names. Since multiple devices with the same SSID displayed on the list of available networks create confusion and encourage accidental access by unauthorized users (applies to networks that lack security), changing the default SSID is a recommended practice.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
+  },
+  {
+    setId: "wireless-security-1",
+    id: 2,
+    prompt: "For a wireless client to be able to connect to a network, the security type (e.g., WEP, WPA, WPA2, or WPA3) and encryption type (e.g., TKIP or AES) settings on the connecting host must match the corresponding wireless security settings on a WAP.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
+  },
+  {
+    setId: "wireless-security-1",
+    id: 3,
+    prompt: "Which of the following answers refers to a security feature used in Bluetooth device pairing?",
+    choices: ["SAE", "PIN", "MFA", "ACL"],
+    correctAnswers: ["PIN"],
+    select: 1
+  },
+  {
+    setId: "wireless-security-1",
+    id: 4,
+    prompt: "Which of the following solutions would offer the strongest security for a small network that lacks an authentication server?",
+    choices: ["WPA3-SAE", "WPA2-Enterprise", "WPA2-PSK", "WPA3-Enterprise"],
+    correctAnswers: ["WPA3-SAE"],
+    select: 1
+  },
+  {
+    setId: "wireless-security-1",
+    id: 5,
+    prompt: "What are the characteristic features of WPA2/WPA3 Enterprise mode? (Select 3 answers)",
+    choices: [
+      "Suitable for large corporate networks",
+      "IEEE 802.1D",
+      "Does not require an authentication server",
+      "IEEE 802.1X",
+      "Suitable for all types of wireless LANs",
+      "Requires RADIUS authentication server"
+    ],
+    correctAnswers: [
+      "Suitable for large corporate networks",
+      "IEEE 802.1X",
+      "Requires RADIUS authentication server"
+    ],
+    select: 3
+  },
+  {
+    setId: "wireless-security-1",
+    id: 6,
+    prompt: "What is the name of the encryption protocol primarily used in Wi-Fi networks implementing the WPA3 security standard?",
+    choices: ["AES-CCMP", "CBC-MAC", "AES-GCMP", "WPA-TKIP"],
+    correctAnswers: ["AES-GCMP"],
+    select: 1
+  },
+  {
+    setId: "wireless-security-1",
+    id: 7,
+    prompt: "Which of the following acronyms refers to a client authentication method used in WPA3 Personal mode?",
+    choices: ["SAE", "IKE", "PSK", "AES"],
+    correctAnswers: ["SAE"],
+    select: 1
+  },
+  {
+    setId: "wireless-security-1",
+    id: 8,
+    prompt: "What are the characteristic features of RADIUS? (Select 3 answers)",
+    choices: [
+      "Primarily used for network access",
+      "Encrypts the entire payload of the access-request packet",
+      "Combines authentication and authorization",
+      "Encrypts only the password in the access-request packet",
+      "Primarily used for device administration",
+      "Separates authentication and authorization"
+    ],
+    correctAnswers: [
+      "Primarily used for network access",
+      "Combines authentication and authorization",
+      "Encrypts only the password in the access-request packet"
+    ],
+    select: 3
+  },
+  {
+    setId: "wireless-security-1",
+    id: 9,
+    prompt: "Which of the wireless encryption schemes listed below offers the highest level of protection?",
+    choices: ["WPS", "WPA3", "AES", "TKIP"],
+    correctAnswers: ["WPA3"],
+    select: 1
+  },
+  {
+    setId: "wireless-security-1",
+    id: 10,
+    prompt: "Which of the following answers refers to a deprecated wireless authentication protocol developed by Cisco?",
+    choices: ["PEAP", "EAP-TTLS", "LEAP", "EAP-TLS"],
+    correctAnswers: ["LEAP"],
+    select: 1
+  },
+  {
+    setId: "wireless-security-1",
+    id: 11,
+    prompt: "Which of the answers listed below refers to an open standard wireless network authentication protocol that enhances security by encapsulating authentication process within an encrypted TLS tunnel?",
+    choices: ["PEAP", "EAP", "LEAP", "RADIUS"],
+    correctAnswers: ["PEAP"],
+    select: 1
+  },
+
+{
+    setId: "application-security-1",
+    id: 1,
+    prompt: "Which of the programming aspects listed below are critical in the secure application development process? (Select 2 answers)",
+    choices: [
+      "Patch management",
+      "Input validation",
+      "Password protection",
+      "Error and exception handling",
+      "Application whitelisting"
+    ],
+    correctAnswers: [
+      "Input validation",
+      "Error and exception handling"
+    ],
+    select: 2
+  },
+  {
+    setId: "application-security-1",
+    id: 2,
+    prompt: "A situation in which a web form field accepts data other than expected (e.g., server commands) is an example of:",
+    choices: [
+      "Zero-day vulnerability",
+      "Improper input validation",
+      "Default configuration",
+      "Improper error handling"
+    ],
+    correctAnswers: [
+      "Improper input validation"
+    ],
+    select: 1
+  },
+  {
+    setId: "application-security-1",
+    id: 3,
+    prompt: "Which of the following answers refers to a countermeasure against code injection?",
+    choices: [
+      "Fuzzing",
+      "Input validation",
+      "Code signing",
+      "Normalization"
+    ],
+    correctAnswers: [
+      "Input validation"
+    ],
+    select: 1
+  },
+  {
+    setId: "application-security-1",
+    id: 4,
+    prompt: "The term \"Secure cookie\" refers to a type of HTTP cookie that is transmitted over an encrypted HTTPS connection, which helps prevent the cookie from being intercepted or tampered with during transit.",
+    choices: [
+      "True",
+      "False"
+    ],
+    correctAnswers: [
+      "True"
+    ],
+    select: 1
+  },
+  {
+    setId: "application-security-1",
+    id: 5,
+    prompt: "Which of the terms listed below refers to an automated or manual code review process aimed at discovering logic and syntax errors in the application's source code?",
+    choices: [
+      "Input validation",
+      "Dynamic code analysis",
+      "Fuzzing",
+      "Static code analysis"
+    ],
+    correctAnswers: [
+      "Static code analysis"
+    ],
+    select: 1
+  },
+  {
+    setId: "application-security-1",
+    id: 6,
+    prompt: "A dynamic code analysis allows for detecting application flaws without the need for actual execution of the application code.",
+    choices: [
+      "True",
+      "False"
+    ],
+    correctAnswers: [
+      "False"
+    ],
+    select: 1
+  },
+  {
+    setId: "application-security-1",
+    id: 7,
+    prompt: "The term \"Static code analysis\" refers to the process of discovering application runtime errors.",
+    choices: [
+      "True",
+      "False"
+    ],
+    correctAnswers: [
+      "False"
+    ],
+    select: 1
+  },
+  {
+    setId: "application-security-1",
+    id: 8,
+    prompt: "What is the purpose of code signing? (Select 2 answers)",
+    choices: [
+      "Disables code reuse",
+      "Confirms the application's source of origin",
+      "Enables application installation",
+      "Validates the application's integrity",
+      "Protects the application against unauthorized use"
+    ],
+    correctAnswers: [
+      "Confirms the application's source of origin",
+      "Validates the application's integrity"
+    ],
+    select: 2
+  },
+  {
+    setId: "application-security-1",
+    id: 9,
+    prompt: "The practice of finding vulnerabilities in an application by feeding it incorrect input is called:",
+    choices: [
+      "Normalization",
+      "Hardening",
+      "Dynamic code analysis",
+      "Fuzzing"
+    ],
+    correctAnswers: [
+      "Fuzzing"
+    ],
+    select: 1
+  },
+  {
+    setId: "application-security-1",
+    id: 10,
+    prompt: "In computer security, a mechanism for safe execution of untested code or untrusted applications is referred to as:",
+    choices: [
+      "Sideloading",
+      "Virtualization",
+      "Sandboxing",
+      "Stress testing"
+    ],
+    correctAnswers: [
+      "Sandboxing"
+    ],
+    select: 1
+  },
+  {
+    setId: "application-security-1",
+    id: 11,
+    prompt: "Which of the following answers refers to a Windows-specific feature for handling exceptions, errors, and abnormal conditions in software?",
+    choices: [
+      "EPC",
+      "SEH",
+      "EH",
+      "EXR"
+    ],
+    correctAnswers: [
+      "SEH"
+    ],
+    select: 1
+  },
+  {
+    setId: "application-security-1",
+    id: 12,
+    prompt: "Address Space Layout Randomization (ASLR) is an OS security technique that randomizes the location of key data areas in memory. The purpose of ASLR is to prevent attackers from predicting the location of specific code or data in memory, which adds a layer of defense against memory-based attacks, such as buffer overflows.",
+    choices: [
+      "True",
+      "False"
+    ],
+    correctAnswers: [
+      "True"
+    ],
+    select: 1
+  },
+  {
+    setId: "application-security-1",
+    id: 13,
+    prompt: "A type of user identification mechanism used as a countermeasure against automated software (such as network bots) is known as:",
+    choices: [
+      "MFA",
+      "CAPTCHA",
+      "SSO",
+      "NIDS"
+    ],
+    correctAnswers: [
+      "CAPTCHA"
+    ],
+    select: 1
+  },
+
+
+
+
+  
+   {
+    setId: "vulnerability-management-1",
+    id: 1,
+    prompt: "Vulnerability scanning: (Select all that apply)",
+    choices: [
       "Identifies lack of security controls",
       "Actively tests security controls",
       "Identifies common misconfigurations",
       "Exploits vulnerabilities",
       "Passively tests security controls"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Identifies lack of security controls",
       "Identifies common misconfigurations",
       "Passively tests security controls"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "vuln-management-1",
-    "id": 2,
-    "prompt": "Which of the answers listed below refer to the characteristic features of static code analysis? (Select 3 answers)",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 2,
+    prompt: "Which of the answers listed below refer to the characteristic features of static code analysis? (Select 3 answers)",
+    choices: [
       "Involves examining the code without executing it",
       "Often used early in the development process",
-      "Examines code structure",
-      "syntax",
-      "and semantics to detect issues like syntax errors",
-      "coding standards violations"
+      "Examines code structure, syntax, and semantics to detect issues like syntax errors, coding standards violations, security vulnerabilities, and bugs",
+      "Typically used later in the software development lifecycle",
+      "Involves executing the code and analyzing its behavior at runtime",
+      "Analyzes runtime properties like memory usage, performance, and error handling to identify issues such as memory leaks, performance bottlenecks, and runtime errors"
     ],
-    "correctAnswers": [
-      "security vulnerabilities"
+    correctAnswers: [
+      "Involves examining the code without executing it",
+      "Often used early in the development process",
+      "Examines code structure, syntax, and semantics to detect issues like syntax errors, coding standards violations, security vulnerabilities, and bugs"
     ],
-    "select": null
+    select: 3
   },
   {
-    "setId": "vuln-management-1",
-    "id": 3,
-    "prompt": "Which of the following statements describe the features of dynamic code analysis? (Select 3 answers)",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 3,
+    prompt: "Which of the following statements describe the features of dynamic code analysis? (Select 3 answers)",
+    choices: [
       "Typically used later in the software development lifecycle",
       "Involves examining the code without executing it",
-      "Analyzes runtime properties like memory usage",
-      "performance",
-      "and error handling to identify issues such as memory leaks",
-      "performance bottlenecks"
+      "Analyzes runtime properties like memory usage, performance, and error handling to identify issues such as memory leaks, performance bottlenecks, and runtime errors",
+      "Often used early in the development process",
+      "Examines code structure, syntax, and semantics to detect issues like syntax errors, coding standards violations, security vulnerabilities, and bugs",
+      "Involves executing the code and analyzing its behavior at runtime"
     ],
-    "correctAnswers": [
-      "and runtime errors"
+    correctAnswers: [
+      "Typically used later in the software development lifecycle",
+      "Analyzes runtime properties like memory usage, performance, and error handling to identify issues such as memory leaks, performance bottlenecks, and runtime errors",
+      "Involves executing the code and analyzing its behavior at runtime"
     ],
-    "select": null
+    select: 3
   },
   {
-    "setId": "vuln-management-1",
-    "id": 4,
-    "prompt": "Which of the terms listed below refers to tracking and managing software application components",
-    "choices": [
-      "such as third-party libraries and other dependencies?",
+    setId: "vulnerability-management-1",
+    id: 4,
+    prompt: "Which of the terms listed below refers to tracking and managing software application components, such as third-party libraries and other dependencies?",
+    choices: [
       "Version control",
       "Package monitoring",
       "Configuration enforcement",
       "Application hardening"
     ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": null
+    correctAnswers: ["Package monitoring"],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 5,
-    "prompt": "Which of the following terms refers to threat intelligence gathered from publicly available sources?",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 5,
+    prompt: "Which of the following terms refers to threat intelligence gathered from publicly available sources?",
+    choices: [
       "IoC",
       "OSINT",
       "RFC",
       "CVE/NVD"
     ],
-    "correctAnswers": [
-      "OSINT"
-    ],
-    "select": 1
+    correctAnswers: ["OSINT"],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 6,
-    "prompt": "Which of the terms listed below refers to a US government initiative for real-time sharing of cyber threat indicators?",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 6,
+    prompt: "Which of the terms listed below refers to a US government initiative for real-time sharing of cyber threat indicators?",
+    choices: [
       "AIS",
       "STIX",
       "TTP",
       "CVSS"
     ],
-    "correctAnswers": [
-      "AIS"
-    ],
-    "select": 1
+    correctAnswers: ["AIS"],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 7,
-    "prompt": "What is STIX?",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 7,
+    prompt: "What is STIX?",
+    choices: [
       "A type of vulnerability database",
       "Common language for describing cyber threat information",
       "US government initiative for real-time sharing of cyber threat indicators",
       "Transport mechanism for cyber threat information"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Common language for describing cyber threat information"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 8,
-    "prompt": "A dedicated transport mechanism for cyber threat information is called:",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 8,
+    prompt: "A dedicated transport mechanism for cyber threat information is called:",
+    choices: [
       "TCP/IP",
       "TLS",
       "TAXII",
       "S/MIME"
     ],
-    "correctAnswers": [
-      "TAXII"
-    ],
-    "select": 1
+    correctAnswers: ["TAXII"],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 9,
-    "prompt": "Which of the following provides insights into the methods and tools used by cybercriminals to carry out attacks?",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 9,
+    prompt: "Which of the following provides insights into the methods and tools used by cybercriminals to carry out attacks?",
+    choices: [
       "CVE",
       "IoC",
       "AIS",
       "TTP"
     ],
-    "correctAnswers": [
-      "TTP"
-    ],
-    "select": 1
+    correctAnswers: ["TTP"],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 10,
-    "prompt": "Which of the following statements does not apply to dark web?",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 10,
+    prompt: "Which of the following statements does not apply to dark web?",
+    choices: [
       "Typically requires specialized software to access its contents",
       "Forms a large part of the deep web",
       "Not indexed by traditional search engines",
-      "Often associated with trading stolen data",
-      "malware",
-      "and cyber threats"
+      "Often associated with trading stolen data, malware, and cyber threats"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "Forms a large part of the deep web"
     ],
-    "select": 0
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 11,
-    "prompt": "Penetration testing: (Select all that apply)",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 11,
+    prompt: "Penetration testing: (Select all that apply)",
+    choices: [
       "Bypasses security controls",
       "Only identifies lack of security controls",
       "Actively tests security controls",
       "Exploits vulnerabilities",
       "Passively tests security controls"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Bypasses security controls",
       "Actively tests security controls",
       "Exploits vulnerabilities"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "vuln-management-1",
-    "id": 12,
-    "prompt": "A responsible disclosure program is a formal process established by an organization to encourage security researchers and ethical hackers to report vulnerabilities they discover in the organization's systems or software. A bug bounty program is a specific type of responsible disclosure program that offers financial rewards to security researchers for reporting valid vulnerabilities.",
-    "choices": [
-      true,
-      false
+    setId: "vulnerability-management-1",
+    id: 12,
+    prompt: "A responsible disclosure program is a formal process established by an organization to encourage security researchers and ethical hackers to report vulnerabilities they discover in the organization's systems or software. A bug bounty program is a specific type of responsible disclosure program that offers financial rewards to security researchers for reporting valid vulnerabilities.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      "true"
-    ],
-    "select": 1
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 13,
-    "prompt": "An antivirus software identifying non-malicious file as a virus due to faulty virus signature file is an example of:",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 13,
+    prompt: "An antivirus software identifying non-malicious file as a virus due to faulty virus signature file is an example of:",
+    choices: [
       "Fault tolerance",
       "False positive error",
       "Quarantine feature",
       "False negative error"
     ],
-    "correctAnswers": [
-      "False positive error"
-    ],
-    "select": 1
+    correctAnswers: ["False positive error"],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 14,
-    "prompt": "Which of the answers listed below refers to a situation where no alarm is raised when an attack has taken place?",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 14,
+    prompt: "Which of the answers listed below refers to a situation where no alarm is raised when an attack has taken place?",
+    choices: [
       "False negative",
       "True positive",
       "False positive",
       "True negative"
     ],
-    "correctAnswers": [
-      "False negative"
-    ],
-    "select": 1
+    correctAnswers: ["False negative"],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 15,
-    "prompt": "A measure of the likelihood that a security system will incorrectly reject an access attempt by an authorized user is referred to as:",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 15,
+    prompt: "A measure of the likelihood that a security system will incorrectly reject an access attempt by an authorized user is referred to as:",
+    choices: [
       "FAR",
       "CER",
       "CRC",
       "FRR"
     ],
-    "correctAnswers": [
-      "FRR"
-    ],
-    "select": 1
+    correctAnswers: ["FRR"],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 16,
-    "prompt": "Which of the following terms refers to a framework and knowledge base that provides understanding of TTPs used during cyberattacks?",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 16,
+    prompt: "Which of the following terms refers to a framework and knowledge base that provides understanding of TTPs used during cyberattacks?",
+    choices: [
       "CVSS",
       "ATT&CK",
       "STIX",
       "TAXII"
     ],
-    "correctAnswers": [
-      "ATT&CK"
-    ],
-    "select": 1
+    correctAnswers: ["ATT&CK"],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 17,
-    "prompt": "Which of the answers listed below refers to an industry standard for assessing and scoring the severity of computer system security vulnerabilities?",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 17,
+    prompt: "Which of the answers listed below refers to an industry standard for assessing and scoring the severity of computer system security vulnerabilities?",
+    choices: [
       "SIEM",
       "CVSS",
       "OSINT",
       "SOAR"
     ],
-    "correctAnswers": [
-      "CVSS"
-    ],
-    "select": 1
+    correctAnswers: ["CVSS"],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 18,
-    "prompt": "Which of the following refers to a system that identifies",
-    "choices": [
-      "defines",
-      "and catalogs publicly known cybersecurity vulnerabilities?",
+    setId: "vulnerability-management-1",
+    id: 18,
+    prompt: "Which of the following refers to a system that identifies, defines, and catalogs publicly known cybersecurity vulnerabilities?",
+    choices: [
       "TAXII",
       "CVE",
       "STIX",
       "CVSS"
     ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
+    correctAnswers: ["CVE"],
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 19,
-    "prompt": "What is Exposure Factor (EF) in vulnerability analysis?",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 19,
+    prompt: "What is Exposure Factor (EF) in vulnerability analysis?",
+    choices: [
       "The likelihood that a vulnerability will be exploited in a real-world scenario",
       "The rate at which vulnerabilities are discovered and reported",
       "The degree of loss that a realized threat would have on a specific asset",
       "The measure of the potential impact of a vulnerability on an organization's assets"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "The degree of loss that a realized threat would have on a specific asset"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "vuln-management-1",
-    "id": 20,
-    "prompt": "Which of the statements listed below does not refer to a vulnerability response and remediation technique?",
-    "choices": [
+    setId: "vulnerability-management-1",
+    id: 20,
+    prompt: "Which of the statements listed below does not refer to a vulnerability response and remediation technique?",
+    choices: [
       "Applying updates or fixes provided by software vendors to address the vulnerability (patching)",
       "Ensuring financial recovery from the costs associated with a successful cyberattack (insurance)",
-      "Dividing a network into smaller",
-      "isolated zones to limit the potential impact of a vulnerability (segmentation)",
+      "Dividing a network into smaller, isolated zones to limit the potential impact of a vulnerability (segmentation)",
       "Mitigating the risk associated with a vulnerability that cannot be immediately patched by implementing alternative security measures (compensating controls)",
-      "Delaying or forgoing a patch for a specific system"
+      "Delaying or forgoing a patch for a specific system, e.g., when applying a patch may not be feasible due to compatibility issues or potential disruptions to critical systems (exceptions and exemptions)",
+      "All of the above answers are examples of vulnerability response and remediation techniques"
     ],
-    "correctAnswers": [
-      "e.g."
+    correctAnswers: [
+      "All of the above answers are examples of vulnerability response and remediation techniques"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "secure-protocols-1",
-    "id": 1,
-    "prompt": "Which of the protocols listed below is used to enable secure web browsing?",
-    "choices": [
+    setId: "secure-protocols-1",
+    id: 1,
+    prompt: "Which of the protocols listed below is used to enable secure web browsing?",
+    choices: [
       "L2TP",
       "HTTPS",
       "SSH",
       "IPsec"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "HTTPS"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "secure-protocols-1",
-    "id": 2,
-    "prompt": "Which of the following protocols allow(s) for secure file transfer? (Select all that apply)",
-    "choices": [
+    setId: "secure-protocols-1",
+    id: 2,
+    prompt: "Which of the following protocols allow(s) for secure file transfer? (Select all that apply)",
+    choices: [
       "FTPS",
       "TFTP",
       "FTP",
       "SFTP"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "FTPS",
       "SFTP"
     ],
-    "select": 2
+    select: 2
   },
   {
-    "setId": "secure-protocols-1",
-    "id": 3,
-    "prompt": "FTPS is an extension to the SSH protocol and runs by default on TCP port 22.",
-    "choices": [
-      true,
-      false
+    setId: "secure-protocols-1",
+    id: 3,
+    prompt: "FTPS is an extension to the SSH protocol and runs by default on TCP port 22.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      "false"
+    correctAnswers: [
+      "False"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "secure-protocols-1",
-    "id": 4,
-    "prompt": "Which of the answers listed below refers to a secure replacement for Telnet?",
-    "choices": [
+    setId: "secure-protocols-1",
+    id: 4,
+    prompt: "Which of the answers listed below refers to a secure replacement for Telnet?",
+    choices: [
       "RSH",
       "IPsec",
       "SSH",
       "RTPS"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "SSH"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "secure-protocols-1",
-    "id": 5,
-    "prompt": "Which of the following answers refers to a deprecated protocol designed as a secure way to send emails from a client to a mail server and between mail servers?",
-    "choices": [
+    setId: "secure-protocols-1",
+    id: 5,
+    prompt: "Which of the following answers refers to a deprecated protocol designed as a secure way to send emails from a client to a mail server and between mail servers?",
+    choices: [
       "IMAPS",
       "SFTP",
       "POP3S",
       "SMTPS"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "SMTPS"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "secure-protocols-1",
-    "id": 6,
-    "prompt": "Which of the protocols listed below enable secure retrieval of emails from a mail server to an email client? (Select 2 answers)",
-    "choices": [
+    setId: "secure-protocols-1",
+    id: 6,
+    prompt: "Which of the protocols listed below enable secure retrieval of emails from a mail server to an email client? (Select 2 answers)",
+    choices: [
       "FTPS",
       "IMAPS",
       "POP3S",
       "STARTTLS",
       "SMTPS"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "IMAPS",
       "POP3S"
     ],
-    "select": 2
+    select: 2
   },
   {
-    "setId": "secure-protocols-1",
-    "id": 7,
-    "prompt": "Which of the following protocols enables secure access and management of emails on a mail server from an email client?",
-    "choices": [
+    setId: "secure-protocols-1",
+    id: 7,
+    prompt: "Which of the following protocols enables secure access and management of emails on a mail server from an email client?",
+    choices: [
       "POP3S",
       "SMTPS",
       "IMAPS",
       "S/MIME"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "IMAPS"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "secure-protocols-1",
-    "id": 8,
-    "prompt": "Which of the answers listed below refers to a secure network protocol used to provide encryption",
-    "choices": [
-      "authentication",
-      "and integrity for real-time multimedia communication?",
+    setId: "secure-protocols-1",
+    id: 8,
+    prompt: "Which of the answers listed below refers to a secure network protocol used to provide encryption, authentication, and integrity for real-time multimedia communication?",
+    choices: [
       "IPsec",
       "SIP",
       "VoIP",
       "SRTP"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "SRTP"
     ],
-    "select": 0
+    select: 1
   },
-  {
-    "setId": "access-controls-1",
-    "id": 1,
-    "prompt": "Which of the following answers refer(s) to the Mandatory Access Control (MAC) model? (Select all that apply)",
-    "choices": [
+   {
+    setId: "access-controls-1",
+    id: 1,
+    prompt: "Which of the following answers refer(s) to the Mandatory Access Control (MAC) model? (Select all that apply)",
+    choices: [
       "Users are not allowed to change access policies at their own discretion",
       "Labels and clearance levels can only be applied and changed by an administrator",
       "Every object has an owner who at his/her own discretion determines what kind of permissions other users can have to that object",
       "Access to resources based on user identity",
       "Every resource has a sensitivity label matching a clearance level assigned to a user"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Users are not allowed to change access policies at their own discretion",
       "Labels and clearance levels can only be applied and changed by an administrator",
       "Every resource has a sensitivity label matching a clearance level assigned to a user"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "access-controls-1",
-    "id": 2,
-    "prompt": "Discretionary Access Control (DAC) is an access control model based on user identity. In DAC",
-    "choices": [
-      "every object has an owner who at his/her own discretion determines what kind of permissions other users can have for that object.",
-      true,
-      false
+    setId: "access-controls-1",
+    id: 2,
+    prompt: "Discretionary Access Control (DAC) is an access control model based on user identity. In DAC, every object has an owner who at his/her own discretion determines what kind of permissions other users can have for that object.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "True"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "access-controls-1",
-    "id": 3,
-    "prompt": "Which type of control access model connects user permissions to their specific responsibilities?",
-    "choices": [
+    setId: "access-controls-1",
+    id: 3,
+    prompt: "Which type of control access model connects user permissions to their specific responsibilities?",
+    choices: [
       "DAC",
       "RBAC",
       "MAC",
       "ABAC"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "RBAC"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "access-controls-1",
-    "id": 4,
-    "prompt": "Which access control model allows for defining granular rules that consider user roles",
-    "choices": [
-      "time constraints",
-      "and network access restrictions?",
+    setId: "access-controls-1",
+    id: 4,
+    prompt: "Which access control model allows for defining granular rules that consider user roles, time constraints, and network access restrictions?",
+    choices: [
       "ABAC",
       "MAC",
       "RuBAC",
-      "DAC"
-    ],
-    "correctAnswers": [
+      "DAC",
       "RBAC"
     ],
-    "select": 0
+    correctAnswers: [
+      "RuBAC"
+    ],
+    select: 1
   },
   {
-    "setId": "access-controls-1",
-    "id": 5,
-    "prompt": "Examples of properties used for defining access policies in Attribute-Based Access Control (ABAC) model include:",
-    "choices": [
-      "Subject (i.e.",
-      "user or process requesting access)",
-      "Type of action (for example \"read\"",
-      "write",
-      "execute)",
-      "Resource type (medical record"
+    setId: "access-controls-1",
+    id: 5,
+    prompt: "Examples of properties used for defining access policies in Attribute-Based Access Control (ABAC) model include:",
+    choices: [
+      "Subject (i.e., user or process requesting access)",
+      "Type of action (for example \"read\", \"write\", \"execute\")",
+      "Resource type (medical record, bank account etc.)",
+      "Environment (contextual data, such as time of day or geolocation)",
+      "All of the above"
     ],
-    "correctAnswers": [
-      "bank account etc.)"
+    correctAnswers: [
+      "All of the above"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "access-controls-1",
-    "id": 6,
-    "prompt": "Which access control model defines access control rules with the use of statements that closely resemble natural language?",
-    "choices": [
+    setId: "access-controls-1",
+    id: 6,
+    prompt: "Which access control model defines access control rules with the use of statements that closely resemble natural language?",
+    choices: [
       "DAC",
       "ABAC",
       "MAC",
       "RBAC"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "ABAC"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "access-controls-1",
-    "id": 7,
-    "prompt": "Which of the access control models listed below enforces the strictest set of access rules?",
-    "choices": [
+    setId: "access-controls-1",
+    id: 7,
+    prompt: "Which of the access control models listed below enforces the strictest set of access rules?",
+    choices: [
       "MAC",
       "RBAC",
       "DAC",
       "ABAC"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "MAC"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "access-controls-1",
-    "id": 8,
-    "prompt": "Which of the following access control methods would be the most suitable for scheduling system maintenance tasks during periods of low user activity?",
-    "choices": [
+    setId: "access-controls-1",
+    id: 8,
+    prompt: "Which of the following access control methods would be the most suitable for scheduling system maintenance tasks during periods of low user activity?",
+    choices: [
       "Resource provisioning",
       "Time-of-day restrictions",
       "Principle of least privilege",
       "Just-in-time permissions"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Time-of-day restrictions"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "access-controls-1",
-    "id": 9,
-    "prompt": "The principle of least privilege is a security rule that prevents users from accessing information and resources that lie beyond the scope of their responsibilities.",
-    "choices": [
-      true,
-      false
+    setId: "access-controls-1",
+    id: 9,
+    prompt: "The principle of least privilege is a security rule that prevents users from accessing information and resources that lie beyond the scope of their responsibilities.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      "true"
+    correctAnswers: [
+      "True"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 1,
-    "prompt": "The two factors that are considered important for creating strong passwords are: (Select 2 answers)",
-    "choices": [
+    setId: "passwords-1",
+    id: 1,
+    prompt: "The two factors that are considered important for creating strong passwords are: (Select 2 answers)",
+    choices: [
       "Password length",
       "Minimum password age",
       "Password history",
       "Password complexity",
       "Maximum password age"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Password length",
       "Password complexity"
     ],
-    "select": 2
+    select: 2
   },
   {
-    "setId": "passwords-1",
-    "id": 2,
-    "prompt": "A strong password that meets the password complexity requirement should contain: (Select the best answer)",
-    "choices": [
+    setId: "passwords-1",
+    id: 2,
+    prompt: "A strong password that meets the password complexity requirement should contain: (Select the best answer)",
+    choices: [
       "Uppercase letters (A-Z)",
       "Digits (0-9)",
-      "Non-alphanumeric characters if permitted (e.g.",
-      "!",
-      "@",
-      "#"
+      "Non-alphanumeric characters if permitted (e.g., !, @, #, $)",
+      "Lowercase letters (a-z)",
+      "A combination of characters from at least 3 character groups"
     ],
-    "correctAnswers": [
-      "$)"
+    correctAnswers: [
+      "A combination of characters from at least 3 character groups"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 3,
-    "prompt": "Which of the following passwords is the most complex?",
-    "choices": [
+    setId: "passwords-1",
+    id: 3,
+    prompt: "Which of the following passwords is the most complex?",
+    choices: [
       "T$7C52WL4SU",
       "GdL3tU8wxYz",
       "@TxBL$nW@Xt",
       "G$L3tU8wY@z"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "G$L3tU8wY@z"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 4,
-    "prompt": "Which password policy would be the most effective in decreasing the risk of a security breach across multiple accounts?",
-    "choices": [
+    setId: "passwords-1",
+    id: 4,
+    prompt: "Which password policy would be the most effective in decreasing the risk of a security breach across multiple accounts?",
+    choices: [
       "Password expiration policy",
       "Minimum password age policy",
       "Password reuse policy",
       "Maximum password age policy"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Password reuse policy"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 5,
-    "prompt": "Which password policy enforces a mandatory password change after a specific time?",
-    "choices": [
+    setId: "passwords-1",
+    id: 5,
+    prompt: "Which password policy enforces a mandatory password change after a specific time?",
+    choices: [
       "Password expiration policy",
       "Password history policy",
       "Minimum password age policy",
       "Password reuse policy"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Password expiration policy"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 6,
-    "prompt": "The minimum password age policy setting determines the period of time that a password can be used before the system requires the user to change it.",
-    "choices": [
-      true,
-      false
-    ],
-    "correctAnswers": [
-      "false"
-    ],
-    "select": 1
+    setId: "passwords-1",
+    id: 6,
+    prompt: "The minimum password age policy setting determines the period of time that a password can be used before the system requires the user to change it.",
+    choices: ["True", "False"],
+    correctAnswers: ["False"],
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 7,
-    "prompt": "The maximum password age policy setting determines the period of time that a password must be used before the user can change it.",
-    "choices": [
-      true,
-      false
-    ],
-    "correctAnswers": [
-      "false"
-    ],
-    "select": 1
+    setId: "passwords-1",
+    id: 7,
+    prompt: "The maximum password age policy setting determines the period of time that a password must be used before the user can change it.",
+    choices: ["True", "False"],
+    correctAnswers: ["False"],
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 8,
-    "prompt": "Which of the answers listed below refers to a software tool specifically designed to store and manage login credentials?",
-    "choices": [
+    setId: "passwords-1",
+    id: 8,
+    prompt: "Which of the answers listed below refers to a software tool specifically designed to store and manage login credentials?",
+    choices: [
       "BitLocker",
       "Password manager",
       "Key escrow",
       "Password vault"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Password manager"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 9,
-    "prompt": "Which of the following technologies cannot be used as a passwordless authentication method?",
-    "choices": [
+    setId: "passwords-1",
+    id: 9,
+    prompt: "Which of the following technologies cannot be used as a passwordless authentication method?",
+    choices: [
       "Biometrics",
       "Hardware tokens",
       "QR codes",
@@ -18292,1050 +18680,874 @@ export  const SetContent = [
       "Passkeys",
       "All of the above can be used as a means for passwordless authentication"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "All of the above can be used as a means for passwordless authentication"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 10,
-    "prompt": "Replacing password characters in a password field with a series of asterisks is an example of:",
-    "choices": [
+    setId: "passwords-1",
+    id: 10,
+    prompt: "Replacing password characters in a password field with a series of asterisks is an example of:",
+    choices: [
       "Data masking",
       "Tokenization",
       "Anonymization",
       "Pseudo-anonymization"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Data masking"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 11,
-    "prompt": "Which of the answers listed below refers to a type of additional input that increases password complexity and provides better protection against brute-force",
-    "choices": [
-      "dictionary",
-      "and rainbow table attacks?",
+    setId: "passwords-1",
+    id: 11,
+    prompt: "Which of the answers listed below refers to a type of additional input that increases password complexity and provides better protection against brute-force, dictionary, and rainbow table attacks?",
+    choices: [
       "Seed",
       "IV",
       "Salt",
       "Shim"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "Salt"
     ],
-    "select": 0
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 12,
-    "prompt": "A pseudo-random data added to a password before hashing is referred to as:",
-    "choices": [
+    setId: "passwords-1",
+    id: 12,
+    prompt: "A pseudo-random data added to a password before hashing is referred to as:",
+    choices: [
       "Shim",
       "Salt",
       "IV",
       "Seed"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Salt"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 13,
-    "prompt": "Which cryptographic technique is used to prevent the effectiveness of rainbow tables in cracking hashed passwords?",
-    "choices": [
+    setId: "passwords-1",
+    id: 13,
+    prompt: "Which cryptographic technique is used to prevent the effectiveness of rainbow tables in cracking hashed passwords?",
+    choices: [
       "Data masking",
       "Two-Factor Authentication (2FA)",
       "Key stretching",
       "Salting"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Salting"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 14,
-    "prompt": "Key stretching is a cryptographic technique that enhances the security of sensitive data",
-    "choices": [
-      "such as cryptographic keys and passwords. It works by repeatedly applying a resource-intensive function or algorithm to the input data",
-      "thus increasing the computational effort required to derive the original key or password",
-      "which makes the data more resistant to brute-force",
-      "dictionary",
-      "or rainbow table attacks.",
-      true
-    ],
-    "correctAnswers": [
-      "false"
-    ],
-    "select": 0
+    setId: "passwords-1",
+    id: 14,
+    prompt: "Key stretching is a cryptographic technique that enhances the security of sensitive data, such as cryptographic keys and passwords. It works by repeatedly applying a resource-intensive function or algorithm to the input data, thus increasing the computational effort required to derive the original key or password, which makes the data more resistant to brute-force, dictionary, or rainbow table attacks.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 15,
-    "prompt": "The importance of changing default usernames and passwords can be illustrated by the example of certain network devices (such as routers)",
-    "choices": [
-      "which are often shipped with default and well-known admin credentials that can be looked up on the web.",
-      true,
-      false
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 1
+    setId: "passwords-1",
+    id: 15,
+    prompt: "The importance of changing default usernames and passwords can be illustrated by the example of certain network devices (such as routers), which are often shipped with default and well-known admin credentials that can be looked up on the web.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 16,
-    "prompt": "A technique that allows an attacker to authenticate to a remote server without extracting cleartext password from a digest is known as:",
-    "choices": [
+    setId: "passwords-1",
+    id: 16,
+    prompt: "A technique that allows an attacker to authenticate to a remote server without extracting cleartext password from a digest is known as:",
+    choices: [
       "Pass the hash",
       "Replay attack",
       "Brute-force attack",
       "Spraying attack"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Pass the hash"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 17,
-    "prompt": "A short list of commonly used passwords tried against large number of user accounts is a characteristic feature of:",
-    "choices": [
+    setId: "passwords-1",
+    id: 17,
+    prompt: "A short list of commonly used passwords tried against large number of user accounts is a characteristic feature of:",
+    choices: [
       "Replay attack",
       "Dictionary attack",
       "Spraying attack",
       "Birthday attack"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Spraying attack"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 18,
-    "prompt": "Which password attack bypasses account-lockout policies?",
-    "choices": [
+    setId: "passwords-1",
+    id: 18,
+    prompt: "Which password attack bypasses account-lockout policies?",
+    choices: [
       "Birthday attack",
       "Replay attack",
       "Spraying attack",
       "Dictionary attack"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Spraying attack"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 19,
-    "prompt": "An attack against encrypted data that relies heavily on computing power to check all possible keys and passwords until the correct one is found is called:",
-    "choices": [
+    setId: "passwords-1",
+    id: 19,
+    prompt: "An attack against encrypted data that relies heavily on computing power to check all possible keys and passwords until the correct one is found is called:",
+    choices: [
       "Replay attack",
       "Brute-force attack",
       "Dictionary attack",
       "Birthday attack"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Brute-force attack"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "passwords-1",
-    "id": 20,
-    "prompt": "One of the measures for bypassing the failed logon attempt account lockout policy is to capture any relevant data that might contain the password and brute force it offline.",
-    "choices": [
-      true,
-      false
-    ],
-    "correctAnswers": [
-      "true"
-    ],
-    "select": 1
+    setId: "passwords-1",
+    id: 20,
+    prompt: "One of the measures for bypassing the failed logon attempt account lockout policy is to capture any relevant data that might contain the password and brute force it offline.",
+    choices: ["True", "False"],
+    correctAnswers: ["True"],
+    select: 1
   },
   {
-    "setId": "incident-response-1",
-    "id": 1,
-    "prompt": "Which part of the incident response process involves establishing and maintaining the incident response capability as well as setting up an incident response team?",
-    "choices": [
+    setId: "incident-response-1",
+    id: 1,
+    prompt: "Which part of the incident response process involves establishing and maintaining the incident response capability as well as setting up an incident response team?",
+    choices: [
       "Preparation",
       "Detection and analysis",
-      "Containment",
-      "eradication",
-      "and recovery",
+      "Containment, eradication, and recovery",
       "Post-incident activity"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "Preparation"
     ],
-    "select": 0
+    select: 1
   },
   {
-    "setId": "incident-response-1",
-    "id": 2,
-    "prompt": "In the incident response process",
-    "choices": [
-      "the step that involves identifying and understanding potential incidents to determine their scope",
-      "impact",
-      "and root cause is a part of the:",
+    setId: "incident-response-1",
+    id: 2,
+    prompt: "In the incident response process, the step that involves identifying and understanding potential incidents to determine their scope, impact, and root cause is a part of the:",
+    choices: [
       "Preparation stage",
       "Detection and analysis stage",
-      "Containment"
+      "Containment, eradication, and recovery stage",
+      "Post-incident activity stage"
     ],
-    "correctAnswers": [
-      "eradication"
+    correctAnswers: [
+      "Detection and analysis stage"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "incident-response-1",
-    "id": 3,
-    "prompt": "Which of the following answers refer(s) to the containment",
-    "choices": [
-      "eradication",
-      "and recovery stage of the incident response process? (Select all that apply)",
+    setId: "incident-response-1",
+    id: 3,
+    prompt: "Which of the following answers refer(s) to the containment, eradication, and recovery stage of the incident response process? (Select all that apply)",
+    choices: [
       "Restoring normal operations",
       "Eliminating the threat",
       "Monitoring and detecting potential incidents",
-      "Establishing and maintaining an incident response policy"
-    ],
-    "correctAnswers": [
+      "Establishing and maintaining an incident response policy",
       "Mitigating the impact of the incident"
     ],
-    "select": 0
+    correctAnswers: [
+      "Restoring normal operations",
+      "Eliminating the threat",
+      "Mitigating the impact of the incident"
+    ],
+    select: 3
   },
   {
-    "setId": "incident-response-1",
-    "id": 4,
-    "prompt": "Which stage of the incident response process involves updating incident response plans",
-    "choices": [
-      "policies",
-      "and procedures?",
+    setId: "incident-response-1",
+    id: 4,
+    prompt: "Which stage of the incident response process involves updating incident response plans, policies, and procedures?",
+    choices: [
       "Preparation",
       "Detection and analysis",
-      "Containment",
-      "eradication"
+      "Containment, eradication, and recovery",
+      "Post-incident activity"
     ],
-    "correctAnswers": [
-      "and recovery"
+    correctAnswers: [
+      "Post-incident activity"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "incident-response-1",
-    "id": 5,
-    "prompt": "Which of the answers listed below refers to a discussion-based activity where team members walk through different scenarios to evaluate the incident response plan without activating any systems?",
-    "choices": [
+    setId: "incident-response-1",
+    id: 5,
+    prompt: "Which of the answers listed below refers to a discussion-based activity where team members walk through different scenarios to evaluate the incident response plan without activating any systems?",
+    choices: [
       "Tabletop exercise",
       "Simulation",
       "Threat hunting",
       "Root cause analysis"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Tabletop exercise"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "incident-response-1",
-    "id": 6,
-    "prompt": "Which of the following answers refers to a more in-depth exercise",
-    "choices": [
-      "which can include activating systems and performing real actions to respond to the incident?",
+    setId: "incident-response-1",
+    id: 6,
+    prompt: "Which of the following answers refers to a more in-depth exercise, which can include activating systems and performing real actions to respond to the incident?",
+    choices: [
       "Penetration testing",
       "Threat hunting",
       "Simulation",
       "Vulnerability scanning"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "Simulation"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "incident-response-1",
-    "id": 7,
-    "prompt": "During the post-incident activity stage",
-    "choices": [
-      "this step involves analyzing logs",
-      "forensics data",
-      "and other evidence to prevent incident reoccurrence.",
+    setId: "incident-response-1",
+    id: 7,
+    prompt: "During the post-incident activity stage, this step involves analyzing logs, forensics data, and other evidence to prevent incident reoccurrence.",
+    choices: [
       "Reporting",
       "E-discovery",
-      "Root cause analysis"
-    ],
-    "correctAnswers": [
+      "Root cause analysis",
       "Threat hunting"
     ],
-    "select": 0
+    correctAnswers: [
+      "Root cause analysis"
+    ],
+    select: 1
   },
   {
-    "setId": "incident-response-1",
-    "id": 8,
-    "prompt": "The term \"Threat hunting\" refers to a proactive search for IoC to identify and address potential threats and vulnerabilities before they can escalate into full-blown incidents.",
-    "choices": [
-      true,
-      false
+    setId: "incident-response-1",
+    id: 8,
+    prompt: "The term \"Threat hunting\" refers to a proactive search for IoC to identify and address potential threats and vulnerabilities before they can escalate into full-blown incidents.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      "true"
+    correctAnswers: [
+      "True"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "incident-response-1",
-    "id": 9,
-    "prompt": "The process of maintaining a documented record of the handling and movement of evidence to ensure its integrity and admissibility in court is called:",
-    "choices": [
+    setId: "incident-response-1",
+    id: 9,
+    prompt: "The process of maintaining a documented record of the handling and movement of evidence to ensure its integrity and admissibility in court is called:",
+    choices: [
       "Chain of custody",
       "Chain of evidence",
       "Chain of accountability",
       "Chain of responsibility"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Chain of custody"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "incident-response-1",
-    "id": 10,
-    "prompt": "The process of identifying",
-    "choices": [
-      "collecting",
-      "and producing electronically stored information with the intent of using it in a legal proceeding or investigation is referred to as:",
+    setId: "incident-response-1",
+    id: 10,
+    prompt: "The process of identifying, collecting, and producing electronically stored information with the intent of using it in a legal proceeding or investigation is referred to as:",
+    choices: [
       "Litigation hold",
       "Evidence management",
       "Digital forensics",
       "E-discovery"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "E-discovery"
     ],
-    "select": 0
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 1,
-    "prompt": "The process of determining potential risks that could affect an organization's ability to achieve its objectives is called:",
-    "choices": [
+    setId: "risk-management-1",
+    id: 1,
+    prompt: "The process of determining potential risks that could affect an organization's ability to achieve its objectives is called:",
+    choices: [
       "Risk assessment",
       "Risk identification",
       "Risk analysis",
       "Risk management"
     ],
-    "correctAnswers": [
-      "Risk identification"
-    ],
-    "select": 1
+    correctAnswers: ["Risk identification"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 2,
-    "prompt": "The process of evaluating discovered risks to understand their potential impact and likelihood is referred to as:",
-    "choices": [
+    setId: "risk-management-1",
+    id: 2,
+    prompt: "The process of evaluating discovered risks to understand their potential impact and likelihood is referred to as:",
+    choices: [
       "Risk analysis",
       "Risk assessment",
       "Risk identification",
       "Risk management"
     ],
-    "correctAnswers": [
-      "Risk assessment"
-    ],
-    "select": 1
+    correctAnswers: ["Risk assessment"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 3,
-    "prompt": "Which of the following answers refers to a risk assessment method based on need",
-    "choices": [
-      "typically conducted in response to specific events or changes",
-      "such as after a major organizational change or a security breach?",
+    setId: "risk-management-1",
+    id: 3,
+    prompt: "Which of the following answers refers to a risk assessment method based on need, typically conducted in response to specific events or changes, such as after a major organizational change or a security breach?",
+    choices: [
       "Ad hoc",
       "Recurring",
       "One-time",
       "Continuous"
     ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
+    correctAnswers: ["Ad hoc"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 4,
-    "prompt": "Which of the answers listed below refers to an example of recurring risk assessment?",
-    "choices": [
+    setId: "risk-management-1",
+    id: 4,
+    prompt: "Which of the answers listed below refers to an example of recurring risk assessment?",
+    choices: [
       "Real-time monitoring of network security threats",
       "Assessing risk after a major organizational change or a security breach",
       "Quarterly or annual risk assessments",
       "Risk assessment for a new product launch"
     ],
-    "correctAnswers": [
-      "Quarterly or annual risk assessments"
-    ],
-    "select": 1
+    correctAnswers: ["Quarterly or annual risk assessments"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 5,
-    "prompt": "Which of the following answers refers to a risk assessment conducted for a specific purpose or project",
-    "choices": [
-      "without plans for regular reassessment (e.g.",
-      "risk assessment for a new product launch)?",
+    setId: "risk-management-1",
+    id: 5,
+    prompt: "Which of the following answers refers to a risk assessment conducted for a specific purpose or project, without plans for regular reassessment (e.g., risk assessment for a new product launch)?",
+    choices: [
       "One-time",
       "Recurring",
       "Ad hoc",
       "Continuous"
     ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
+    correctAnswers: ["One-time"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 6,
-    "prompt": "Which of the answers listed below refers to an example of continuous risk assessment?",
-    "choices": [
+    setId: "risk-management-1",
+    id: 6,
+    prompt: "Which of the answers listed below refers to an example of continuous risk assessment?",
+    choices: [
       "Quarterly or annual risk assessments",
       "Risk assessment for a new product launch",
       "Assessing risk after a major organizational change or a security breach",
       "Real-time monitoring of network security threats"
     ],
-    "correctAnswers": [
-      "Real-time monitoring of network security threats"
-    ],
-    "select": 1
+    correctAnswers: ["Real-time monitoring of network security threats"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 7,
-    "prompt": "Assessment of risk probability and its impact based on subjective judgment falls into the category of:",
-    "choices": [
+    setId: "risk-management-1",
+    id: 7,
+    prompt: "Assessment of risk probability and its impact based on subjective judgment falls into the category of:",
+    choices: [
       "Risk acceptance",
       "Quantitative risk assessment",
       "Risk tolerance",
       "Qualitative risk assessment"
     ],
-    "correctAnswers": [
-      "Qualitative risk assessment"
-    ],
-    "select": 1
+    correctAnswers: ["Qualitative risk assessment"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 8,
-    "prompt": "A calculation of SLE is an example of:",
-    "choices": [
+    setId: "risk-management-1",
+    id: 8,
+    prompt: "A calculation of SLE is an example of:",
+    choices: [
       "Quantitative risk assessment",
       "Ad hoc risk assessment",
       "Qualitative risk assessment",
       "Recurring risk assessment"
     ],
-    "correctAnswers": [
-      "Quantitative risk assessment"
-    ],
-    "select": 1
+    correctAnswers: ["Quantitative risk assessment"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 9,
-    "prompt": "Which of the following terms is used to describe the predicted loss of value to an asset based on a single security incident?",
-    "choices": [
+    setId: "risk-management-1",
+    id: 9,
+    prompt: "Which of the following terms is used to describe the predicted loss of value to an asset based on a single security incident?",
+    choices: [
       "SLE",
       "ARO",
       "ALE",
       "SLA"
     ],
-    "correctAnswers": [
-      "SLE"
-    ],
-    "select": 1
+    correctAnswers: ["SLE"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 10,
-    "prompt": "Which of the acronyms listed below refers to a risk assessment formula defining probable financial loss due to a risk over a one-year period?",
-    "choices": [
+    setId: "risk-management-1",
+    id: 10,
+    prompt: "Which of the acronyms listed below refers to a risk assessment formula defining probable financial loss due to a risk over a one-year period?",
+    choices: [
       "ARO",
       "SLE",
       "ALE",
       "SLA"
     ],
-    "correctAnswers": [
-      "ALE"
-    ],
-    "select": 1
+    correctAnswers: ["ALE"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 11,
-    "prompt": "Which of the following answers refers to the correct formula for calculating probable financial loss due to a risk over a one-year period?",
-    "choices": [
+    setId: "risk-management-1",
+    id: 11,
+    prompt: "Which of the following answers refers to the correct formula for calculating probable financial loss due to a risk over a one-year period?",
+    choices: [
       "SLE = AV x EF",
       "ALE = ARO x SLE",
       "SLE = ALE x AV",
       "ALE = AV x EF"
     ],
-    "correctAnswers": [
-      "ALE = ARO x SLE"
-    ],
-    "select": 1
+    correctAnswers: ["ALE = ARO x SLE"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 12,
-    "prompt": "In quantitative risk assessment",
-    "choices": [
-      "this term is used for estimating the likelihood of occurrence of a future threat.",
+    setId: "risk-management-1",
+    id: 12,
+    prompt: "In quantitative risk assessment, this term is used for estimating the likelihood of occurrence of a future threat.",
+    choices: [
       "ALE",
       "SLA",
       "ARO",
       "SLE"
     ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": null
+    correctAnswers: ["ARO"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 13,
-    "prompt": "An estimate based on the historical data of how often a threat would be successful in exploiting a vulnerability is known as:",
-    "choices": [
+    setId: "risk-management-1",
+    id: 13,
+    prompt: "An estimate based on the historical data of how often a threat would be successful in exploiting a vulnerability is known as:",
+    choices: [
       "ALE",
       "SLA",
       "ARO",
       "SLE"
     ],
-    "correctAnswers": [
-      "ARO"
-    ],
-    "select": 1
+    correctAnswers: ["ARO"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 14,
-    "prompt": "In the context of risk assessment",
-    "choices": [
-      "the Exposure Factor (EF) is defined as the percentage of loss that a realized threat would have on an asset. If an organization has an asset valued at $10",
-      "000 and the EF is determined to be 20%",
-      "what would be the SLE?",
-      500,
-      2,
-      0
+    setId: "risk-management-1",
+    id: 14,
+    prompt: "In the context of risk assessment, the Exposure Factor (EF) is defined as the percentage of loss that a realized threat would have on an asset. If an organization has an asset valued at $10,000 and the EF is determined to be 20%, what would be the SLE?",
+    choices: [
+      "$500",
+      "$2,000",
+      "$5,000",
+      "$10,000"
     ],
-    "correctAnswers": [
-      "5"
-    ],
-    "select": 0
+    correctAnswers: ["$2,000"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 15,
-    "prompt": "Which of the answers listed below refers to a comprehensive document used in risk management and project management to identify",
-    "choices": [
-      "assess",
-      "and track risks?",
+    setId: "risk-management-1",
+    id: 15,
+    prompt: "Which of the answers listed below refers to a comprehensive document used in risk management and project management to identify, assess, and track risks?",
+    choices: [
       "Risk register",
       "Risk heat map",
       "Risk matrix",
       "Risk repository"
     ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
+    correctAnswers: ["Risk register"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 16,
-    "prompt": "Which of the following terms is used to describe the specific level of risk an organization is prepared to accept in pursuit of its objectives?",
-    "choices": [
+    setId: "risk-management-1",
+    id: 16,
+    prompt: "Which of the following terms is used to describe the specific level of risk an organization is prepared to accept in pursuit of its objectives?",
+    choices: [
       "Risk appetite",
       "Risk tolerance",
       "Risk acceptance",
       "Risk capacity"
     ],
-    "correctAnswers": [
-      "Risk tolerance"
-    ],
-    "select": 1
+    correctAnswers: ["Risk tolerance"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 17,
-    "prompt": "Which of the terms listed below refers to a general term that describes an organization’s overall attitude towards risk-taking?",
-    "choices": [
+    setId: "risk-management-1",
+    id: 17,
+    prompt: "Which of the terms listed below refers to a general term that describes an organization’s overall attitude towards risk-taking?",
+    choices: [
       "Risk strategy",
       "Risk control",
       "Risk appetite",
       "Risk tolerance"
     ],
-    "correctAnswers": [
-      "Risk appetite"
-    ],
-    "select": 1
+    correctAnswers: ["Risk appetite"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 18,
-    "prompt": "Contracting out a specialized technical component when the company's employees lack the necessary skills is an example of:",
-    "choices": [
+    setId: "risk-management-1",
+    id: 18,
+    prompt: "Contracting out a specialized technical component when the company's employees lack the necessary skills is an example of:",
+    choices: [
       "Risk deterrence",
       "Risk avoidance",
       "Risk acceptance",
       "Risk transference"
     ],
-    "correctAnswers": [
-      "Risk transference"
-    ],
-    "select": 1
+    correctAnswers: ["Risk transference"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 19,
-    "prompt": "Cybersecurity insurance is an example of which risk management strategy?",
-    "choices": [
+    setId: "risk-management-1",
+    id: 19,
+    prompt: "Cybersecurity insurance is an example of which risk management strategy?",
+    choices: [
       "Risk avoidance",
       "Risk deterrence",
       "Risk transference",
       "Risk acceptance"
     ],
-    "correctAnswers": [
-      "Risk transference"
-    ],
-    "select": 1
+    correctAnswers: ["Risk transference"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 20,
-    "prompt": "In the context of risk acceptance",
-    "choices": [
-      "choosing not to apply certain controls or safeguards for a specific risk is called:",
+    setId: "risk-management-1",
+    id: 20,
+    prompt: "In the context of risk acceptance, choosing not to apply certain controls or safeguards for a specific risk is called:",
+    choices: [
       "Exception",
       "Evasion",
       "Exemption",
       "Exclusion"
     ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": null
+    correctAnswers: ["Exemption"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 21,
-    "prompt": "In the risk acceptance strategy",
-    "choices": [
-      "the practice of temporarily not complying with a standard or policy due to a specific risk scenario is referred to as:",
+    setId: "risk-management-1",
+    id: 21,
+    prompt: "In the risk acceptance strategy, the practice of temporarily not complying with a standard or policy due to a specific risk scenario is referred to as:",
+    choices: [
       "Exclusion",
       "Exception",
       "Evasion",
       "Exemption"
     ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": null
+    correctAnswers: ["Exception"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 22,
-    "prompt": "Disabling certain system functions or shutting down the system when risks are identified is an example of:",
-    "choices": [
+    setId: "risk-management-1",
+    id: 22,
+    prompt: "Disabling certain system functions or shutting down the system when risks are identified is an example of:",
+    choices: [
       "Risk acceptance",
       "Risk avoidance",
       "Risk transference",
       "Risk deterrence"
     ],
-    "correctAnswers": [
-      "Risk avoidance"
-    ],
-    "select": 1
+    correctAnswers: ["Risk avoidance"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 23,
-    "prompt": "Which of the following terms describes the process of taking proactive measures to reduce the impact of identified risks?",
-    "choices": [
+    setId: "risk-management-1",
+    id: 23,
+    prompt: "Which of the following terms describes the process of taking proactive measures to reduce the impact of identified risks?",
+    choices: [
       "Risk acceptance",
       "Risk avoidance",
       "Risk transference",
       "Risk mitigation"
     ],
-    "correctAnswers": [
-      "Risk mitigation"
-    ],
-    "select": 1
+    correctAnswers: ["Risk mitigation"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 24,
-    "prompt": "Which of the acronyms listed below refers to a maximum allowable time to restore critical business functions after a disruption?",
-    "choices": [
+    setId: "risk-management-1",
+    id: 24,
+    prompt: "Which of the acronyms listed below refers to a maximum allowable time to restore critical business functions after a disruption?",
+    choices: [
       "SLA",
       "RTO",
       "MTTF",
       "RPO"
     ],
-    "correctAnswers": [
-      "RTO"
-    ],
-    "select": 1
+    correctAnswers: ["RTO"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 25,
-    "prompt": "Which of the following defines the maximum acceptable amount of data loss measured by a specific point in time before a disaster or outage?",
-    "choices": [
+    setId: "risk-management-1",
+    id: 25,
+    prompt: "Which of the following defines the maximum acceptable amount of data loss measured by a specific point in time before a disaster or outage?",
+    choices: [
       "RPO",
       "MTBF",
       "RTO",
       "MTTR"
     ],
-    "correctAnswers": [
-      "RPO"
-    ],
-    "select": 1
+    correctAnswers: ["RPO"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 26,
-    "prompt": "Which of the terms listed below is used to describe the average time required to repair a failed component or device?",
-    "choices": [
+    setId: "risk-management-1",
+    id: 26,
+    prompt: "Which of the terms listed below is used to describe the average time required to repair a failed component or device?",
+    choices: [
       "MTBF",
       "RPO",
       "MTTR",
       "SLA"
     ],
-    "correctAnswers": [
-      "MTTR"
-    ],
-    "select": 1
+    correctAnswers: ["MTTR"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 27,
-    "prompt": "A high MTBF value indicates that a component or system provides low reliability and is more likely to fail.",
-    "choices": [
-      true,
-      false
-    ],
-    "correctAnswers": [
-      "false"
-    ],
-    "select": 1
+    setId: "risk-management-1",
+    id: 27,
+    prompt: "A high MTBF value indicates that a component or system provides low reliability and is more likely to fail.",
+    choices: ["True", "False"],
+    correctAnswers: ["False"],
+    select: 1
   },
   {
-    "setId": "risk-management-1",
-    "id": 28,
-    "prompt": "A metric that represents the average amount of time a device or system is expected to operate before experiencing its first failure is known as:",
-    "choices": [
+    setId: "risk-management-1",
+    id: 28,
+    prompt: "A metric that represents the average amount of time a device or system is expected to operate before experiencing its first failure is known as:",
+    choices: [
       "MTTR",
       "SLA",
       "MTBR",
       "MTTF"
     ],
-    "correctAnswers": [
-      "MTTF"
-    ],
-    "select": 1
+    correctAnswers: ["MTTF"],
+    select: 1
   },
   {
-    "setId": "agreements-1",
-    "id": 1,
-    "prompt": "Which of the following terms refers to an agreement that specifies performance requirements for a vendor?",
-    "choices": [
-      "MSA",
-      "SLA",
-      "MOU",
-      "SOW"
-    ],
-    "correctAnswers": [
-      "SLA"
-    ],
-    "select": 1
+    setId: "agreements-1",
+    id: 1,
+    prompt: "Which of the following terms refers to an agreement that specifies performance requirements for a vendor?",
+    choices: ["MSA", "SLA", "MOU", "SOW"],
+    correctAnswers: ["SLA"],
+    select: 1
   },
   {
-    "setId": "agreements-1",
-    "id": 2,
-    "prompt": "Which of the acronyms listed below refers to a formal and often legally binding document that outlines specific responsibilities",
-    "choices": [
-      "roles",
-      "and terms agreed upon by two or more parties?",
-      "SOW",
-      "MOA",
-      "MSA",
-      "MOU"
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
+    setId: "agreements-1",
+    id: 2,
+    prompt: "Which of the acronyms listed below refers to a formal and often legally binding document that outlines specific responsibilities, roles, and terms agreed upon by two or more parties?",
+    choices: ["SOW", "MOA", "MSA", "MOU"],
+    correctAnswers: ["MOA"],
+    select: 1
   },
   {
-    "setId": "agreements-1",
-    "id": 3,
-    "prompt": "A type of nonbinding agreement outlining mutual goals and the general framework for cooperation between two or more parties is referred to as:",
-    "choices": [
-      "MOA",
-      "SOW",
-      "MOU",
-      "MSA"
-    ],
-    "correctAnswers": [
-      "MOU"
-    ],
-    "select": 1
+    setId: "agreements-1",
+    id: 3,
+    prompt: "A type of nonbinding agreement outlining mutual goals and the general framework for cooperation between two or more parties is referred to as:",
+    choices: ["MOA", "SOW", "MOU", "MSA"],
+    correctAnswers: ["MOU"],
+    select: 1
   },
   {
-    "setId": "agreements-1",
-    "id": 4,
-    "prompt": "A type of legally binding contract that establishes the foundational terms and conditions governing future agreements between two parties is known as:",
-    "choices": [
-      "MOU",
-      "SLA",
-      "MSA",
-      "SOW"
-    ],
-    "correctAnswers": [
-      "MSA"
-    ],
-    "select": 1
+    setId: "agreements-1",
+    id: 4,
+    prompt: "A type of legally binding contract that establishes the foundational terms and conditions governing future agreements between two parties is known as:",
+    choices: ["MOU", "SLA", "MSA", "SOW"],
+    correctAnswers: ["MSA"],
+    select: 1
   },
   {
-    "setId": "agreements-1",
-    "id": 5,
-    "prompt": "Which of the following acronyms refers to a document that authorizes",
-    "choices": [
-      "initiates",
-      "and tracks the progress and completion of a particular job or task?",
-      "SOW",
-      "WO",
-      "SLA",
-      "MSA"
-    ],
-    "correctAnswers": [
-      ""
-    ],
-    "select": 0
+    setId: "agreements-1",
+    id: 5,
+    prompt: "Which of the following acronyms refers to a document that authorizes, initiates, and tracks the progress and completion of a particular job or task?",
+    choices: ["SOW", "WO", "SLA", "MSA"],
+    correctAnswers: ["WO"],
+    select: 1
   },
   {
-    "setId": "agreements-1",
-    "id": 6,
-    "prompt": "A detailed agreement between a client and a vendor that describes the work to be performed on a project is called:",
-    "choices": [
-      "MSA",
-      "SLA",
-      "WO",
-      "SOW"
-    ],
-    "correctAnswers": [
-      "SOW"
-    ],
-    "select": 1
+    setId: "agreements-1",
+    id: 6,
+    prompt: "A detailed agreement between a client and a vendor that describes the work to be performed on a project is called:",
+    choices: ["MSA", "SLA", "WO", "SOW"],
+    correctAnswers: ["SOW"],
+    select: 1
   },
   {
-    "setId": "agreements-1",
-    "id": 7,
-    "prompt": "A legal contract between the holder of confidential information and another person to whom that information is disclosed restricting that other person from disclosing the confidential information to any other party is referred to as:",
-    "choices": [
-      "ISA",
-      "NDA",
-      "BPA",
-      "SLA"
-    ],
-    "correctAnswers": [
-      "NDA"
-    ],
-    "select": 1
+    setId: "agreements-1",
+    id: 7,
+    prompt: "A legal contract between the holder of confidential information and another person to whom that information is disclosed restricting that other person from disclosing the confidential information to any other party is referred to as:",
+    choices: ["ISA", "NDA", "BPA", "SLA"],
+    correctAnswers: ["NDA"],
+    select: 1
   },
   {
-    "setId": "agreements-1",
-    "id": 8,
-    "prompt": "Which of the terms listed below refers to a formal contract between business partners outlining the rights",
-    "choices": [
-      "responsibilities",
-      "and obligations of each partner regarding the management",
-      "operation",
-      "and decision-making processes within the business?",
-      "MSA",
-      "SLA"
-    ],
-    "correctAnswers": [
-      "BPA"
-    ],
-    "select": null
+    setId: "agreements-1",
+    id: 8,
+    prompt: "Which of the terms listed below refers to a formal contract between business partners outlining the rights, responsibilities, and obligations of each partner regarding the management, operation, and decision-making processes within the business?",
+    choices: ["MSA", "SLA", "BPA", "MOA"],
+    correctAnswers: ["BPA"],
+    select: 1
   },
+ 
   {
-    "setId": "pentesting-1",
-    "id": 1,
-    "prompt": "Penetration testing: (Select all that apply)",
-    "choices": [
+    setId: "pentesting-1",
+    id: 1,
+    prompt: "Penetration testing: (Select all that apply)",
+    choices: [
       "Bypasses security controls",
       "Only identifies lack of security controls",
       "Actively tests security controls",
       "Exploits vulnerabilities",
       "Passively tests security controls"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Bypasses security controls",
       "Actively tests security controls",
       "Exploits vulnerabilities"
     ],
-    "select": 3
+    select: 3
   },
   {
-    "setId": "pentesting-1",
-    "id": 2,
-    "prompt": "In cybersecurity exercises",
-    "choices": [
-      "red team takes on the role of:",
+    setId: "pentesting-1",
+    id: 2,
+    prompt: "In cybersecurity exercises, red team takes on the role of:",
+    choices: [
       "An attacker",
       "A defender",
       "Both an attacker and a defender",
       "An exercise overseer"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "An attacker"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "pentesting-1",
-    "id": 3,
-    "prompt": "In cybersecurity exercises",
-    "choices": [
-      "the defending team is known as:",
+    setId: "pentesting-1",
+    id: 3,
+    prompt: "In cybersecurity exercises, the defending team is known as:",
+    choices: [
       "Red team",
       "Blue team",
       "White team",
       "Purple team"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "Blue team"
     ],
-    "select": null
+    select: 1
   },
   {
-    "setId": "pentesting-1",
-    "id": 4,
-    "prompt": "In cybersecurity exercises",
-    "choices": [
-      "the role of an event overseer (i.e.",
-      "the referee) is delegated to:",
+    setId: "pentesting-1",
+    id: 4,
+    prompt: "In cybersecurity exercises, the role of an event overseer (i.e., the referee) is delegated to:",
+    choices: [
       "Red team",
       "Blue team",
       "White team",
       "Purple team"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "White team"
     ],
-    "select": 0
+    select: 1
   },
   {
-    "setId": "pentesting-1",
-    "id": 5,
-    "prompt": "In cybersecurity exercises",
-    "choices": [
-      "a purple team assumes the integrated role of all other teams (i.e.",
-      "red",
-      "blue",
-      "and white).",
-      true,
-      false
+    setId: "pentesting-1",
+    id: 5,
+    prompt: "In cybersecurity exercises, a purple team assumes the integrated role of all other teams (i.e., red, blue, and white).",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "False"
     ],
-    "select": 0
+    select: 1
   },
   {
-    "setId": "pentesting-1",
-    "id": 6,
-    "prompt": "A penetration test performed by an authorized professional with the full prior knowledge on how the system that is to be tested works is called:",
-    "choices": [
+    setId: "pentesting-1",
+    id: 6,
+    prompt: "A penetration test performed by an authorized professional with the full prior knowledge on how the system that is to be tested works is called:",
+    choices: [
       "Black-hat hacking",
       "White-box testing",
       "Black-box testing",
       "White-hat hacking"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "White-box testing"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "pentesting-1",
-    "id": 7,
-    "prompt": "Which of the following terms is used to describe a penetration test in which the person conducting the test has limited access to information on the internal workings of the targeted system?",
-    "choices": [
+    setId: "pentesting-1",
+    id: 7,
+    prompt: "Which of the following terms is used to describe a penetration test in which the person conducting the test has limited access to information on the internal workings of the targeted system?",
+    choices: [
       "Black-box testing",
       "Fuzz testing",
       "Gray-box testing",
       "White-box testing"
     ],
-    "correctAnswers": [
+    correctAnswers: [
       "Gray-box testing"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "pentesting-1",
-    "id": 8,
-    "prompt": "A penetration test of a computer system performed without prior knowledge of how the system that is to be tested works is referred to as black-box testing.",
-    "choices": [
-      true,
-      false
+    setId: "pentesting-1",
+    id: 8,
+    prompt: "A penetration test of a computer system performed without prior knowledge of how the system that is to be tested works is referred to as black-box testing.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      "true"
+    correctAnswers: [
+      "True"
     ],
-    "select": 1
+    select: 1
   },
   {
-    "setId": "pentesting-1",
-    "id": 9,
-    "prompt": "In penetration testing",
-    "choices": [
-      "active reconnaissance involves gathering any type of publicly available information that can be used later for exploiting vulnerabilities found in the targeted system.",
-      true,
-      false
+    setId: "pentesting-1",
+    id: 9,
+    prompt: "In penetration testing, active reconnaissance involves gathering any type of publicly available information that can be used later for exploiting vulnerabilities found in the targeted system.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "False"
     ],
-    "select": 0
+    select: 1
   },
   {
-    "setId": "pentesting-1",
-    "id": 10,
-    "prompt": "In penetration testing",
-    "choices": [
-      "passive reconnaissance relies on gathering information on the targeted system with the use of various non-invasive software tools and techniques",
-      "such as pinging",
-      "port scanning",
-      "or OS fingerprinting.",
-      true,
-      false
+    setId: "pentesting-1",
+    id: 10,
+    prompt: "In penetration testing, passive reconnaissance relies on gathering information on the targeted system with the use of various non-invasive software tools and techniques, such as pinging, port scanning, or OS fingerprinting.",
+    choices: [
+      "True",
+      "False"
     ],
-    "correctAnswers": [
-      ""
+    correctAnswers: [
+      "False"
     ],
-    "select": 0
+    select: 1
   }
 ]
 

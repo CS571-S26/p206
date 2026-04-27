@@ -1,47 +1,45 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 export default function Navbar() {
-  return (
-    <nav style={styles.nav}>
-      <h2 style={styles.logo}>CySecPrep</h2>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-      <div style={styles.links}>
-        <Link to="/" style={styles.link}>Home</Link>
-        <Link to="/quiz" style={styles.link}>Quizzes</Link>
-        <Link to="/flashcards" style={styles.link}>Flashcards</Link>
-        <Link to="/matching" style={styles.link}>Matching</Link>
-        <Link to="/about" style={styles.link}>About</Link>
+  return (
+    <nav className="app-navbar">
+      <div className="navbar-brand-group">
+        <h2 className="navbar-logo">CySecPrep</h2>
+        <button
+          type="button"
+          className="navbar-toggle"
+          aria-controls="navbar-menu"
+          aria-expanded={menuOpen}
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
+
+      <div id="navbar-menu" className={`navbar-links ${menuOpen ? "open" : ""}`}>
+        <Link to="/" className="navbar-link" onClick={() => setMenuOpen(false)}>
+          Home
+        </Link>
+        <Link to="/quiz" className="navbar-link" onClick={() => setMenuOpen(false)}>
+          Quizzes
+        </Link>
+        <Link to="/flashcards" className="navbar-link" onClick={() => setMenuOpen(false)}>
+          Flashcards
+        </Link>
+        <Link to="/matching" className="navbar-link" onClick={() => setMenuOpen(false)}>
+          Matching
+        </Link>
+        <Link to="/about" className="navbar-link" onClick={() => setMenuOpen(false)}>
+          About
+        </Link>
       </div>
     </nav>
   );
 }
-
-const styles = {
-  nav: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "1rem 2rem",
-    backgroundColor: "#020617",
-    borderBottom: "1px solid #1e293b",
-    position: "sticky",
-    top: 0,
-    zIndex: 1000
-  },
-
-  logo: {
-    color: "#38bdf8",
-    margin: 0
-  },
-
-  links: {
-    display: "flex",
-    gap: "1.5rem"
-  },
-
-  link: {
-    color: "white",
-    textDecoration: "none",
-    fontWeight: "500"
-  }
-};

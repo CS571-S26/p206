@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Container, Button } from "react-bootstrap";
+import { ShieldShaded } from "react-bootstrap-icons";
 import { studySets } from "../data/studySets";
 import "./HomePage.css";
 import CardGrid from "../components/CardGrid";
@@ -57,7 +58,9 @@ export default function HomePage() {
             getKey={(set) => set.id}
             renderContent={(set) => (
               <div className="home-card-content">
-                <div className="home-card-icon">🛡️</div>
+                <div className="home-card-icon">
+                  <ShieldShaded />
+                </div>
                 <div className="home-card-title">{set.title}</div>
                 <div className="home-card-subtitle">
                   {set.category || "Security+ practice set"}

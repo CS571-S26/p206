@@ -78,6 +78,11 @@
   font-size: 2rem;
   font-weight: 750;
   margin-bottom: 0.5rem;
+  color: #ffffff !important;
+}
+
+.homepage .section-title {
+  color: #ffffff !important;
 }
 
 .section-subtitle {

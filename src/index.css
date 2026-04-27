@@ -1,0 +1,20 @@
+html, body, #root {
+  min-height: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, #0b1220 0%, #070b16 100%);
+  color: #f8f9fa;
+}
+
+body {
+  background-attachment: fixed;
+}
+
+.quiz-page,
+.flashcards-page,
+.matching-page,
+.quizsets-page,
+.studysets-page,
+.about-page {
+  background: transparent !important;
+  color: inherit;
+}

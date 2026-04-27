@@ -1,14 +1,9 @@
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import { Container, Row, Col, Card, Button, Badge } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import {
-  Grid,
-  Book,
-  PencilSquare,
-  Controller,
   Lightbulb,
   VolumeUp,
-  Gear,
   ChevronLeft,
   ChevronRight,
   Shuffle,
@@ -59,37 +54,102 @@ export default function FlashcardsPage() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const [displayedCards, setDisplayedCards] = useState([]);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const cardRef = useRef(null);
 
   useEffect(() => {
+    setDisplayedCards(flashcards);
     setCurrentIndex(0);
     setFlipped(false);
-  }, [activeSet?.id]);
+  }, [flashcards]);
+
+  useEffect(() => {
+    const handleFullScreenChange = () => {
+      setIsFullscreen(Boolean(document.fullscreenElement));
+    };
+
+    document.addEventListener("fullscreenchange", handleFullScreenChange);
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullScreenChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isSpeaking && "speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+      setIsSpeaking(false);
+    }
+  }, [currentIndex, flipped]);
 
   if (!activeSet) {
     return null;
   }
 
-  const currentCard = flashcards[currentIndex];
+  const currentCard = displayedCards[currentIndex];
 
   const handleNext = () => {
-    if (!flashcards.length) return;
+    if (!displayedCards.length) return;
     setFlipped(false);
-    setCurrentIndex((prev) => (prev + 1) % flashcards.length);
+    setCurrentIndex((prev) => (prev + 1) % displayedCards.length);
   };
 
   const handlePrev = () => {
-    if (!flashcards.length) return;
+    if (!displayedCards.length) return;
     setFlipped(false);
     setCurrentIndex((prev) =>
-      prev === 0 ? flashcards.length - 1 : prev - 1
+      prev === 0 ? displayedCards.length - 1 : prev - 1
     );
   };
 
+  const shuffleArray = (items) => {
+    return [...items].sort(() => Math.random() - 0.5);
+  };
+
   const handleShuffle = () => {
-    if (!flashcards.length) return;
+    if (displayedCards.length < 2) return;
     setFlipped(false);
-    const randomIndex = Math.floor(Math.random() * flashcards.length);
-    setCurrentIndex(randomIndex);
+    setDisplayedCards((prev) => shuffleArray(prev));
+    setCurrentIndex(0);
+  };
+
+  const handleFullscreenToggle = async () => {
+    if (!cardRef.current) return;
+
+    try {
+      if (document.fullscreenElement) {
+        await document.exitFullscreen();
+      } else if (cardRef.current.requestFullscreen) {
+        await cardRef.current.requestFullscreen();
+      }
+    } catch (error) {
+      console.error("Fullscreen error:", error);
+    }
+  };
+
+  const handleVoiceReader = () => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+
+    if (isSpeaking) {
+      window.speechSynthesis.cancel();
+      setIsSpeaking(false);
+      return;
+    }
+
+    const text = flipped
+      ? `Definition: ${currentCard?.correctAnswers?.join(", ") || "No answer available"}`
+      : `Term: ${currentCard?.prompt || "No question available"}`;
+
+    if (!text) return;
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.onend = () => setIsSpeaking(false);
+    utterance.onerror = () => setIsSpeaking(false);
+
+    setIsSpeaking(true);
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
   };
 
   return (
@@ -105,43 +165,13 @@ export default function FlashcardsPage() {
               <p className="flashcards-subtitle mb-0">
                 Review key terms and concepts for the CompTIA Security+ exam.
               </p>
+              <Button
+                className="flashcards-btn mt-3"
+                onClick={() => navigate(`/quiz/${activeSet.id}`)}
+              >
+                Test this set
+              </Button>
             </div>
-
-            <Row className="g-3 mb-4">
-              <Col md={6} xl={3}>
-                <Button className="mode-btn mode-btn-active w-100">
-                  <Book className="me-2" />
-                  Flashcards
-                </Button>
-              </Col>
-
-              <Col md={6} xl={3}>
-                <Button
-                  className="mode-btn w-100"
-                  onClick={() => navigate(`/quiz/${activeSet.id}`)}
-                >
-                  <Grid className="me-2" />
-                  Learn
-                </Button>
-              </Col>
-
-              <Col md={6} xl={3}>
-                <Button
-                  className="mode-btn w-100"
-                  onClick={() => navigate(`/quiz/${activeSet.id}`)}
-                >
-                  <PencilSquare className="me-2" />
-                  Test
-                </Button>
-              </Col>
-
-              <Col md={6} xl={3}>
-                <Button className="mode-btn w-100">
-                  <Controller className="me-2" />
-                  Match
-                </Button>
-              </Col>
-            </Row>
 
             <Card className="flashcard-shell border-0">
               <Card.Body className="p-3 p-md-4">
@@ -152,25 +182,40 @@ export default function FlashcardsPage() {
                   </div>
 
                   <div className="d-flex gap-3 fs-5">
-                    <VolumeUp />
-                    <Gear />
+                    <Button
+                      variant="link"
+                      className="icon-btn p-0 text-white"
+                      onClick={handleVoiceReader}
+                      aria-label={isSpeaking ? "Stop voice reader" : "Read card aloud"}
+                    >
+                      <VolumeUp />
+                    </Button>
+                    <Button
+                      variant="link"
+                      className="icon-btn p-0 text-white"
+                      onClick={handleFullscreenToggle}
+                      aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+                    >
+                      <ArrowsFullscreen />
+                    </Button>
                   </div>
                 </div>
 
                 <Card
                   className="flashcard-main border-0"
+                  ref={cardRef}
                   onClick={() => setFlipped(!flipped)}
                 >
                   <Card.Body className="d-flex justify-content-center align-items-center text-center">
-                    {flashcards.length > 0 ? (
+                    {displayedCards.length > 0 ? (
                       <div>
                         <Badge bg="info" className="mb-3 flashcard-badge">
                           {flipped ? "Definition" : "Term"}
                         </Badge>
                         <h2 className="flashcard-text mb-0">
                         {flipped
-                          ? (currentCard.correctAnswers?.join(", ") || "No answer available")
-                          : (currentCard.prompt || "No question available")}
+                          ? (currentCard?.correctAnswers?.join(", ") || "No answer available")
+                          : (currentCard?.prompt || "No question available")}
                       </h2>
                       </div>
                     ) : (
@@ -189,7 +234,7 @@ export default function FlashcardsPage() {
               </Button>
 
               <div className="flashcard-counter">
-                {flashcards.length ? `${currentIndex + 1} / ${flashcards.length}` : "0 / 0"}
+                {displayedCards.length ? `${currentIndex + 1} / ${displayedCards.length}` : "0 / 0"}
               </div>
 
               <Button className="control-btn rounded-circle" onClick={handleNext}>
@@ -200,7 +245,7 @@ export default function FlashcardsPage() {
                 <Shuffle size={18} />
               </Button>
 
-              <Button className="control-btn rounded-circle">
+              <Button className="control-btn rounded-circle" onClick={handleFullscreenToggle}>
                 <ArrowsFullscreen size={18} />
               </Button>
             </div>
@@ -214,7 +259,7 @@ export default function FlashcardsPage() {
                   <strong>Category:</strong> {activeSet.category}
                 </p>
                 <p className="mb-2">
-                  <strong>Total Cards:</strong> {flashcards.length}
+                  <strong>Total Cards:</strong> {displayedCards.length}
                 </p>
                 <p className="mb-0">
                   <strong>Focus:</strong> {activeSet.title}
@@ -247,7 +292,7 @@ export default function FlashcardsPage() {
               <Card.Body>
                 <h5 className="mb-3">Card List</h5>
                 <div className="sidebar-card-list d-grid gap-2">
-                  {flashcards.map((card, index) => (
+                  {displayedCards.map((card, index) => (
                     <Button
                       key={index}
                       className={`sidebar-list-btn text-start ${
