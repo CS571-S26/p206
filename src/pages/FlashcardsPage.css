@@ -185,3 +185,62 @@
 .scrollable-sets-box::-webkit-scrollbar-thumb:hover {
   background: #5c74bd;
 }
+
+
+.custom-set-modal-header,
+.custom-set-modal-body,
+.custom-set-modal-footer {
+  background: #22305a;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.custom-set-modal-body input {
+  background: #101c3d;
+  color: white;
+  border: 1px solid #4b5f9e;
+  border-radius: 12px;
+}
+
+.custom-set-modal-body input::placeholder {
+  color: #94a3b8;
+}
+
+.custom-set-modal-body input:focus {
+  background: #101c3d;
+  color: white;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 0.2rem rgba(96, 165, 250, 0.2);
+}
+
+.custom-card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  align-items: center;
+}
+
+.custom-remove-btn {
+  border-radius: 12px !important;
+  padding: 0.65rem 0.8rem !important;
+}
+
+@media (max-width: 768px) {
+  .custom-card-row {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-remove-btn {
+    width: 100%;
+  }
+}
+
+
+.flashcards-btn-red {
+  background-color: #dc3545 !important;
+}
+
+.flashcards-btn-red:hover {
+  background-color: #b91c1c !important;
+}

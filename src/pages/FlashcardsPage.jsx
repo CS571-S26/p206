@@ -1,5 +1,14 @@
 import { useMemo, useState, useEffect, useRef } from "react";
-import { Container, Row, Col, Card, Button, Badge } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Button,
+  Badge,
+  Modal,
+  Form
+} from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   Lightbulb,
@@ -7,57 +16,88 @@ import {
   ChevronLeft,
   ChevronRight,
   Shuffle,
-  ArrowsFullscreen
+  ArrowsFullscreen,
+  PlusCircle,
+  Trash
 } from "react-bootstrap-icons";
 import { studySets } from "../data/studySets";
 import { SetContent } from "../data/SetContent";
 import "./FlashcardsPage.css";
 
+const CUSTOM_SETS_KEY = "customFlashcardSets";
+
 export default function FlashcardsPage() {
   const navigate = useNavigate();
   const { setId } = useParams();
+  const cardRef = useRef(null);
 
-  const activeSet = useMemo(() => {
-    return studySets.find((set) => set.id === setId) || studySets[0];
-  }, [setId]);
-
-  const flashcards = useMemo(() => {
-  const specialSetMap = {
-    "threat-vectors": "attack-surfaces-1",
-    "malware-attacks": "malware-1",
-    "vulnerability-management": "vuln-management-1",
-    "secure-protocols": "secure-protocols-1",
-    "application-security": "application-security-1",
-    "network-attacks": "network-attacks-1",
-    "application-attacks": "application-attacks-1",
-    "security-vulnerabilities": "security-vulnerabilities-1",
-    "data-protection": "data-protection-1",
-    "resilience-recovery": "resilience-recovery-1",
-    "wireless-security": "wireless-security-1",
-    "indicators-malicious": "indicators-malicious-1",
-    "access-controls": "access-controls-1",
-    "password-concepts": "password-concepts-1",
-    "incident-response": "incident-response-1",
-    "risk-management": "risk-management-1",
-    "agreement-types": "agreement-types-1",
-    "penetration-testing": "penetration-testing-1"
-  };
-
-  const possibleIds = [
-    activeSet?.id,
-    `${activeSet?.id}-1`,
-    specialSetMap[activeSet?.id]
-  ].filter(Boolean);
-
-  return SetContent.filter((card) => possibleIds.includes(card.setId));
-}, [activeSet]);
-
+  const [customSets, setCustomSets] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [displayedCards, setDisplayedCards] = useState([]);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const cardRef = useRef(null);
+
+  const [showAddSetModal, setShowAddSetModal] = useState(false);
+  const [newSetTitle, setNewSetTitle] = useState("");
+  const [newSetCategory, setNewSetCategory] = useState("Custom");
+  const [newCards, setNewCards] = useState([
+    { term: "", definition: "" }
+  ]);
+
+  useEffect(() => {
+    const savedSets = JSON.parse(sessionStorage.getItem(CUSTOM_SETS_KEY)) || [];
+    setCustomSets(savedSets);
+  }, []);
+
+  useEffect(() => {
+    sessionStorage.setItem(CUSTOM_SETS_KEY, JSON.stringify(customSets));
+  }, [customSets]);
+
+  const allStudySets = useMemo(() => {
+    return [...studySets, ...customSets];
+  }, [customSets]);
+
+  const activeSet = useMemo(() => {
+    return allStudySets.find((set) => set.id === setId) || allStudySets[0];
+  }, [setId, allStudySets]);
+
+  const flashcards = useMemo(() => {
+    if (!activeSet) return [];
+
+    if (activeSet.isCustom) {
+      return activeSet.cards || [];
+    }
+
+    const specialSetMap = {
+      "threat-vectors": "attack-surfaces-1",
+      "malware-attacks": "malware-1",
+      "vulnerability-management": "vuln-management-1",
+      "secure-protocols": "secure-protocols-1",
+      "application-security": "application-security-1",
+      "network-attacks": "network-attacks-1",
+      "application-attacks": "application-attacks-1",
+      "security-vulnerabilities": "security-vulnerabilities-1",
+      "data-protection": "data-protection-1",
+      "resilience-recovery": "resilience-recovery-1",
+      "wireless-security": "wireless-security-1",
+      "indicators-malicious": "indicators-malicious-1",
+      "access-controls": "access-controls-1",
+      "password-concepts": "password-concepts-1",
+      "incident-response": "incident-response-1",
+      "risk-management": "risk-management-1",
+      "agreement-types": "agreement-types-1",
+      "penetration-testing": "penetration-testing-1"
+    };
+
+    const possibleIds = [
+      activeSet.id,
+      `${activeSet.id}-1`,
+      specialSetMap[activeSet.id]
+    ].filter(Boolean);
+
+    return SetContent.filter((card) => possibleIds.includes(card.setId));
+  }, [activeSet]);
 
   useEffect(() => {
     setDisplayedCards(flashcards);
@@ -71,6 +111,7 @@ export default function FlashcardsPage() {
     };
 
     document.addEventListener("fullscreenchange", handleFullScreenChange);
+
     return () => {
       document.removeEventListener("fullscreenchange", handleFullScreenChange);
     };
@@ -83,9 +124,7 @@ export default function FlashcardsPage() {
     }
   }, [currentIndex, flipped]);
 
-  if (!activeSet) {
-    return null;
-  }
+  if (!activeSet) return null;
 
   const currentCard = displayedCards[currentIndex];
 
@@ -120,7 +159,7 @@ export default function FlashcardsPage() {
     try {
       if (document.fullscreenElement) {
         await document.exitFullscreen();
-      } else if (cardRef.current.requestFullscreen) {
+      } else {
         await cardRef.current.requestFullscreen();
       }
     } catch (error) {
@@ -141,8 +180,6 @@ export default function FlashcardsPage() {
       ? `Definition: ${currentCard?.correctAnswers?.join(", ") || "No answer available"}`
       : `Term: ${currentCard?.prompt || "No question available"}`;
 
-    if (!text) return;
-
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.onend = () => setIsSpeaking(false);
     utterance.onerror = () => setIsSpeaking(false);
@@ -150,6 +187,73 @@ export default function FlashcardsPage() {
     setIsSpeaking(true);
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(utterance);
+  };
+
+  const handleCardChange = (index, field, value) => {
+    setNewCards((prev) =>
+      prev.map((card, i) =>
+        i === index ? { ...card, [field]: value } : card
+      )
+    );
+  };
+
+  const handleAddCardRow = () => {
+    setNewCards((prev) => [...prev, { term: "", definition: "" }]);
+  };
+
+  const handleRemoveCardRow = (index) => {
+    setNewCards((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const handleCreateSet = () => {
+    const cleanedCards = newCards
+      .filter((card) => card.term.trim() && card.definition.trim())
+      .map((card, index) => ({
+        id: `custom-card-${Date.now()}-${index}`,
+        setId: `custom-${Date.now()}`,
+        prompt: card.term.trim(),
+        correctAnswers: [card.definition.trim()]
+      }));
+
+
+   
+
+    if (!newSetTitle.trim() || cleanedCards.length === 0) return;
+
+    const newSetId = `custom-${Date.now()}`;
+
+    const createdSet = {
+      id: newSetId,
+      title: newSetTitle.trim(),
+      category: newSetCategory.trim() || "Custom",
+      isCustom: true,
+      cards: cleanedCards.map((card) => ({
+        ...card,
+        setId: newSetId
+      }))
+    };
+
+    setCustomSets((prev) => [...prev, createdSet]);
+
+    setNewSetTitle("");
+    setNewSetCategory("Custom");
+    setNewCards([{ term: "", definition: "" }]);
+    setShowAddSetModal(false);
+
+    navigate(`/flashcards/${newSetId}`);
+  };
+
+
+   const handleDeleteSet = () => {
+    if (!activeSet?.isCustom) return;
+
+    const updatedSets = customSets.filter((set) => set.id !== activeSet.id);
+    setCustomSets(updatedSets);
+
+    const nextSetId = studySets[0]?.id;
+    if (nextSetId) {
+      navigate(`/flashcards/${nextSetId}`);
+    }
   };
 
   return (
@@ -161,16 +265,43 @@ export default function FlashcardsPage() {
               <div className="flashcards-breadcrumb mb-2">
                 Security+ / Flashcards / {activeSet.title}
               </div>
+
               <h1 className="flashcards-title mb-2">CySecPrep Flashcards</h1>
+
               <p className="flashcards-subtitle mb-0">
                 Review key terms and concepts for the CompTIA Security+ exam.
               </p>
-              <Button
-                className="flashcards-btn mt-3"
-                onClick={() => navigate(`/quiz/${activeSet.id}`)}
-              >
-                Test this set
-              </Button>
+
+              <div className="d-flex flex-wrap gap-2 mt-3">
+                {!activeSet.isCustom && (
+                  <Button
+                    className="flashcards-btn"
+                    onClick={() => navigate(`/quiz/${activeSet.id}`)}
+                  >
+                    Test this set
+                  </Button>
+                )}
+
+                <Button
+                  className="flashcards-btn flashcards-btn-green"
+                  onClick={() => setShowAddSetModal(true)}
+                >
+                  <PlusCircle className="me-2" />
+                  Add Set
+                </Button>
+                
+                {activeSet.isCustom && (
+                <Button
+                  className="flashcards-btn flashcards-btn-red"
+                  onClick={handleDeleteSet}
+                >
+                  <Trash className="me-2" />
+                  Delete Set
+                </Button>
+              )}
+                
+                
+              </div>
             </div>
 
             <Card className="flashcard-shell border-0">
@@ -186,15 +317,14 @@ export default function FlashcardsPage() {
                       variant="link"
                       className="icon-btn p-0 text-white"
                       onClick={handleVoiceReader}
-                      aria-label={isSpeaking ? "Stop voice reader" : "Read card aloud"}
                     >
                       <VolumeUp />
                     </Button>
+
                     <Button
                       variant="link"
                       className="icon-btn p-0 text-white"
                       onClick={handleFullscreenToggle}
-                      aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
                     >
                       <ArrowsFullscreen />
                     </Button>
@@ -212,16 +342,15 @@ export default function FlashcardsPage() {
                         <Badge bg="info" className="mb-3 flashcard-badge">
                           {flipped ? "Definition" : "Term"}
                         </Badge>
+
                         <h2 className="flashcard-text mb-0">
-                        {flipped
-                          ? (currentCard?.correctAnswers?.join(", ") || "No answer available")
-                          : (currentCard?.prompt || "No question available")}
-                      </h2>
+                          {flipped
+                            ? currentCard?.correctAnswers?.join(", ")
+                            : currentCard?.prompt}
+                        </h2>
                       </div>
                     ) : (
-                      <div>
-                        <h2 className="flashcard-text mb-0">No cards yet</h2>
-                      </div>
+                      <h2 className="flashcard-text mb-0">No cards yet</h2>
                     )}
                   </Card.Body>
                 </Card>
@@ -234,7 +363,9 @@ export default function FlashcardsPage() {
               </Button>
 
               <div className="flashcard-counter">
-                {displayedCards.length ? `${currentIndex + 1} / ${displayedCards.length}` : "0 / 0"}
+                {displayedCards.length
+                  ? `${currentIndex + 1} / ${displayedCards.length}`
+                  : "0 / 0"}
               </div>
 
               <Button className="control-btn rounded-circle" onClick={handleNext}>
@@ -270,9 +401,10 @@ export default function FlashcardsPage() {
             <Card className="sidebar-card border-0 mt-3">
               <Card.Body>
                 <h5 className="mb-3">All Study Sets</h5>
+
                 <div className="scrollable-sets-box">
                   <div className="d-grid gap-2">
-                    {studySets.map((set) => (
+                    {allStudySets.map((set) => (
                       <Button
                         key={set.id}
                         className={`sidebar-list-btn text-start ${
@@ -281,6 +413,11 @@ export default function FlashcardsPage() {
                         onClick={() => navigate(`/flashcards/${set.id}`)}
                       >
                         {set.title}
+                        {set.isCustom && (
+                          <Badge bg="success" className="ms-2">
+                            Custom
+                          </Badge>
+                        )}
                       </Button>
                     ))}
                   </div>
@@ -291,10 +428,11 @@ export default function FlashcardsPage() {
             <Card className="sidebar-card border-0 mt-3">
               <Card.Body>
                 <h5 className="mb-3">Card List</h5>
+
                 <div className="sidebar-card-list d-grid gap-2">
                   {displayedCards.map((card, index) => (
                     <Button
-                      key={index}
+                      key={card.id || index}
                       className={`sidebar-list-btn text-start ${
                         currentIndex === index ? "sidebar-list-btn-active" : ""
                       }`}
@@ -312,6 +450,95 @@ export default function FlashcardsPage() {
           </Col>
         </Row>
       </Container>
+
+      <Modal
+        show={showAddSetModal}
+        onHide={() => setShowAddSetModal(false)}
+        centered
+        size="lg"
+      >
+        <Modal.Header closeButton className="custom-set-modal-header">
+          <Modal.Title>Create Custom Flashcard Set</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body className="custom-set-modal-body">
+          <Form>
+            <Form.Group className="mb-3">
+              <Form.Label>Set Title</Form.Label>
+              <Form.Control
+                value={newSetTitle}
+                onChange={(e) => setNewSetTitle(e.target.value)}
+                placeholder="Example: Network Acronyms"
+              />
+            </Form.Group>
+
+            <Form.Group className="mb-4">
+              <Form.Label>Category</Form.Label>
+              <Form.Control
+                value={newSetCategory}
+                onChange={(e) => setNewSetCategory(e.target.value)}
+                placeholder="Example: Networking"
+              />
+            </Form.Group>
+
+            <h5 className="mb-3">Terms and Definitions</h5>
+
+            {newCards.map((card, index) => (
+              <div className="custom-card-row" key={index}>
+                <Form.Control
+                  value={card.term}
+                  onChange={(e) =>
+                    handleCardChange(index, "term", e.target.value)
+                  }
+                  placeholder="Term"
+                />
+
+                <Form.Control
+                  value={card.definition}
+                  onChange={(e) =>
+                    handleCardChange(index, "definition", e.target.value)
+                  }
+                  placeholder="Definition"
+                />
+
+                {newCards.length > 1 && (
+                  <Button
+                    variant="danger"
+                    className="custom-remove-btn"
+                    onClick={() => handleRemoveCardRow(index)}
+                  >
+                    <Trash />
+                  </Button>
+                )}
+              </div>
+            ))}
+
+            <Button
+              className="flashcards-btn mt-2"
+              type="button"
+              onClick={handleAddCardRow}
+            >
+              Add another card
+            </Button>
+          </Form>
+        </Modal.Body>
+
+        <Modal.Footer className="custom-set-modal-footer">
+          <Button
+            variant="secondary"
+            onClick={() => setShowAddSetModal(false)}
+          >
+            Cancel
+          </Button>
+
+          <Button
+            className="flashcards-btn flashcards-btn-green"
+            onClick={handleCreateSet}
+          >
+            Save Set
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }
