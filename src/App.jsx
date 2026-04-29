@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
-import StudySetsPage from "./pages/StudySetsPage";
 import FlashcardsPage from "./pages/FlashcardsPage";
 import QuizSetsPage from "./pages/QuizSetsPage";
 import QuizPage from "./pages/QuizPage";
