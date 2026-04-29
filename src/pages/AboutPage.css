@@ -23,8 +23,8 @@
 }
 
 .about-badge {
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  background-color: #1e40af !important; 
+  color: #ffffff !important;
 }
 
 .about-title {

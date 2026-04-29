@@ -15892,7 +15892,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 1,
     prompt: "An attack surface is the sum of all the potential points (vulnerabilities) through which an attacker can interact with or compromise a system or network, indicating the overall exposure to potential threats. Examples of attack surfaces can be all software, hardware, and network interfaces with known security flaws. A threat vector represents the method or means through which a cyber threat is introduced or delivered to a target system. It outlines the pathway or avenue used by attackers to exploit vulnerabilities. Common threat vector types include phishing emails, malware, drive-by downloads, and social engineering techniques.",
     choices: ["True", "False"],
@@ -15900,7 +15900,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 2,
     prompt: "Which of the answers listed below refers to an email-based threat vector?",
     choices: [
@@ -15915,7 +15915,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 3,
     prompt: "Which of the following terms refers to a threat vector commonly associated with SMS-based communication?",
     choices: [
@@ -15928,7 +15928,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 4,
     prompt: "Which of the answers listed below refers to an example of a potential threat vector in IM-based communication?",
     choices: [
@@ -15944,7 +15944,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 5,
     prompt: "Which of the following answers refer to examples of image-based threat vectors? (Select 3 answers)",
     choices: [
@@ -15962,7 +15962,7 @@ export  const SetContent = [
     select: 3
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 6,
     prompt: "Which of the answers listed below refers to a file-based threat vector?",
     choices: [
@@ -15978,7 +15978,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 7,
     prompt: "Which of the following answer choices is an example of a threat vector type that is typical for voice communication?",
     choices: [
@@ -15991,7 +15991,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 8,
     prompt: "Examples of threat vectors directly related to the use of removable devices include: (Select 2 answers)",
     choices: [
@@ -16008,7 +16008,7 @@ export  const SetContent = [
     select: 2
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 9,
     prompt: "Which of the answers listed below refer(s) to client-based software threat vector(s)? (Select all that apply)",
     choices: [
@@ -16029,7 +16029,7 @@ export  const SetContent = [
     select: 5
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 10,
     prompt: "Which of the following answers refer to agentless software threat vectors? (Select 2 answers)",
     choices: [
@@ -16046,7 +16046,7 @@ export  const SetContent = [
     select: 2
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 11,
     prompt: "Exploiting known vulnerability is a common threat vector for:",
     choices: [
@@ -16061,7 +16061,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 12,
     prompt: "Which of the wireless technologies listed below are considered potential threat vectors and should be avoided due to their known vulnerabilities? (Select all that apply)",
     choices: [
@@ -16081,7 +16081,7 @@ export  const SetContent = [
     select: 4
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 13,
     prompt: "Which of the following answers refers to a threat vector characteristic only to wired networks?",
     choices: [
@@ -16097,7 +16097,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 14,
     prompt: "Examples of threat vectors related to Bluetooth communication include: bluesmacking (a type of DoS attack that targets Bluetooth devices by overwhelming them with excessive traffic), bluejacking (the practice of sending unsolicited messages or data to a Bluetooth-enabled device), bluesnarfing (gaining unauthorized access to a Bluetooth device and data theft), and bluebugging (gaining remote control over a Bluetooth device).",
     choices: [
@@ -16110,7 +16110,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 15,
     prompt: "Which of the answers listed below refers to the most probable cause of an unauthorized access caused by the exploitation of a specific network entry point?",
     choices: [
@@ -16125,7 +16125,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 16,
     prompt: "The importance of changing default usernames and passwords can be illustrated by the example of certain network devices (such as routers), which are often shipped with default and well-known admin credentials that can be looked up on the web. Leaving the default credentials unchanged expands the attack surface by providing an easy entry point for unauthorized access.",
     choices: [
@@ -16138,7 +16138,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "attack-surfaces-1",
+    setId: "threat-vectors",
     id: 17,
     prompt: "Which of the following answers refer to common threat vectors that apply to MSPs, vendors, and suppliers in the supply chain? (Select 2 answers)",
     choices: [
@@ -16369,7 +16369,7 @@ export  const SetContent = [
     select: 1
   },
    {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 1,
     prompt: "Which type of application attack relies on introducing external code into the address space of a running program?",
     choices: [
@@ -16382,7 +16382,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 2,
     prompt: "A collection of precompiled functions designed to be used by more than one Microsoft Windows application simultaneously to save system resources is known as:",
     choices: [
@@ -16395,7 +16395,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 3,
     prompt: "Which of the answers listed below refers to an application attack that relies on executing a library of code?",
     choices: [
@@ -16408,7 +16408,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 4,
     prompt: "A type of exploit in which an application overwrites the contents of a memory area it should not have access to is called:",
     choices: [
@@ -16421,7 +16421,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 5,
     prompt: "A malfunction in a preprogrammed sequential access to a shared resource is described as:",
     choices: [
@@ -16434,7 +16434,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 6,
     prompt: "A type of vulnerability where the state of a resource is verified at one point in time but may change before the resource is actually used is referred to as:",
     choices: [
@@ -16447,7 +16447,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 7,
     prompt: "A malicious application update is a type of malware that can be installed through a seemingly legitimate software update. The introduction of a malicious update into the application code can be enabled through various means, including:",
     choices: [
@@ -16462,7 +16462,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 8,
     prompt: "Which of the following answers does not refer to a common type of OS-based vulnerability?",
     choices: [
@@ -16478,7 +16478,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 9,
     prompt: "Which of the answers listed below refers to a security vulnerability that enables inserting malicious code into input fields, such search bars or login forms, to execute unauthorized commands on a database?",
     choices: [
@@ -16491,7 +16491,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 10,
     prompt: "Which of the following indicates an SQL injection attack attempt?",
     choices: [
@@ -16506,7 +16506,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 11,
     prompt: "Which of the answers listed below describe the characteristics of a cross-site scripting attack? (Select 3 answers)",
     choices: [
@@ -16525,7 +16525,7 @@ export  const SetContent = [
     select: 3
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 12,
     prompt: "Which of the terms listed below refers to a situation in which a product or service may no longer receive security patches or other updates, making it more vulnerable to attack?",
     choices: [
@@ -16538,7 +16538,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 13,
     prompt: "What is the main vulnerability related to legacy hardware?",
     choices: [
@@ -16553,7 +16553,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 14,
     prompt: "The term \"VM escape\" refers to the process of breaking out of the boundaries of a guest operating system installation to access the primary hypervisor controlling all the virtual machines on the host machine.",
     choices: [
@@ -16564,7 +16564,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 15,
     prompt: "Which of the following answers refers to a virtualization-related vulnerability where virtualized assets allocated to one VM are improperly isolated and can be accessed or compromised by another VM?",
     choices: [
@@ -16577,7 +16577,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 16,
     prompt: "Which of the answers listed below refers to a cloud-related vulnerability type?",
     choices: [
@@ -16592,7 +16592,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 17,
     prompt: "The practice of installing mobile apps from websites and app stores other than the official marketplaces is referred to as:",
     choices: [
@@ -16605,7 +16605,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 18,
     prompt: "Which of the following terms is used to describe the process of removing software restrictions imposed by Apple on its iOS operating system?",
     choices: [
@@ -16618,7 +16618,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 19,
     prompt: "The term \"Rooting\" refers to the capability of gaining administrative access to the operating system and system applications on:",
     choices: [
@@ -16631,7 +16631,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "vulnerabilities-1",
+    setId: "security-vulnerabilities",
     id: 20,
     prompt: "A type of attack aimed at exploiting vulnerability that is present in already released software but unknown to the software developer is known as:",
     choices: [
@@ -16644,7 +16644,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "malware-1",
+    setId: "malware-attacks",
     id: 1,
     prompt: "Malware that restricts access to a computer system by encrypting files or locking the entire system down until the user performs requested action is called:",
     choices: [
@@ -16659,7 +16659,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "malware-1",
+    setId: "malware-attacks",
     id: 2,
     prompt: "A Trojan horse is a type of software that performs harmful actions under the guise of a legitimate and useful program. The most characteristic feature of Trojan horse is that while it may function as a legitimate program and possess all the expected functionalities, it also contains a concealed portion of malicious code that the user is unaware of.",
     choices: [
@@ -16672,7 +16672,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "malware-1",
+    setId: "malware-attacks",
     id: 3,
     prompt: "Which type of Trojan enables unauthorized remote access to a compromised system?",
     choices: [
@@ -16687,7 +16687,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "malware-1",
+    setId: "malware-attacks",
     id: 4,
     prompt: "A standalone malicious computer program that typically propagates itself over a computer network to adversely affect system resources and network bandwidth is referred to as:",
     choices: [
@@ -16702,7 +16702,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "malware-1",
+    setId: "malware-attacks",
     id: 5,
     prompt: "Malicious software collecting information about users without their knowledge/consent is known as:",
     choices: [
@@ -16717,7 +16717,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "malware-1",
+    setId: "malware-attacks",
     id: 6,
     prompt: "Which of the answers listed below refer to the characteristic features of bloatware? (Select 3 answers)",
     choices: [
@@ -16735,7 +16735,7 @@ export  const SetContent = [
     select: 3
   },
   {
-    setId: "malware-1",
+    setId: "malware-attacks",
     id: 7,
     prompt: "Which of the following answers refer to the characteristics of a PUP? (Select 3 answers)",
     choices: [
@@ -16753,7 +16753,7 @@ export  const SetContent = [
     select: 3
   },
   {
-    setId: "malware-1",
+    setId: "malware-attacks",
     id: 8,
     prompt: "Which of the statements listed below apply to the definition of a computer virus? (Select 3 answers)",
     choices: [
@@ -16772,7 +16772,7 @@ export  const SetContent = [
     select: 3
   },
   {
-    setId: "malware-1",
+    setId: "malware-attacks",
     id: 9,
     prompt: "Which of the following is an example of spyware?",
     choices: [
@@ -16787,7 +16787,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "malware-1",
+    setId: "malware-attacks",
     id: 10,
     prompt: "Malicious code activated by a specific event is called:",
     choices: [
@@ -16802,7 +16802,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "malware-1",
+    setId: "malware-attacks",
     id: 11,
     prompt: "Which of the following answers refers to a collection of software tools used by a hacker to mask intrusion and obtain administrator-level access to a computer or computer network?",
     choices: [
@@ -17166,7 +17166,7 @@ export  const SetContent = [
 
 
  {
-    setId: "ioc-1",
+    setId: "indicators-malicious",
     id: 1,
     prompt: "A type of forensic evidence that can be used to detect unauthorized access attempts or other malicious activities is called:",
     choices: [
@@ -17181,7 +17181,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "ioc-1",
+    setId: "indicators-malicious",
     id: 2,
     prompt: "An account lockout might indicate which type of malicious activity?",
     choices: [
@@ -17196,7 +17196,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "ioc-1",
+    setId: "indicators-malicious",
     id: 3,
     prompt: "Which of the terms listed below most accurately describes a situation wherein a single account is being used from multiple locations/devices at the same time?",
     choices: [
@@ -17211,7 +17211,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "ioc-1",
+    setId: "indicators-malicious",
     id: 4,
     prompt: "Which of the following terms refers to a malicious activity indicator in a situation where a firewall or other security measure prevents an attempt to deliver malicious payload or perform an unauthorized action?",
     choices: [
@@ -17226,7 +17226,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "ioc-1",
+    setId: "indicators-malicious",
     id: 5,
     prompt: "Which of the terms listed below most accurately describes a situation wherein an account is accessed from a location that is physically impossible for the user to be in?",
     choices: [
@@ -17241,7 +17241,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "ioc-1",
+    setId: "indicators-malicious",
     id: 6,
     prompt: "The term \"Out-of-cycle logging\" refers to instances where systems or applications produce logs outside their regular intervals or in abnormal volumes, potentially signaling malicious activity.",
     choices: [
@@ -17254,7 +17254,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "ioc-1",
+    setId: "indicators-malicious",
     id: 7,
     prompt: "Which of the following would indicate an attempt to hide evidence of malicious activity?",
     choices: [
@@ -18560,7 +18560,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 1,
     prompt: "The two factors that are considered important for creating strong passwords are: (Select 2 answers)",
     choices: [
@@ -18577,7 +18577,7 @@ export  const SetContent = [
     select: 2
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 2,
     prompt: "A strong password that meets the password complexity requirement should contain: (Select the best answer)",
     choices: [
@@ -18593,7 +18593,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 3,
     prompt: "Which of the following passwords is the most complex?",
     choices: [
@@ -18608,7 +18608,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 4,
     prompt: "Which password policy would be the most effective in decreasing the risk of a security breach across multiple accounts?",
     choices: [
@@ -18623,7 +18623,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 5,
     prompt: "Which password policy enforces a mandatory password change after a specific time?",
     choices: [
@@ -18638,7 +18638,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 6,
     prompt: "The minimum password age policy setting determines the period of time that a password can be used before the system requires the user to change it.",
     choices: ["True", "False"],
@@ -18646,7 +18646,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 7,
     prompt: "The maximum password age policy setting determines the period of time that a password must be used before the user can change it.",
     choices: ["True", "False"],
@@ -18654,7 +18654,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 8,
     prompt: "Which of the answers listed below refers to a software tool specifically designed to store and manage login credentials?",
     choices: [
@@ -18669,7 +18669,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 9,
     prompt: "Which of the following technologies cannot be used as a passwordless authentication method?",
     choices: [
@@ -18686,7 +18686,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 10,
     prompt: "Replacing password characters in a password field with a series of asterisks is an example of:",
     choices: [
@@ -18701,7 +18701,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 11,
     prompt: "Which of the answers listed below refers to a type of additional input that increases password complexity and provides better protection against brute-force, dictionary, and rainbow table attacks?",
     choices: [
@@ -18716,7 +18716,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 12,
     prompt: "A pseudo-random data added to a password before hashing is referred to as:",
     choices: [
@@ -18731,7 +18731,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 13,
     prompt: "Which cryptographic technique is used to prevent the effectiveness of rainbow tables in cracking hashed passwords?",
     choices: [
@@ -18746,7 +18746,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 14,
     prompt: "Key stretching is a cryptographic technique that enhances the security of sensitive data, such as cryptographic keys and passwords. It works by repeatedly applying a resource-intensive function or algorithm to the input data, thus increasing the computational effort required to derive the original key or password, which makes the data more resistant to brute-force, dictionary, or rainbow table attacks.",
     choices: ["True", "False"],
@@ -18754,7 +18754,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 15,
     prompt: "The importance of changing default usernames and passwords can be illustrated by the example of certain network devices (such as routers), which are often shipped with default and well-known admin credentials that can be looked up on the web.",
     choices: ["True", "False"],
@@ -18762,7 +18762,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 16,
     prompt: "A technique that allows an attacker to authenticate to a remote server without extracting cleartext password from a digest is known as:",
     choices: [
@@ -18777,7 +18777,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 17,
     prompt: "A short list of commonly used passwords tried against large number of user accounts is a characteristic feature of:",
     choices: [
@@ -18792,7 +18792,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 18,
     prompt: "Which password attack bypasses account-lockout policies?",
     choices: [
@@ -18807,7 +18807,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 19,
     prompt: "An attack against encrypted data that relies heavily on computing power to check all possible keys and passwords until the correct one is found is called:",
     choices: [
@@ -18822,7 +18822,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "passwords-1",
+    setId: "password-concepts",
     id: 20,
     prompt: "One of the measures for bypassing the failed logon attempt account lockout policy is to capture any relevant data that might contain the password and brute force it offline.",
     choices: ["True", "False"],
@@ -19340,7 +19340,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "agreements-1",
+    setId: "agreement-types",
     id: 1,
     prompt: "Which of the following terms refers to an agreement that specifies performance requirements for a vendor?",
     choices: ["MSA", "SLA", "MOU", "SOW"],
@@ -19348,7 +19348,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "agreements-1",
+    setId: "agreement-types",
     id: 2,
     prompt: "Which of the acronyms listed below refers to a formal and often legally binding document that outlines specific responsibilities, roles, and terms agreed upon by two or more parties?",
     choices: ["SOW", "MOA", "MSA", "MOU"],
@@ -19356,7 +19356,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "agreements-1",
+    setId: "agreement-types",
     id: 3,
     prompt: "A type of nonbinding agreement outlining mutual goals and the general framework for cooperation between two or more parties is referred to as:",
     choices: ["MOA", "SOW", "MOU", "MSA"],
@@ -19364,7 +19364,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "agreements-1",
+    setId: "agreement-types",
     id: 4,
     prompt: "A type of legally binding contract that establishes the foundational terms and conditions governing future agreements between two parties is known as:",
     choices: ["MOU", "SLA", "MSA", "SOW"],
@@ -19372,7 +19372,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "agreements-1",
+    setId: "agreement-types",
     id: 5,
     prompt: "Which of the following acronyms refers to a document that authorizes, initiates, and tracks the progress and completion of a particular job or task?",
     choices: ["SOW", "WO", "SLA", "MSA"],
@@ -19380,7 +19380,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "agreements-1",
+    setId: "agreement-types",
     id: 6,
     prompt: "A detailed agreement between a client and a vendor that describes the work to be performed on a project is called:",
     choices: ["MSA", "SLA", "WO", "SOW"],
@@ -19388,7 +19388,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "agreements-1",
+    setId: "agreement-types",
     id: 7,
     prompt: "A legal contract between the holder of confidential information and another person to whom that information is disclosed restricting that other person from disclosing the confidential information to any other party is referred to as:",
     choices: ["ISA", "NDA", "BPA", "SLA"],
@@ -19396,7 +19396,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "agreements-1",
+    setId: "agreement-types",
     id: 8,
     prompt: "Which of the terms listed below refers to a formal contract between business partners outlining the rights, responsibilities, and obligations of each partner regarding the management, operation, and decision-making processes within the business?",
     choices: ["MSA", "SLA", "BPA", "MOA"],
@@ -19405,7 +19405,7 @@ export  const SetContent = [
   },
  
   {
-    setId: "pentesting-1",
+    setId: "penetration-testing",
     id: 1,
     prompt: "Penetration testing: (Select all that apply)",
     choices: [
@@ -19423,7 +19423,7 @@ export  const SetContent = [
     select: 3
   },
   {
-    setId: "pentesting-1",
+    setId: "penetration-testing",
     id: 2,
     prompt: "In cybersecurity exercises, red team takes on the role of:",
     choices: [
@@ -19438,7 +19438,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "pentesting-1",
+    setId: "penetration-testing",
     id: 3,
     prompt: "In cybersecurity exercises, the defending team is known as:",
     choices: [
@@ -19453,7 +19453,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "pentesting-1",
+    setId: "penetration-testing",
     id: 4,
     prompt: "In cybersecurity exercises, the role of an event overseer (i.e., the referee) is delegated to:",
     choices: [
@@ -19468,7 +19468,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "pentesting-1",
+    setId: "penetration-testing",
     id: 5,
     prompt: "In cybersecurity exercises, a purple team assumes the integrated role of all other teams (i.e., red, blue, and white).",
     choices: [
@@ -19481,7 +19481,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "pentesting-1",
+    setId: "penetration-testing",
     id: 6,
     prompt: "A penetration test performed by an authorized professional with the full prior knowledge on how the system that is to be tested works is called:",
     choices: [
@@ -19496,7 +19496,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "pentesting-1",
+    setId: "penetration-testing",
     id: 7,
     prompt: "Which of the following terms is used to describe a penetration test in which the person conducting the test has limited access to information on the internal workings of the targeted system?",
     choices: [
@@ -19511,7 +19511,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "pentesting-1",
+    setId: "penetration-testing",
     id: 8,
     prompt: "A penetration test of a computer system performed without prior knowledge of how the system that is to be tested works is referred to as black-box testing.",
     choices: [
@@ -19524,7 +19524,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "pentesting-1",
+    setId: "penetration-testing",
     id: 9,
     prompt: "In penetration testing, active reconnaissance involves gathering any type of publicly available information that can be used later for exploiting vulnerabilities found in the targeted system.",
     choices: [
@@ -19537,7 +19537,7 @@ export  const SetContent = [
     select: 1
   },
   {
-    setId: "pentesting-1",
+    setId: "penetration-testing",
     id: 10,
     prompt: "In penetration testing, passive reconnaissance relies on gathering information on the targeted system with the use of various non-invasive software tools and techniques, such as pinging, port scanning, or OS fingerprinting.",
     choices: [

@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Card, Badge } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
 import { studySets } from "../data/studySets";
 import { matchingTerms } from "../data/matchingTerms";
@@ -11,10 +11,12 @@ const MATCHING_PROGRESS_KEY = "matchingProgress";
 
 function shuffle(array) {
   const arr = [...array];
+
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
+
   return arr;
 }
 
@@ -42,20 +44,13 @@ export default function MatchingPage() {
   const { setId } = useParams();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!setId) {
-      const lastSet = sessionStorage.getItem(MATCHING_LAST_SET_KEY);
-      if (lastSet && lastSet !== "default") {
-        navigate(`/matching/${lastSet}`);
-      }
-    }
-  }, [setId, navigate]);
-
-
   const activeMatchingSetId = setId || "default";
 
   const selectedSet = useMemo(() => {
-    if (!setId) return { id: "default", title: "Matching Game" };
+    if (!setId) {
+      return { id: "default", title: "Matching Game" };
+    }
+
     return studySets.find((set) => set.id === setId);
   }, [setId]);
 
@@ -66,60 +61,74 @@ export default function MatchingPage() {
   const [isChecking, setIsChecking] = useState(false);
 
   useEffect(() => {
-  const savedProgress =
-    JSON.parse(sessionStorage.getItem(MATCHING_PROGRESS_KEY)) || {};
+    if (!setId) {
+      const lastSet = sessionStorage.getItem(MATCHING_LAST_SET_KEY);
 
-  const savedSetProgress = savedProgress[activeMatchingSetId];
+      if (lastSet && lastSet !== "default") {
+        navigate(`/matching/${lastSet}`);
+      }
+    }
+  }, [setId, navigate]);
 
- if (savedSetProgress && savedSetProgress.tiles?.length) {
-  setTiles(savedSetProgress.tiles);
-  setMatchedIds(savedSetProgress.matchedIds || []);
-} else {
-  resetGame();
-}
+  useEffect(() => {
+    const savedProgress =
+      JSON.parse(sessionStorage.getItem(MATCHING_PROGRESS_KEY)) || {};
 
-  sessionStorage.setItem(MATCHING_LAST_SET_KEY, activeMatchingSetId);
-}, [activeMatchingSetId]);
+    const savedSetProgress = savedProgress[activeMatchingSetId];
 
+    if (savedSetProgress && savedSetProgress.tiles?.length) {
+      setTiles(savedSetProgress.tiles);
+      setMatchedIds(savedSetProgress.matchedIds || []);
+      setSelectedTiles([]);
+      setWrongIds([]);
+      setIsChecking(false);
+    } else {
+      resetGame(false);
+    }
 
-useEffect(() => {
-  if (tiles.length === 0) return;
+    sessionStorage.setItem(MATCHING_LAST_SET_KEY, activeMatchingSetId);
+  }, [activeMatchingSetId]);
 
-  const savedProgress =
-    JSON.parse(sessionStorage.getItem(MATCHING_PROGRESS_KEY)) || {};
+  useEffect(() => {
+    if (tiles.length === 0) return;
 
-  savedProgress[activeMatchingSetId] = {
-    tiles,
-    matchedIds
-  };
+    const savedProgress =
+      JSON.parse(sessionStorage.getItem(MATCHING_PROGRESS_KEY)) || {};
 
-  sessionStorage.setItem(
-    MATCHING_PROGRESS_KEY,
-    JSON.stringify(savedProgress)
-  );
+    savedProgress[activeMatchingSetId] = {
+      tiles,
+      matchedIds,
+    };
 
-  sessionStorage.setItem(MATCHING_LAST_SET_KEY, activeMatchingSetId);
-}, [tiles, matchedIds, activeMatchingSetId]);
+    sessionStorage.setItem(
+      MATCHING_PROGRESS_KEY,
+      JSON.stringify(savedProgress)
+    );
 
-  function resetGame() {
-  const newTiles = buildBoard(matchingTerms);
+    sessionStorage.setItem(MATCHING_LAST_SET_KEY, activeMatchingSetId);
+  }, [tiles, matchedIds, activeMatchingSetId]);
 
-  setTiles(newTiles);
-  setSelectedTiles([]);
-  setMatchedIds([]);
-  setWrongIds([]);
-  setIsChecking(false);
+  function resetGame(clearSavedProgress = true) {
+    const newTiles = buildBoard(matchingTerms);
 
-  const savedProgress =
-    JSON.parse(sessionStorage.getItem(MATCHING_PROGRESS_KEY)) || {};
+    setTiles(newTiles);
+    setSelectedTiles([]);
+    setMatchedIds([]);
+    setWrongIds([]);
+    setIsChecking(false);
 
-  delete savedProgress[activeMatchingSetId];
+    if (clearSavedProgress) {
+      const savedProgress =
+        JSON.parse(sessionStorage.getItem(MATCHING_PROGRESS_KEY)) || {};
 
-  sessionStorage.setItem(
-    MATCHING_PROGRESS_KEY,
-    JSON.stringify(savedProgress)
-  );
-}
+      delete savedProgress[activeMatchingSetId];
+
+      sessionStorage.setItem(
+        MATCHING_PROGRESS_KEY,
+        JSON.stringify(savedProgress)
+      );
+    }
+  }
 
   function handleTileClick(tile) {
     if (isChecking) return;
@@ -150,6 +159,7 @@ useEffect(() => {
         }, 250);
       } else {
         setWrongIds([firstTile.id, secondTile.id]);
+
         setTimeout(() => {
           setWrongIds([]);
           setSelectedTiles([]);
@@ -160,52 +170,88 @@ useEffect(() => {
   }
 
   const matchCount = matchedIds.length / 2;
-  const isComplete = matchCount === 25;
+  const totalPairs = 25;
+  const isComplete = matchCount === totalPairs;
 
   if (setId && !selectedSet) {
     return (
-      <Container className="py-5">
-        <h2>Set not found.</h2>
-      </Container>
+      <div className="matching-page">
+        <Container className="py-5">
+          <Card className="matching-info-card border-0">
+            <Card.Body className="text-center">
+              <h1 className="matching-title">Set not found</h1>
+              <p className="matching-subtitle">
+                This matching set does not exist.
+              </p>
+              <Button className="matching-btn" onClick={() => navigate("/matching")}>
+                Back to Matching
+              </Button>
+            </Card.Body>
+          </Card>
+        </Container>
+      </div>
     );
   }
 
   return (
     <div className="matching-page">
       <Container className="py-5">
-        <div className="matching-header">
-          <h2 className="matching-title">
-            {selectedSet?.title || "Matching Game"}
-          </h2>
-          <p className="matching-subtitle">
-            Match each term with its correct definition. 25 pairs are randomly
-            chosen each round.
-          </p>
+        <Card className="matching-info-card border-0 mb-4">
+          <Card.Body className="matching-header">
+            <Badge className="matching-badge mb-3">Security+ Practice</Badge>
 
-          <div className="matching-stats">
-            <span>{matchCount} / 25 matched</span>
-          </div>
-        </div>
+            <h1 className="matching-title">
+              {selectedSet?.title || "Matching Game"}
+            </h1>
 
-        <CardGrid
-        items={tiles}
-        getKey={(tile) => tile.id}
-        renderText={(tile) => tile.text}
-        onItemClick={handleTileClick}
-        selectedIds={selectedTiles.map((tile) => tile.id)}
-        matchedIds={matchedIds}
-        wrongIds={wrongIds}
-        colProps={{ xs: 6, md: 4, lg: 3, xl: 2 }}
-        cardClassName="matching-card"
-        />
+            <p className="matching-subtitle">
+              Match each term with its correct definition. 25 pairs are randomly
+              chosen each round.
+            </p>
+
+            <div className="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+              <div className="matching-stats">
+                <span>
+                  {matchCount} / {totalPairs} matched
+                </span>
+              </div>
+
+              <Button className="matching-btn" onClick={() => resetGame(true)}>
+                Restart Game
+              </Button>
+            </div>
+          </Card.Body>
+        </Card>
+
+        <Card className="matching-board-card border-0">
+          <Card.Body>
+            <CardGrid
+              items={tiles}
+              getKey={(tile) => tile.id}
+              renderText={(tile) => tile.text}
+              onItemClick={handleTileClick}
+              selectedIds={selectedTiles.map((tile) => tile.id)}
+              matchedIds={matchedIds}
+              wrongIds={wrongIds}
+              colProps={{ xs: 6, md: 4, lg: 3, xl: 2 }}
+              cardClassName="matching-card"
+            />
+          </Card.Body>
+        </Card>
 
         {isComplete && (
-          <div className="matching-complete">
-            <h2>Nice work — you matched all 25 pairs.</h2>
-            <Button className="matching-btn mt-3" onClick={resetGame}>
-              Play Again
-            </Button>
-          </div>
+          <Card className="matching-complete border-0 mt-4">
+            <Card.Body className="text-center">
+              <h2>Nice work — you matched all 25 pairs.</h2>
+              <p className="matching-subtitle mb-0">
+                You completed the full matching round.
+              </p>
+
+              <Button className="matching-btn mt-3" onClick={() => resetGame(true)}>
+                Play Again
+              </Button>
+            </Card.Body>
+          </Card>
         )}
       </Container>
     </div>

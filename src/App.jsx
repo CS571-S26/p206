@@ -7,11 +7,15 @@ import QuizSetsPage from "./pages/QuizSetsPage";
 import QuizPage from "./pages/QuizPage";
 import MatchingPage from "./pages/MatchingPage";
 import AboutPage from "./pages/AboutPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 export default function App() {
   return (
     <>
+    <header>
       <Navbar />
+    </header>
+      <main>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/flashcards" element={<FlashcardsPage />} />
@@ -21,7 +25,10 @@ export default function App() {
         <Route path="/matching" element={<MatchingPage />} />
         <Route path="/matching/:setId" element={<MatchingPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      </main>
+      
     </>
   );
 }

@@ -218,8 +218,8 @@ useEffect(() => {
         <Container className="py-5">
           <Card className="quiz-card border-0 result-card">
             <Card.Body className="p-4 p-md-5 text-center">
-              <h2 className="mb-3">Quiz Complete</h2>
-              <h3 className="mb-3">{selectedSet.title}</h3>
+              <h1 className="mb-3">Quiz Complete</h1>
+              <h2 className="mb-3">{selectedSet.title}</h2>
               <p className="result-score">
                 Score: {score} / {questions.length}
               </p>
@@ -238,7 +238,7 @@ useEffect(() => {
   }
 
   const progressPercent = ((currentIndex + 1) / questions.length) * 100;
-
+const progressLabel = `Quiz progress: ${currentIndex + 1} of ${questions.length}`;
   return (
     <div className="quiz-page">
       <Container className="py-5">
@@ -247,15 +247,11 @@ useEffect(() => {
             <div className="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
               <div>
                 <div className="quiz-label mb-2">Question</div>
-                <h2 className="quiz-set-title mb-0">
+                <h1 className="quiz-set-title mb-0">
                   {selectedSet.title}
-                </h2>
+                </h1>
 
-                {currentIndex > 0 && (
-                  <div style={{ fontSize: "0.9rem", color: "#aaa" }}>
-                    Resumed where you left off
-                  </div>
-                )}
+
               </div>
 
               <div className="quiz-counter">
@@ -263,15 +259,27 @@ useEffect(() => {
               </div>
             </div>
 
-            <ProgressBar now={progressPercent} className="quiz-progress mb-4" />
+            <div
+            className="progress quiz-progress mb-4"
+            role="progressbar"
+            aria-label={progressLabel}
+            aria-valuenow={progressPercent}
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div
+              className="progress-bar"
+              style={{ width: `${progressPercent}%` }}
+            />
+          </div>
 
             <div className="quiz-prompt mb-3">{currentQuestion.prompt}</div>
 
-            <h3 className="quiz-subheading mb-2">
+            <h2 className="quiz-subheading mb-2">
               {isMultiSelect
                 ? `Select ${requiredSelections} answers`
                 : "Choose an answer"}
-            </h3>
+            </h2>
 
             {isMultiSelect && !answered && (
               <p className="mb-4 text-light">
@@ -299,6 +307,13 @@ useEffect(() => {
                     <Button
                       className={buttonClass}
                       onClick={() => handleChoiceClick(choice)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault(); // prevents page scroll on space
+                          handleChoiceClick(choice);
+                        }
+                      }}
+                      aria-pressed={selectedChoices.includes(choiceStr)}
                     >
                       {choiceStr}
                     </Button>

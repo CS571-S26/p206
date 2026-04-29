@@ -25,26 +25,11 @@ import { SetContent } from "../data/SetContent";
 import "./FlashcardsPage.css";
 
 const CUSTOM_SETS_KEY = "customFlashcardSets";
-const FLASHCARD_LAST_SET_KEY = "lastFlashcardSetId";
-const FLASHCARD_PROGRESS_KEY = "flashcardProgress";
 
 export default function FlashcardsPage() {
   const navigate = useNavigate();
   const { setId } = useParams();
-
-useEffect(() => {
-  if (!setId) {
-    const lastSet = sessionStorage.getItem(FLASHCARD_LAST_SET_KEY);
-    if (lastSet) {
-      navigate(`/flashcards/${lastSet}`);
-    }
-  }
-}, [setId, navigate]);
-
-
-
   const cardRef = useRef(null);
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   const [customSets, setCustomSets] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -102,7 +87,7 @@ useEffect(() => {
       "incident-response": "incident-response-1",
       "risk-management": "risk-management-1",
       "agreement-types": "agreement-types-1",
-      "penetration-testing": "penetration-testing-1"
+      "penetration-testing": "pentesting-1"
     };
 
     const possibleIds = [
@@ -115,49 +100,10 @@ useEffect(() => {
   }, [activeSet]);
 
   useEffect(() => {
-  if (!activeSet) return;
-
-  const savedProgress =
-    JSON.parse(sessionStorage.getItem(FLASHCARD_PROGRESS_KEY)) || {};
-
-  const savedSetProgress = savedProgress[activeSet.id];
-
-  setDisplayedCards(flashcards);
-
-  if (savedSetProgress && flashcards.length > 0) {
-    setCurrentIndex(
-      Math.min(savedSetProgress.currentIndex || 0, flashcards.length - 1)
-    );
-    setFlipped(savedSetProgress.flipped || false);
-  } else {
+    setDisplayedCards(flashcards);
     setCurrentIndex(0);
     setFlipped(false);
-  }
-
-  sessionStorage.setItem(FLASHCARD_LAST_SET_KEY, activeSet.id);
-}, [activeSet, flashcards]);
-
-
-useEffect(() => {
-  if (!activeSet || displayedCards.length === 0) return;
-
-  const savedProgress =
-    JSON.parse(sessionStorage.getItem(FLASHCARD_PROGRESS_KEY)) || {};
-
-  savedProgress[activeSet.id] = {
-    currentIndex,
-    flipped
-  };
-
-  sessionStorage.setItem(
-    FLASHCARD_PROGRESS_KEY,
-    JSON.stringify(savedProgress)
-  );
-
-  sessionStorage.setItem(FLASHCARD_LAST_SET_KEY, activeSet.id);
-}, [activeSet, currentIndex, flipped, displayedCards.length]);
-
-
+  }, [flashcards]);
 
   useEffect(() => {
     const handleFullScreenChange = () => {
@@ -177,8 +123,6 @@ useEffect(() => {
       setIsSpeaking(false);
     }
   }, [currentIndex, flipped]);
-
-  
 
   if (!activeSet) return null;
 
@@ -210,7 +154,6 @@ useEffect(() => {
   };
 
   const handleFullscreenToggle = async () => {
-    if (isMobile) return; 
     if (!cardRef.current) return;
 
     try {
@@ -323,7 +266,7 @@ useEffect(() => {
                 Security+ / Flashcards / {activeSet.title}
               </div>
 
-              <h2 className="flashcards-title mb-2">CySecPrep Flashcards</h2>
+              <h1 className="flashcards-title mb-2">CySecPrep Flashcards</h1>
 
               <p className="flashcards-subtitle mb-0">
                 Review key terms and concepts for the CompTIA Security+ exam.
@@ -349,7 +292,7 @@ useEffect(() => {
                 
                 {activeSet.isCustom && (
                 <Button
-                  className="flashcards-btn flashcards-btn-red"
+                  className="flashcards-btn"
                   onClick={handleDeleteSet}
                 >
                   <Trash className="me-2" />
@@ -366,53 +309,36 @@ useEffect(() => {
                 <div className="d-flex justify-content-between align-items-center mb-3 flashcard-shell-top">
                   <div>
                     <Lightbulb className="me-2" />
-                    <span>Tap the card or press Space to flip. Use arrow keys to move cards.</span>
+                    <span>Tap the card to flip</span>
                   </div>
 
                   <div className="d-flex gap-3 fs-5">
                     <Button
-                      variant="link"
-                      className="icon-btn p-0 text-white"
-                      onClick={handleVoiceReader}
-                    >
-                      <VolumeUp />
-                    </Button>
+                    variant="link"
+                    className="icon-btn p-0 text-white"
+                    onClick={handleVoiceReader}
+                    aria-label={isSpeaking ? "Stop reading flashcard" : "Read flashcard aloud"}
+                    title={isSpeaking ? "Stop reading" : "Read aloud"}
+                  >
+                    <VolumeUp aria-hidden="true" />
+                  </Button>
 
-                    {!isMobile && (
                     <Button
-                      variant="link"
-                      className="icon-btn p-0 text-white"
-                      onClick={handleFullscreenToggle}
-                    >
-                      <ArrowsFullscreen />
-                    </Button>
-                  )}
+                    variant="link"
+                    className="icon-btn p-0 text-white"
+                    onClick={handleFullscreenToggle}
+                    aria-label="Toggle fullscreen flashcard"
+                    title="Fullscreen"
+                  >
+                    <ArrowsFullscreen aria-hidden="true" />
+                  </Button>
                   </div>
                 </div>
 
                 <Card
                   className="flashcard-main border-0"
                   ref={cardRef}
-                  tabIndex={0}
-                  role="button"
-                  aria-label={`Flashcard ${currentIndex + 1} of ${displayedCards.length}. Press space to flip, left arrow for previous card, right arrow for next card.`}
                   onClick={() => setFlipped(!flipped)}
-                  onKeyDown={(e) => {
-                    if (e.key === " ") {
-                      e.preventDefault();
-                      setFlipped((prev) => !prev);
-                    }
-
-                    if (e.key === "ArrowRight") {
-                      e.preventDefault();
-                      handleNext();
-                    }
-
-                    if (e.key === "ArrowLeft") {
-                      e.preventDefault();
-                      handlePrev();
-                    }
-                  }}
                 >
                   <Card.Body className="d-flex justify-content-center align-items-center text-center">
                     {displayedCards.length > 0 ? (
@@ -436,9 +362,14 @@ useEffect(() => {
             </Card>
 
             <div className="flashcard-controls mt-4 d-flex justify-content-center align-items-center flex-wrap gap-3">
-              <Button className="control-btn rounded-circle" onClick={handlePrev}>
-                <ChevronLeft size={22} />
-              </Button>
+              <Button
+              className="control-btn rounded-circle"
+              onClick={handlePrev}
+              aria-label="Previous flashcard"
+              title="Previous"
+            >
+              <ChevronLeft size={22} aria-hidden="true" />
+            </Button>
 
               <div className="flashcard-counter">
                 {displayedCards.length
@@ -446,26 +377,39 @@ useEffect(() => {
                   : "0 / 0"}
               </div>
 
-              <Button className="control-btn rounded-circle" onClick={handleNext}>
-                <ChevronRight size={22} />
+              <Button
+              className="control-btn rounded-circle"
+              onClick={handleNext}
+              aria-label="Next flashcard"
+              title="Next"
+            >
+              <ChevronRight size={22} aria-hidden="true" />
               </Button>
 
-              <Button className="control-btn rounded-circle" onClick={handleShuffle}>
-                <Shuffle size={18} />
+              <Button
+              className="control-btn rounded-circle"
+              onClick={handleShuffle}
+              aria-label="Shuffle flashcards"
+              title="Shuffle"
+            >
+              <Shuffle size={18} aria-hidden="true" />
               </Button>
 
-              {!isMobile && (
-              <Button className="control-btn rounded-circle" onClick={handleFullscreenToggle}>
-                <ArrowsFullscreen size={18} />
+              <Button
+              className="control-btn rounded-circle"
+              onClick={handleFullscreenToggle}
+              aria-label="Toggle fullscreen flashcard"
+              title="Fullscreen"
+            >
+              <ArrowsFullscreen size={18} aria-hidden="true" />
               </Button>
-            )}
             </div>
           </Col>
 
           <Col lg={3} className="mt-4 mt-lg-0">
             <Card className="sidebar-card border-0">
               <Card.Body>
-                <h3 className="mb-3">Study Set Info</h3>
+                <h2 className="mb-3">Study Set Info</h2>
                 <p className="mb-2">
                   <strong>Category:</strong> {activeSet.category}
                 </p>
@@ -480,7 +424,7 @@ useEffect(() => {
 
             <Card className="sidebar-card border-0 mt-3">
               <Card.Body>
-                <h3 className="mb-3">All Study Sets</h3>
+                <h2 className="mb-3">All Study Sets</h2>
 
                 <div className="scrollable-sets-box">
                   <div className="d-grid gap-2">
@@ -507,7 +451,7 @@ useEffect(() => {
 
             <Card className="sidebar-card border-0 mt-3">
               <Card.Body>
-                <h3 className="mb-3">Card List</h3>
+                <h2 className="mb-3">Card List</h2>
 
                 <div className="sidebar-card-list d-grid gap-2">
                   {displayedCards.map((card, index) => (
@@ -532,13 +476,16 @@ useEffect(() => {
       </Container>
 
       <Modal
-        show={showAddSetModal}
-        onHide={() => setShowAddSetModal(false)}
-        centered
-        size="lg"
-      >
+      show={showAddSetModal}
+      onHide={() => setShowAddSetModal(false)}
+      centered
+      size="lg"
+      aria-labelledby="create-set-title"
+    >
         <Modal.Header closeButton className="custom-set-modal-header">
-          <Modal.Title>Create Custom Flashcard Set</Modal.Title>
+          <Modal.Title id="create-set-title">
+          Create Custom Flashcard Set
+         </Modal.Title>
         </Modal.Header>
 
         <Modal.Body className="custom-set-modal-body">
@@ -561,7 +508,7 @@ useEffect(() => {
               />
             </Form.Group>
 
-            <h3 className="mb-3">Terms and Definitions</h3>
+            <h2 className="mb-3">Terms and Definitions</h2>
 
             {newCards.map((card, index) => (
               <div className="custom-card-row" key={index}>

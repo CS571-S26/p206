@@ -142,14 +142,29 @@
 }
 
 .flashcards-btn-green {
-  background-color: #22c55e !important;
+  background-color: #15803d !important; /* darker green */
+  color: #ffffff !important;
+}
+
+.flashcards-btn-green:hover {
+  background-color: #166534 !important;
 }
 
 .flashcards-btn-orange {
   background-color: #f97316 !important;
 }
 
+.flashcard-badge {
+  background-color: #1e40af !important; /* darker blue */
+  color: #ffffff !important;
+}
+
 @media (max-width: 768px) {
+
+  .flashcard-badge {
+  background-color: #1e40af !important; /* darker blue */
+  color: #ffffff !important;
+}
   .flashcards-title {
     font-size: 2.2rem;
   }
@@ -243,4 +258,9 @@
 
 .flashcards-btn-red:hover {
   background-color: #b91c1c !important;
+}
+
+.flashcard-badge {
+  background-color: #1e40af !important; /* darker blue */
+  color: #ffffff !important;
 }

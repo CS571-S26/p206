@@ -6,7 +6,7 @@ export default function AboutPage() {
   const navigate = useNavigate()
 
   return (
-    <main className="about-page py-5" aria-labelledby="about-heading">
+    <div className="about-page py-5" aria-labelledby="about-heading">
       <Container>
         <Card className="about-card p-4">
           <Card.Body>
@@ -15,7 +15,7 @@ export default function AboutPage() {
                 <Badge pill bg="info" className="about-badge mb-3">
                   CySecPrep
                 </Badge>
-                <h2 id="about-heading" className="about-title">About This Project</h2>
+                <h1 id="about-heading" className="about-title">About This Project</h1>
                 <p className="about-intro">
                   This project is a web-based cybersecurity learning platform designed to help users study and reinforce key concepts through interactive quizzes and flashcards.
                   It focuses on making complex topics—such as Security+ concepts, acronyms, and penetration testing—more approachable through active learning.
@@ -116,6 +116,6 @@ export default function AboutPage() {
           </Card.Body>
         </Card>
       </Container>
-    </main>
+    </div>
   )
 }

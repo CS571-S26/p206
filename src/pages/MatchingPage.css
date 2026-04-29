@@ -1,3 +1,23 @@
+.matching-info-card,
+.matching-board-card,
+.matching-complete {
+  background: #22305a !important;
+  color: white !important;
+  border-radius: 18px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+.matching-badge {
+  background-color: #1e40af !important;
+  color: white !important;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+}
+
+
+
+
 .matching-page {
   min-height: 100vh;
   background: linear-gradient(180deg, #03132b 0%, #041a38 100%);
