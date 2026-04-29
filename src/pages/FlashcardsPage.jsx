@@ -154,6 +154,7 @@ export default function FlashcardsPage() {
   };
 
   const handleFullscreenToggle = async () => {
+    if (isMobile) return; 
     if (!cardRef.current) return;
 
     try {
@@ -309,7 +310,7 @@ export default function FlashcardsPage() {
                 <div className="d-flex justify-content-between align-items-center mb-3 flashcard-shell-top">
                   <div>
                     <Lightbulb className="me-2" />
-                    <span>Tap the card to flip</span>
+                    <span>Tap the card or press Space to flip. Use arrow keys to move cards.</span>
                   </div>
 
                   <div className="d-flex gap-3 fs-5">
@@ -334,7 +335,26 @@ export default function FlashcardsPage() {
                 <Card
                   className="flashcard-main border-0"
                   ref={cardRef}
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`Flashcard ${currentIndex + 1} of ${displayedCards.length}. Press space to flip, left arrow for previous card, right arrow for next card.`}
                   onClick={() => setFlipped(!flipped)}
+                  onKeyDown={(e) => {
+                    if (e.key === " ") {
+                      e.preventDefault();
+                      setFlipped((prev) => !prev);
+                    }
+
+                    if (e.key === "ArrowRight") {
+                      e.preventDefault();
+                      handleNext();
+                    }
+
+                    if (e.key === "ArrowLeft") {
+                      e.preventDefault();
+                      handlePrev();
+                    }
+                  }}
                 >
                   <Card.Body className="d-flex justify-content-center align-items-center text-center">
                     {displayedCards.length > 0 ? (
