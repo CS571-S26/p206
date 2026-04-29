@@ -124,6 +124,36 @@ export default function FlashcardsPage() {
     }
   }, [currentIndex, flipped]);
 
+  useEffect(() => {
+  const handleKeyDown = (e) => {
+    const tagName = e.target.tagName.toLowerCase();
+
+    // Don't trigger shortcuts while typing in modal inputs
+    if (tagName === "input" || tagName === "textarea") return;
+
+    if (e.key === " ") {
+      e.preventDefault();
+      setFlipped((prev) => !prev);
+    }
+
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      handleNext();
+    }
+
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      handlePrev();
+    }
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+
+  return () => {
+    window.removeEventListener("keydown", handleKeyDown);
+  };
+}, [displayedCards.length]);
+
   if (!activeSet) return null;
 
   const currentCard = displayedCards[currentIndex];
@@ -336,10 +366,13 @@ export default function FlashcardsPage() {
                 </div>
 
                 <Card
-                  className="flashcard-main border-0"
-                  ref={cardRef}
-                  onClick={() => setFlipped(!flipped)}
-                >
+                className="flashcard-main border-0"
+                ref={cardRef}
+                tabIndex={0}
+                role="button"
+                aria-label="Flashcard. Press space to flip."
+                onClick={() => setFlipped(!flipped)}
+              >
                   <Card.Body className="d-flex justify-content-center align-items-center text-center">
                     {displayedCards.length > 0 ? (
                       <div>
