@@ -114,9 +114,9 @@ export default function MatchingPage() {
     <div className="matching-page">
       <Container className="py-5">
         <div className="matching-header">
-          <h1 className="matching-title">
+          <h2 className="matching-title">
             {selectedSet?.title || "Matching Game"}
-          </h1>
+          </h2>
           <p className="matching-subtitle">
             Match each term with its correct definition. 25 pairs are randomly
             chosen each round.

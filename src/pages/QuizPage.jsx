@@ -159,7 +159,7 @@ export default function QuizPage() {
         <Container className="py-5">
           <Card className="quiz-card border-0 result-card">
             <Card.Body className="p-4 p-md-5 text-center">
-              <h1 className="mb-3">Quiz Complete</h1>
+              <h2 className="mb-3">Quiz Complete</h2>
               <h3 className="mb-3">{selectedSet.title}</h3>
               <p className="result-score">
                 Score: {score} / {questions.length}
@@ -200,11 +200,11 @@ export default function QuizPage() {
 
             <div className="quiz-prompt mb-3">{currentQuestion.prompt}</div>
 
-            <h5 className="quiz-subheading mb-2">
+            <h3 className="quiz-subheading mb-2">
               {isMultiSelect
                 ? `Select ${requiredSelections} answers`
                 : "Choose an answer"}
-            </h5>
+            </h3>
 
             {isMultiSelect && !answered && (
               <p className="mb-4 text-light">

@@ -15,7 +15,7 @@ export default function HomePage() {
       <Container className="py-5">
         <section className="hero-section text-center">
           <div className="hero-badge">Security+ Exam Prep</div>
-          <h1 className="homepage-title">Welcome to CySecPrep</h1>
+          <h2 className="homepage-title">Welcome to CySecPrep</h2>
           <p className="homepage-subtitle">
             Study flashcards, take quizzes, and practice matching games to get
             ready for the CompTIA Security+ exam.

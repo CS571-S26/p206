@@ -15,7 +15,7 @@ export default function AboutPage() {
                 <Badge pill bg="info" className="about-badge mb-3">
                   CySecPrep
                 </Badge>
-                <h1 id="about-heading" className="about-title">About This Project</h1>
+                <h2 id="about-heading" className="about-title">About This Project</h2>
                 <p className="about-intro">
                   This project is a web-based cybersecurity learning platform designed to help users study and reinforce key concepts through interactive quizzes and flashcards.
                   It focuses on making complex topics—such as Security+ concepts, acronyms, and penetration testing—more approachable through active learning.

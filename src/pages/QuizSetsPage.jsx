@@ -10,7 +10,7 @@ export default function QuizSetsPage() {
     <div className="quizsets-page">
       <Container className="py-5">
         <div className="text-center mb-5">
-          <h1 className="quizsets-title">Quiz Categories</h1>
+          <h2 className="quizsets-title">Quiz Categories</h2>
           <p className="quizsets-subtitle">
             Choose a topic to enter quiz mode.
           </p>

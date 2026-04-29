@@ -266,7 +266,7 @@ export default function FlashcardsPage() {
                 Security+ / Flashcards / {activeSet.title}
               </div>
 
-              <h1 className="flashcards-title mb-2">CySecPrep Flashcards</h1>
+              <h2 className="flashcards-title mb-2">CySecPrep Flashcards</h2>
 
               <p className="flashcards-subtitle mb-0">
                 Review key terms and concepts for the CompTIA Security+ exam.
@@ -385,7 +385,7 @@ export default function FlashcardsPage() {
           <Col lg={3} className="mt-4 mt-lg-0">
             <Card className="sidebar-card border-0">
               <Card.Body>
-                <h5 className="mb-3">Study Set Info</h5>
+                <h3 className="mb-3">Study Set Info</h3>
                 <p className="mb-2">
                   <strong>Category:</strong> {activeSet.category}
                 </p>
@@ -400,7 +400,7 @@ export default function FlashcardsPage() {
 
             <Card className="sidebar-card border-0 mt-3">
               <Card.Body>
-                <h5 className="mb-3">All Study Sets</h5>
+                <h3 className="mb-3">All Study Sets</h3>
 
                 <div className="scrollable-sets-box">
                   <div className="d-grid gap-2">
@@ -427,7 +427,7 @@ export default function FlashcardsPage() {
 
             <Card className="sidebar-card border-0 mt-3">
               <Card.Body>
-                <h5 className="mb-3">Card List</h5>
+                <h3 className="mb-3">Card List</h3>
 
                 <div className="sidebar-card-list d-grid gap-2">
                   {displayedCards.map((card, index) => (
@@ -481,7 +481,7 @@ export default function FlashcardsPage() {
               />
             </Form.Group>
 
-            <h5 className="mb-3">Terms and Definitions</h5>
+            <h3 className="mb-3">Terms and Definitions</h3>
 
             {newCards.map((card, index) => (
               <div className="custom-card-row" key={index}>

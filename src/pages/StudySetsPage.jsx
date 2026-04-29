@@ -16,9 +16,9 @@ export default function StudySetsPage() {
           <Card.Body className="p-4">
             <div className="studysets-badge mb-4">Security+</div>
 
-            <h1 className="studysets-title text-center mb-5">
+            <h2 className="studysets-title text-center mb-5">
               CompTIA Security+ Certification Exam SY0-701 Practice Sets
-            </h1>
+            </h2>
 
             <h3 className="section-title mb-3">Practice Tests</h3>
             <Row className="g-3 mb-5">

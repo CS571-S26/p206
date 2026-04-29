@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="app-navbar">
       <div className="navbar-brand-group">
-        <h2 className="navbar-logo">CySecPrep</h2>
+        <h1 className="navbar-logo">CySecPrep</h1>
         <button
           type="button"
           className="navbar-toggle"
