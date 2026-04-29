@@ -1,12 +1,17 @@
 import { useMemo, useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate} from "react-router-dom";
 import { Container, Card, Button, Row, Col, Alert, ProgressBar } from "react-bootstrap";
 import { studySets } from "../data/studySets";
 import { SetContent } from "../data/SetContent";
 import "./QuizPage.css";
 
+const QUIZ_LAST_SET_KEY = "lastQuizSetId";
+const QUIZ_PROGRESS_KEY = "quizProgress";
+
 export default function QuizPage() {
   const { setId } = useParams();
+  const navigate = useNavigate();
+
 
   const selectedSet = useMemo(() => {
     return studySets.find((set) => set.id === setId);
@@ -50,12 +55,59 @@ export default function QuizPage() {
   const [score, setScore] = useState(0);
 
   useEffect(() => {
+  if (!setId) {
+    const lastSet = sessionStorage.getItem(QUIZ_LAST_SET_KEY);
+    if (lastSet) {
+      navigate(`/quiz/${lastSet}`);
+    }
+  }
+}, [setId, navigate]);
+
+useEffect(() => {
+  if (!setId || questions.length === 0) return;
+
+  const savedProgress =
+    JSON.parse(sessionStorage.getItem(QUIZ_PROGRESS_KEY)) || {};
+
+  const savedSetProgress = savedProgress[setId];
+
+  if (savedSetProgress) {
+    setCurrentIndex(
+      Math.min(savedSetProgress.currentIndex || 0, questions.length - 1)
+    );
+    setSelectedChoices(savedSetProgress.selectedChoices || []);
+    setAnswered(savedSetProgress.answered || false);
+    setIsCorrect(savedSetProgress.isCorrect ?? null);
+    setScore(savedSetProgress.score || 0);
+  } else {
     setCurrentIndex(0);
     setSelectedChoices([]);
     setAnswered(false);
     setIsCorrect(null);
     setScore(0);
-  }, [setId]);
+  }
+
+  sessionStorage.setItem(QUIZ_LAST_SET_KEY, setId);
+}, [setId, questions.length, navigate]);
+
+
+useEffect(() => {
+  if (!setId || questions.length === 0) return;
+
+  const savedProgress =
+    JSON.parse(sessionStorage.getItem(QUIZ_PROGRESS_KEY)) || {};
+
+  savedProgress[setId] = {
+    currentIndex,
+    selectedChoices,
+    answered,
+    isCorrect,
+    score
+  };
+
+  sessionStorage.setItem(QUIZ_PROGRESS_KEY, JSON.stringify(savedProgress));
+  sessionStorage.setItem(QUIZ_LAST_SET_KEY, setId);
+}, [setId, currentIndex, selectedChoices, answered, isCorrect, score, questions.length]);
 
   if (!selectedSet) {
     return (
@@ -144,12 +196,19 @@ export default function QuizPage() {
   };
 
   const handleRestart = () => {
-    setCurrentIndex(0);
-    setSelectedChoices([]);
-    setAnswered(false);
-    setIsCorrect(null);
-    setScore(0);
-  };
+  const savedProgress =
+    JSON.parse(sessionStorage.getItem(QUIZ_PROGRESS_KEY)) || {};
+
+  delete savedProgress[setId];
+
+  sessionStorage.setItem(QUIZ_PROGRESS_KEY, JSON.stringify(savedProgress));
+
+  setCurrentIndex(0);
+  setSelectedChoices([]);
+  setAnswered(false);
+  setIsCorrect(null);
+  setScore(0);
+};
 
   if (quizFinished) {
     const percent = Math.round((score / questions.length) * 100);
@@ -188,7 +247,15 @@ export default function QuizPage() {
             <div className="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
               <div>
                 <div className="quiz-label mb-2">Question</div>
-                <h2 className="quiz-set-title mb-0">{selectedSet.title}</h2>
+                <h2 className="quiz-set-title mb-0">
+                  {selectedSet.title}
+                </h2>
+
+                {currentIndex > 0 && (
+                  <div style={{ fontSize: "0.9rem", color: "#aaa" }}>
+                    Resumed where you left off
+                  </div>
+                )}
               </div>
 
               <div className="quiz-counter">
@@ -268,18 +335,32 @@ export default function QuizPage() {
             )}
 
             <div className="d-flex justify-content-between align-items-center flex-wrap gap-3 mt-4">
-              <div className="score-display">
-                Score: {score} / {questions.length}
-              </div>
 
-              <Button
-                className="quiz-next-btn"
-                onClick={handleNext}
-                disabled={!answered}
-              >
-                {currentIndex === questions.length - 1 ? "Finish Quiz" : "Next Question"}
-              </Button>
-            </div>
+          {/* LEFT SIDE BUTTONS */}
+          <div className="d-flex gap-2">
+          <Button className="quiz-btn quiz-btn-back" onClick={() => navigate("/quiz")}>
+            Back
+          </Button>
+
+          <Button className="quiz-btn quiz-btn-restart" onClick={handleRestart}>
+            Restart
+          </Button>
+          </div>
+
+          {/* SCORE */}
+          <div className="score-display">
+            Score: {score} / {questions.length}
+          </div>
+
+          {/* NEXT */}
+          <Button
+            className="quiz-next-btn"
+            onClick={handleNext}
+            disabled={!answered}
+          >
+            {currentIndex === questions.length - 1 ? "Finish Quiz" : "Next Question"}
+          </Button>
+        </div>
           </Card.Body>
         </Card>
       </Container>

@@ -25,10 +25,24 @@ import { SetContent } from "../data/SetContent";
 import "./FlashcardsPage.css";
 
 const CUSTOM_SETS_KEY = "customFlashcardSets";
+const FLASHCARD_LAST_SET_KEY = "lastFlashcardSetId";
+const FLASHCARD_PROGRESS_KEY = "flashcardProgress";
 
 export default function FlashcardsPage() {
   const navigate = useNavigate();
   const { setId } = useParams();
+
+useEffect(() => {
+  if (!setId) {
+    const lastSet = sessionStorage.getItem(FLASHCARD_LAST_SET_KEY);
+    if (lastSet) {
+      navigate(`/flashcards/${lastSet}`);
+    }
+  }
+}, [setId, navigate]);
+
+
+
   const cardRef = useRef(null);
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -101,10 +115,49 @@ export default function FlashcardsPage() {
   }, [activeSet]);
 
   useEffect(() => {
-    setDisplayedCards(flashcards);
+  if (!activeSet) return;
+
+  const savedProgress =
+    JSON.parse(sessionStorage.getItem(FLASHCARD_PROGRESS_KEY)) || {};
+
+  const savedSetProgress = savedProgress[activeSet.id];
+
+  setDisplayedCards(flashcards);
+
+  if (savedSetProgress && flashcards.length > 0) {
+    setCurrentIndex(
+      Math.min(savedSetProgress.currentIndex || 0, flashcards.length - 1)
+    );
+    setFlipped(savedSetProgress.flipped || false);
+  } else {
     setCurrentIndex(0);
     setFlipped(false);
-  }, [flashcards]);
+  }
+
+  sessionStorage.setItem(FLASHCARD_LAST_SET_KEY, activeSet.id);
+}, [activeSet, flashcards]);
+
+
+useEffect(() => {
+  if (!activeSet || displayedCards.length === 0) return;
+
+  const savedProgress =
+    JSON.parse(sessionStorage.getItem(FLASHCARD_PROGRESS_KEY)) || {};
+
+  savedProgress[activeSet.id] = {
+    currentIndex,
+    flipped
+  };
+
+  sessionStorage.setItem(
+    FLASHCARD_PROGRESS_KEY,
+    JSON.stringify(savedProgress)
+  );
+
+  sessionStorage.setItem(FLASHCARD_LAST_SET_KEY, activeSet.id);
+}, [activeSet, currentIndex, flipped, displayedCards.length]);
+
+
 
   useEffect(() => {
     const handleFullScreenChange = () => {
@@ -124,6 +177,8 @@ export default function FlashcardsPage() {
       setIsSpeaking(false);
     }
   }, [currentIndex, flipped]);
+
+  
 
   if (!activeSet) return null;
 

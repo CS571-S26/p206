@@ -1,10 +1,13 @@
 import { useMemo, useState, useEffect } from "react";
 import { Container, Button } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { studySets } from "../data/studySets";
 import { matchingTerms } from "../data/matchingTerms";
 import CardGrid from "../components/CardGrid";
 import "./MatchingPage.css";
+
+const MATCHING_LAST_SET_KEY = "lastMatchingSetId";
+const MATCHING_PROGRESS_KEY = "matchingProgress";
 
 function shuffle(array) {
   const arr = [...array];
@@ -37,6 +40,19 @@ function buildBoard(data) {
 
 export default function MatchingPage() {
   const { setId } = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!setId) {
+      const lastSet = sessionStorage.getItem(MATCHING_LAST_SET_KEY);
+      if (lastSet && lastSet !== "default") {
+        navigate(`/matching/${lastSet}`);
+      }
+    }
+  }, [setId, navigate]);
+
+
+  const activeMatchingSetId = setId || "default";
 
   const selectedSet = useMemo(() => {
     if (!setId) return { id: "default", title: "Matching Game" };
@@ -50,16 +66,60 @@ export default function MatchingPage() {
   const [isChecking, setIsChecking] = useState(false);
 
   useEffect(() => {
-    resetGame();
-  }, [setId]);
+  const savedProgress =
+    JSON.parse(sessionStorage.getItem(MATCHING_PROGRESS_KEY)) || {};
+
+  const savedSetProgress = savedProgress[activeMatchingSetId];
+
+ if (savedSetProgress && savedSetProgress.tiles?.length) {
+  setTiles(savedSetProgress.tiles);
+  setMatchedIds(savedSetProgress.matchedIds || []);
+} else {
+  resetGame();
+}
+
+  sessionStorage.setItem(MATCHING_LAST_SET_KEY, activeMatchingSetId);
+}, [activeMatchingSetId]);
+
+
+useEffect(() => {
+  if (tiles.length === 0) return;
+
+  const savedProgress =
+    JSON.parse(sessionStorage.getItem(MATCHING_PROGRESS_KEY)) || {};
+
+  savedProgress[activeMatchingSetId] = {
+    tiles,
+    matchedIds
+  };
+
+  sessionStorage.setItem(
+    MATCHING_PROGRESS_KEY,
+    JSON.stringify(savedProgress)
+  );
+
+  sessionStorage.setItem(MATCHING_LAST_SET_KEY, activeMatchingSetId);
+}, [tiles, matchedIds, activeMatchingSetId]);
 
   function resetGame() {
-    setTiles(buildBoard(matchingTerms));
-    setSelectedTiles([]);
-    setMatchedIds([]);
-    setWrongIds([]);
-    setIsChecking(false);
-  }
+  const newTiles = buildBoard(matchingTerms);
+
+  setTiles(newTiles);
+  setSelectedTiles([]);
+  setMatchedIds([]);
+  setWrongIds([]);
+  setIsChecking(false);
+
+  const savedProgress =
+    JSON.parse(sessionStorage.getItem(MATCHING_PROGRESS_KEY)) || {};
+
+  delete savedProgress[activeMatchingSetId];
+
+  sessionStorage.setItem(
+    MATCHING_PROGRESS_KEY,
+    JSON.stringify(savedProgress)
+  );
+}
 
   function handleTileClick(tile) {
     if (isChecking) return;
