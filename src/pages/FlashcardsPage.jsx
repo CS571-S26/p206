@@ -30,6 +30,7 @@ export default function FlashcardsPage() {
   const navigate = useNavigate();
   const { setId } = useParams();
   const cardRef = useRef(null);
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   const [customSets, setCustomSets] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -322,6 +323,7 @@ export default function FlashcardsPage() {
                       <VolumeUp />
                     </Button>
 
+                    {!isMobile && (
                     <Button
                       variant="link"
                       className="icon-btn p-0 text-white"
@@ -329,6 +331,7 @@ export default function FlashcardsPage() {
                     >
                       <ArrowsFullscreen />
                     </Button>
+                  )}
                   </div>
                 </div>
 
@@ -396,9 +399,11 @@ export default function FlashcardsPage() {
                 <Shuffle size={18} />
               </Button>
 
+              {!isMobile && (
               <Button className="control-btn rounded-circle" onClick={handleFullscreenToggle}>
                 <ArrowsFullscreen size={18} />
               </Button>
+            )}
             </div>
           </Col>
 
